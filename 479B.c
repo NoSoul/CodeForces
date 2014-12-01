@@ -6,7 +6,7 @@ int main()
     int minid, maxid, min, max;
     int A[100], Ans[1000][2];
     scanf("%d %d", &N, &K);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
     }
@@ -15,7 +15,7 @@ int main()
     {
         min = 0x3f3f3f3f;
         max = 0;
-        for(i=0; i<N; ++i)
+        for(i = 0; i < N; ++i)
         {
             if(A[i] > max)
             {
@@ -28,7 +28,7 @@ int main()
                 minid = i;
             }
         }
-        if(max-min < 2)
+        if(max - min < 2)
         {
             break;
         }
@@ -39,7 +39,7 @@ int main()
     }
     min = 0x3f3f3f3f;
     max = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         if(A[i] > max)
         {
@@ -52,10 +52,10 @@ int main()
             minid = i;
         }
     }
-    printf("%d %d\n", max-min, Size);
-    for(i=0; i<Size; ++i)
+    printf("%d %d\n", max - min, Size);
+    for(i = 0; i < Size; ++i)
     {
-        printf("%d %d\n", Ans[i][0]+1, Ans[i][1]+1);
+        printf("%d %d\n", Ans[i][0] + 1, Ans[i][1] + 1);
     }
     return 0;
 }

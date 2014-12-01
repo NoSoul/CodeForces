@@ -6,7 +6,7 @@ int main()
 {
     int N, M, i, Num, Ans = 0;
     scanf("%d", &N);
-    for(i=0; i<2; ++i)
+    for(i = 0; i < 2; ++i)
     {
         scanf("%d", &M);
         while(M--)
@@ -19,6 +19,6 @@ int main()
             }
         }
     }
-    puts(Ans==N?"I become the guy.":"Oh, my keyboard!");
+    puts(Ans == N ? "I become the guy." : "Oh, my keyboard!");
     return 0;
 }

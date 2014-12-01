@@ -16,7 +16,7 @@ int Queue[MAXV];
 void Init(int N)
 {
     int i;
-    for(i=0; i<=N; ++i)
+    for(i = 0; i <= N; ++i)
     {
         Adj[i] = -1;
     }
@@ -38,9 +38,9 @@ int BFS(int start)
     Tail = 1;
     while(Head < Tail)
     {
-        for(i=Head; i<Tail; ++i)
+        for(i = Head; i < Tail; ++i)
         {
-            for(j=Adj[Queue[i]]; ~j; j=E[j].next)
+            for(j = Adj[Queue[i]]; ~j; j = E[j].next)
             {
                 Visit[E[j].to] = 1;
                 Queue[Len++] = E[j].to;
@@ -58,7 +58,7 @@ int main()
     int N, i, Num, Ans;
     scanf("%d", &N);
     Init(N);
-    for(i=1; i<=N; ++i)
+    for(i = 1; i <= N; ++i)
     {
         scanf("%d", &Num);
         if(~Num)
@@ -67,7 +67,7 @@ int main()
         }
     }
     Ans = 0;
-    for(i=1; i<=N; ++i)
+    for(i = 1; i <= N; ++i)
     {
         if(!Visit[i])
         {

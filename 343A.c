@@ -12,20 +12,20 @@ int main()
     {
         if(A >= B)
         {
-            Ans += A/B;
+            Ans += A / B;
             A %= B;
         }
         else
         {
-            if(B % A ==0)
+            if(B % A == 0)
             {
-                Ans += B/A-1;
+                Ans += B / A - 1;
                 B = A;
             }
             else
             {
-                Ans += B/A;
-                B -= (B/A)*A;
+                Ans += B / A;
+                B -= (B / A) * A;
             }
         }
     }

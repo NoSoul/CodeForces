@@ -2,17 +2,17 @@
 
 int main()
 {
-    int N,K,i,ans;
+    int N, K, i, ans;
     int A[50];
-    while(scanf("%d %d",&N,&K)!=EOF)
+    while(scanf("%d %d", &N, &K) != EOF)
     {
-        for(i=0; i<N; ++i)
+        for(i = 0; i < N; ++i)
         {
-            scanf("%d",&A[i]);
+            scanf("%d", &A[i]);
         }
-        for(ans=i=0; i<N; ++i)
+        for(ans = i = 0; i < N; ++i)
         {
-            if(A[i]&&A[i]>=A[K-1])
+            if(A[i] && A[i] >= A[K - 1])
             {
                 ++ans;
             }
@@ -21,7 +21,7 @@ int main()
                 break;
             }
         }
-        printf("%d\n",ans);
+        printf("%d\n", ans);
     }
     return 0;
 }

@@ -6,11 +6,11 @@ int main()
     int K, i, j, maxid;
     char max;
     scanf("%s %d", Str, &K);
-    for(i=0; i<i+K && Str[i]!='\0'; ++i)
+    for(i = 0; i < i + K && Str[i] != '\0'; ++i)
     {
         max = Str[i];
         maxid = i;
-        for(j=i+1; j<i+1+K && Str[j]!='\0'; ++j)
+        for(j = i + 1; j < i + 1 + K && Str[j] != '\0'; ++j)
         {
             if(Str[j] > max)
             {
@@ -21,9 +21,9 @@ int main()
         if(maxid != i)
         {
             K -= maxid - i;
-            for(j=maxid; j>i; --j)
+            for(j = maxid; j > i; --j)
             {
-                Str[j] = Str[j-1];
+                Str[j] = Str[j - 1];
             }
             Str[i] = max;
         }

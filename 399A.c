@@ -4,8 +4,8 @@ int main()
 {
     int N, P, K, Min, Max, i;
     scanf("%d %d %d", &N, &P, &K);
-    Min = P-K;
-    Max = P+K;
+    Min = P - K;
+    Max = P + K;
     if(Min < 1)
     {
         Min = 1;
@@ -18,14 +18,14 @@ int main()
     {
         printf("<< ");
     }
-    for(i=0; i<K&&Min+i<P; ++i)
+    for(i = 0; i < K && Min + i < P; ++i)
     {
-        printf("%d ", Min+i);
+        printf("%d ", Min + i);
     }
     printf("(%d) ", P);
-    for(i=1; i<K+1&&P+i<=Max; ++i)
+    for(i = 1; i < K + 1 && P + i <= Max; ++i)
     {
-        printf("%d ", P+i);
+        printf("%d ", P + i);
     }
     if(Max != N)
     {

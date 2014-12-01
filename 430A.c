@@ -8,7 +8,7 @@ int main()
 {
     int N, M, i;
     scanf("%d %d", &N, &M);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
         Hash[A[i]] = 1;
@@ -18,7 +18,7 @@ int main()
         scanf("%*d %*d");
     }
     int temp = 0;
-    for(i=0; i<101; ++i)
+    for(i = 0; i < 101; ++i)
     {
         if(Hash[i])
         {
@@ -26,7 +26,7 @@ int main()
             temp ^= 1;
         }
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         printf("%d ", Ans[A[i]]);
     }

@@ -2,18 +2,18 @@
 
 int main()
 {
-    int N,i,now;
-    scanf("%d",&N);
+    int N, i, now;
+    scanf("%d", &N);
     printf("2");
-    for(now=i=2; i<N; ++i)
+    for(now = i = 2; i < N; ++i)
     {
-        now+=i;
-        now%=N;
-        if(now==0)
+        now += i;
+        now %= N;
+        if(now == 0)
         {
-            now=N;
+            now = N;
         }
-        printf(" %d",now);
+        printf(" %d", now);
     }
     puts("");
     return 0;

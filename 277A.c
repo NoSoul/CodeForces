@@ -30,34 +30,34 @@ int main()
 {
     int N, M, i, j, Num, Ans = 0, Sum = 0;
     scanf("%d %d", &N, &M);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i].k);
         Sum += A[i].k;
         A[i].visit = 0;
-        for(j=0; j<4; ++j)
+        for(j = 0; j < 4; ++j)
         {
             A[i].flag[j] = 0;
         }
-        for(j=0; j<A[i].k; ++j)
+        for(j = 0; j < A[i].k; ++j)
         {
             scanf("%d", &Num);
             --Num;
             if(Num < 32)
             {
-                A[i].flag[0] |= 1<<Num;
+                A[i].flag[0] |= 1 << Num;
             }
             else if(Num < 64)
             {
-                A[i].flag[1] |= 1<<(Num-32);
+                A[i].flag[1] |= 1 << (Num - 32);
             }
             else if(Num < 96)
             {
-                A[i].flag[2] |= 1<<(Num-64);
+                A[i].flag[2] |= 1 << (Num - 64);
             }
             else
             {
-                A[i].flag[3] |= 1<<(Num-96);
+                A[i].flag[3] |= 1 << (Num - 96);
             }
         }
     }
@@ -66,7 +66,7 @@ int main()
         printf("%d\n", N);
         return 0;
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         if(!A[i].visit)
         {
@@ -74,7 +74,7 @@ int main()
             while(1)
             {
                 char flag = 0;
-                for(j=i+1; j<N; ++j)
+                for(j = i + 1; j < N; ++j)
                 {
                     if(!A[j].visit)
                     {
@@ -94,6 +94,6 @@ int main()
             A[i].visit = 1;
         }
     }
-    printf("%d\n", Ans-1);
+    printf("%d\n", Ans - 1);
     return 0;
 }

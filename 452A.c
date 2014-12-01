@@ -8,13 +8,13 @@ int main()
     char Key[9];
     scanf("%d", &Len);
     scanf("%s", Key);
-    for(i=0; i<8; ++i)
+    for(i = 0; i < 8; ++i)
     {
         if(Len == strlen(Str[i]))
         {
-            for(j=0; j<Len; ++j)
+            for(j = 0; j < Len; ++j)
             {
-                if(Key[j]=='.' || Key[j]==Str[i][j])
+                if(Key[j] == '.' || Key[j] == Str[i][j])
                 {
                     continue;
                 }

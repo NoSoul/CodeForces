@@ -4,14 +4,14 @@ char Flag[26];
 
 int main()
 {
-    int  i,N;
+    int  i, N;
     char Str[11];
-    scanf("%s",Str);
-    for(i=0; Str[i]!='\0'; ++i)
+    scanf("%s", Str);
+    for(i = 0; Str[i] != '\0'; ++i)
     {
-        ++Flag[Str[i]-'a'];
+        ++Flag[Str[i] - 'a'];
     }
-    for(i=25; i>=0; --i)
+    for(i = 25; i >= 0; --i)
     {
         if(Flag[i])
         {
@@ -20,7 +20,7 @@ int main()
     }
     while(Flag[i]--)
     {
-        printf("%c",i+'a');
+        printf("%c", i + 'a');
     }
     printf("\n");
     return 0;

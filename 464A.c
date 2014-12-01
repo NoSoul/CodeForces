@@ -7,11 +7,11 @@ char Str[1001];
 int Check(int id)
 {
     int i;
-    for(i=Str[id]+1; i<'a'+P; ++i)
+    for(i = Str[id] + 1; i < 'a' + P; ++i)
     {
         if(id > 1)
         {
-            if(i!=Str[id-1] && i!=Str[id-2])
+            if(i != Str[id - 1] && i != Str[id - 2])
             {
                 Str[id] = i;
                 return 1;
@@ -19,7 +19,7 @@ int Check(int id)
         }
         else if(id == 1)
         {
-            if(i != Str[id-1])
+            if(i != Str[id - 1])
             {
                 Str[id] = i;
                 return 1;
@@ -37,11 +37,11 @@ int Check(int id)
 void Update(int id)
 {
     int i;
-    for(i='a'; i<'a'+P; ++i)
+    for(i = 'a'; i < 'a' + P; ++i)
     {
         if(id > 1)
         {
-            if(i!=Str[id-1] && i!=Str[id-2])
+            if(i != Str[id - 1] && i != Str[id - 2])
             {
                 Str[id] = i;
                 return;
@@ -49,7 +49,7 @@ void Update(int id)
         }
         else if(id == 1)
         {
-            if(i != Str[id-1])
+            if(i != Str[id - 1])
             {
                 Str[id] = i;
                 return;
@@ -76,7 +76,7 @@ int main()
     }
     if(start >= 0)
     {
-        for(i=start+1; i<Len; ++i)
+        for(i = start + 1; i < Len; ++i)
         {
             Update(i);
         }

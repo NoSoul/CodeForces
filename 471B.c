@@ -20,12 +20,12 @@ int cmp(const void *a, const void *b)
 
 int main()
 {
-    int N, i, j, Cnt=0;
+    int N, i, j, Cnt = 0;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &TData[i].h);
-        TData[i].id = i+1;
+        TData[i].id = i + 1;
         ++Hash[TData[i].h];
         if(Hash[TData[i].h] >= 2)
         {
@@ -39,26 +39,26 @@ int main()
     }
     puts("YES");
     qsort(TData, N, sizeof(Task_t), cmp);
-    for(j=0; j<N; ++j)
+    for(j = 0; j < N; ++j)
     {
         printf("%d ", TData[j].id);
     }
     puts("");
     int target = 2;
     int Pre = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         if(TData[i].h != Pre)
         {
             Pre = TData[i].h;
             if(Hash[TData[i].h] == 2)
             {
-                for(j=0; j<i; ++j)
+                for(j = 0; j < i; ++j)
                 {
                     printf("%d ", TData[j].id);
                 }
-                printf("%d %d ", TData[i+1].id, TData[i].id);
-                for(j=i+2; j<N; ++j)
+                printf("%d %d ", TData[i + 1].id, TData[i].id);
+                for(j = i + 2; j < N; ++j)
                 {
                     printf("%d ", TData[j].id);
                 }
@@ -70,12 +70,12 @@ int main()
             }
             else if(Hash[TData[i].h] > 2)
             {
-                for(j=0; j<i; ++j)
+                for(j = 0; j < i; ++j)
                 {
                     printf("%d ", TData[j].id);
                 }
-                printf("%d %d %d ", TData[i].id, TData[i+2].id, TData[i+1].id);
-                for(j=i+3; j<N; ++j)
+                printf("%d %d %d ", TData[i].id, TData[i + 2].id, TData[i + 1].id);
+                for(j = i + 3; j < N; ++j)
                 {
                     printf("%d ", TData[j].id);
                 }
@@ -84,12 +84,12 @@ int main()
                 {
                     return 0;
                 }
-                for(j=0; j<i; ++j)
+                for(j = 0; j < i; ++j)
                 {
                     printf("%d ", TData[j].id);
                 }
-                printf("%d %d %d ", TData[i+1].id, TData[i].id, TData[i+2].id);
-                for(j=i+3; j<N; ++j)
+                printf("%d %d %d ", TData[i + 1].id, TData[i].id, TData[i + 2].id);
+                for(j = i + 3; j < N; ++j)
                 {
                     printf("%d ", TData[j].id);
                 }

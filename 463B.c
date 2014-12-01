@@ -14,7 +14,7 @@ int main()
     first = Num;
     Ans = 0;
     Sum = 0;
-    for(i=1; i<N; ++i)
+    for(i = 1; i < N; ++i)
     {
         scanf("%d", &Num);
         if(Pre - Num + Sum < 0)
@@ -28,6 +28,6 @@ int main()
         }
         Pre = Num;
     }
-    printf("%d\n", Ans+first);
+    printf("%d\n", Ans + first);
     return 0;
 }

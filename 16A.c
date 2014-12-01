@@ -2,26 +2,26 @@
 
 int main()
 {
-    int N,M,i,j,Pre=-1;
+    int N, M, i, j, Pre = -1;
     char Str[101];
-    scanf("%d %d",&N,&M);
-    for(i=0; i<N; ++i)
+    scanf("%d %d", &N, &M);
+    for(i = 0; i < N; ++i)
     {
-        scanf("%s",Str);
-        if(Str[0]-'0'==Pre)
+        scanf("%s", Str);
+        if(Str[0] - '0' == Pre)
         {
             puts("NO");
             return 0;
         }
-        for(j=1; j<M; ++j)
+        for(j = 1; j < M; ++j)
         {
-            if(Str[j]!=Str[j-1])
+            if(Str[j] != Str[j - 1])
             {
                 puts("NO");
                 return 0;
             }
         }
-        Pre=Str[0]-'0';
+        Pre = Str[0] - '0';
     }
     puts("YES");
     return 0;

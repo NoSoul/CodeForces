@@ -7,10 +7,10 @@ int main()
     while(T--)
     {
         scanf("%d %d", &N, &P);
-        M = 2*N+P;
-        for(i=1; i<N&&M; ++i)
+        M = 2 * N + P;
+        for(i = 1; i < N && M; ++i)
         {
-            for(j=i+1; j<=N&&M; ++j)
+            for(j = i + 1; j <= N && M; ++j)
             {
                 printf("%d %d\n", i, j);
                 --M;

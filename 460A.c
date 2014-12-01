@@ -7,8 +7,8 @@ int main()
     Sum = N;
     while(N >= M)
     {
-        Sum += N/M;
-        N = N/M + N%M;
+        Sum += N / M;
+        N = N / M + N % M;
     }
     printf("%d\n", Sum);
     return 0;

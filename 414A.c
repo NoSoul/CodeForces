@@ -16,16 +16,16 @@ int main()
         }
         return 0;
     }
-    if(K < N/2)
+    if(K < N / 2)
     {
         printf("-1\n");
         return 0;
     }
-    X = K-(N-2)/2;
-    printf("%d %d ", X, 2*X);
-    for(i=0,j=1; i<N-2; ++i, ++j)
+    X = K - (N - 2) / 2;
+    printf("%d %d ", X, 2 * X);
+    for(i = 0, j = 1; i < N - 2; ++i, ++j)
     {
-        while(j==X || j==2*X)
+        while(j == X || j == 2 * X)
         {
             ++j;
         }

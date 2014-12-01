@@ -3,17 +3,17 @@
 
 char Digit[10];
 
-int Fun(char *num,int k)
+int Fun(char *num, int k)
 {
     int i;
-    memset(Digit,0,sizeof(Digit));
-    for(i=0; num[i]!='\0'; ++i)
+    memset(Digit, 0, sizeof(Digit));
+    for(i = 0; num[i] != '\0'; ++i)
     {
-        Digit[num[i]-'0']=1;
+        Digit[num[i] - '0'] = 1;
     }
-    for(i=0; i<=k; ++i)
+    for(i = 0; i <= k; ++i)
     {
-        if(Digit[i]==0)
+        if(Digit[i] == 0)
         {
             return 0;
         }
@@ -23,14 +23,14 @@ int Fun(char *num,int k)
 
 int main()
 {
-    int N,K,i,Cnt;
+    int N, K, i, Cnt;
     char Num[11];
-    scanf("%d %d",&N,&K);
-    for(Cnt=i=0; i<N; ++i)
+    scanf("%d %d", &N, &K);
+    for(Cnt = i = 0; i < N; ++i)
     {
-        scanf("%s",Num);
-        Cnt+=Fun(Num,K);
+        scanf("%s", Num);
+        Cnt += Fun(Num, K);
     }
-    printf("%d\n",Cnt);
+    printf("%d\n", Cnt);
     return 0;
 }

@@ -21,10 +21,10 @@ int main()
     }
     else
     {
-        int M = N-K;
-        for(i=0; i<M; ++i)
+        int M = N - K;
+        for(i = 0; i < M; ++i)
         {
-            if(i&1)
+            if(i & 1)
             {
                 printf("b");
             }
@@ -33,7 +33,7 @@ int main()
                 printf("a");
             }
         }
-        if(M&1)
+        if(M & 1)
         {
             printf("ba");
         }
@@ -41,9 +41,9 @@ int main()
         {
             printf("ab");
         }
-        for(i=2; i<K; ++i)
+        for(i = 2; i < K; ++i)
         {
-            printf("%c", 'a'+i);
+            printf("%c", 'a' + i);
         }
     }
     return 0;

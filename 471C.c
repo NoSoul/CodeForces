@@ -10,7 +10,7 @@ int main()
     Ans = 0;
     while(1)
     {
-        F = h*2 + h*(h-1)/2*3;
+        F = h * 2 + h * (h - 1) / 2 * 3;
         if(F > N)
         {
             break;

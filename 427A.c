@@ -4,7 +4,7 @@ int main()
 {
     int N, i, Num, Sum, Ans;
     scanf("%d", &N);
-    for(Ans=Sum=i=0; i<N; ++i)
+    for(Ans = Sum = i = 0; i < N; ++i)
     {
         scanf("%d", &Num);
         if(Num == -1)

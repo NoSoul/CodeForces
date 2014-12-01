@@ -7,10 +7,10 @@ int main()
     int N, i, j, Pre, Num;
     scanf("%d", &N);
     Pre = 1;
-    for(i=1; i<=N; ++i)
+    for(i = 1; i <= N; ++i)
     {
         scanf("%d", &Num);
-        for(j=Pre; j<Pre+Num; ++j)
+        for(j = Pre; j < Pre + Num; ++j)
         {
             Hash[j] = i;
         }

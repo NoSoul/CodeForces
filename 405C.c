@@ -6,18 +6,18 @@ int main()
 {
     int N, M, i, j, type, Sum;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        for(j=0; j<N; ++j)
+        for(j = 0; j < N; ++j)
         {
             scanf("%d", &A[i][j]);
         }
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        for(j=0; j<N; ++j)
+        for(j = 0; j < N; ++j)
         {
-            Sum += A[i][j]*A[j][i];
+            Sum += A[i][j] * A[j][i];
         }
     }
     Sum &= 1;

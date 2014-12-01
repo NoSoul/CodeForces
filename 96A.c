@@ -2,22 +2,22 @@
 
 int main()
 {
-    int  i,cnt;
+    int  i, cnt;
     char Str[101];
-    scanf("%s",Str);
-    for(cnt=i=1; Str[i]!='\0'; ++i)
+    scanf("%s", Str);
+    for(cnt = i = 1; Str[i] != '\0'; ++i)
     {
-        if(Str[i]==Str[i-1])
+        if(Str[i] == Str[i - 1])
         {
             ++cnt;
-            if(cnt==7)
+            if(cnt == 7)
             {
                 break;
             }
             continue;
         }
-        cnt=1;
+        cnt = 1;
     }
-    puts(cnt==7?"YES":"NO");
+    puts(cnt == 7 ? "YES" : "NO");
     return 0;
 }

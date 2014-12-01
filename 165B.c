@@ -2,35 +2,35 @@
 
 typedef __int64 LL;
 
-LL Cal(LL v,LL k)
+LL Cal(LL v, LL k)
 {
-    LL sum=v,b=k;
-    while(v>=b)
+    LL sum = v, b = k;
+    while(v >= b)
     {
-        sum+=v/b;
-        b*=k;
+        sum += v / b;
+        b *= k;
     }
     return sum;
 }
 
 int main()
 {
-    LL N,K,Left,Right,Mid;
-    scanf("%I64d %I64d",&N,&K);
-    Left=1;
-    Right=K*N;
-    while(Right>Left)
+    LL N, K, Left, Right, Mid;
+    scanf("%I64d %I64d", &N, &K);
+    Left = 1;
+    Right = K * N;
+    while(Right > Left)
     {
-        Mid=(Left+Right)/2;
-        if(Cal(Mid,K)<N)
+        Mid = (Left + Right) / 2;
+        if(Cal(Mid, K) < N)
         {
-            Left=Mid+1;
+            Left = Mid + 1;
         }
         else
         {
-            Right=Mid;
+            Right = Mid;
         }
     }
-    printf("%d\n",Left);
+    printf("%d\n", Left);
     return 0;
 }

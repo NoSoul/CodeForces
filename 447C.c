@@ -13,11 +13,11 @@ int A[MAXN];
 
 int JudgeTwo(int idx)
 {
-    if(Seg[idx].len==1 || Seg[idx+1].len==1)
+    if(Seg[idx].len == 1 || Seg[idx + 1].len == 1)
     {
         return 1;
     }
-    if(A[Seg[idx+1].min]-1>A[Seg[idx].max-1] || A[Seg[idx].max]+1<A[Seg[idx+1].min+1])
+    if(A[Seg[idx + 1].min] - 1 > A[Seg[idx].max - 1] || A[Seg[idx].max] + 1 < A[Seg[idx + 1].min + 1])
     {
         return 1;
     }
@@ -30,7 +30,7 @@ int JudgeThree(int idx)
     {
         return 0;
     }
-    if(A[Seg[idx+1].min] - A[Seg[idx-1].max] >= 2)
+    if(A[Seg[idx + 1].min] - A[Seg[idx - 1].max] >= 2)
     {
         return 1;
     }
@@ -41,7 +41,7 @@ int main()
 {
     int N, i, Ans = 0;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
     }
@@ -49,9 +49,9 @@ int main()
     Seg[Size].min = 0;
     Seg[Size].max = 0;
     Seg[Size].len = 1;
-    for(i=1; i<N; ++i)
+    for(i = 1; i < N; ++i)
     {
-        if(A[i] > A[i-1])
+        if(A[i] > A[i - 1])
         {
             Seg[Size].max = i;
             ++Seg[Size].len;
@@ -70,29 +70,29 @@ int main()
     }
     else
     {
-        for(i=0; i<=Size; ++i)
+        for(i = 0; i <= Size; ++i)
         {
-            if(Seg[i].len+1 > Ans)
+            if(Seg[i].len + 1 > Ans)
             {
-                Ans = Seg[i].len+1;
+                Ans = Seg[i].len + 1;
             }
-            if(i!=Size)
+            if(i != Size)
             {
                 if(JudgeTwo(i))
                 {
-                    if(Seg[i].len+Seg[i+1].len > Ans)
+                    if(Seg[i].len + Seg[i + 1].len > Ans)
                     {
-                        Ans = Seg[i].len+Seg[i+1].len;
+                        Ans = Seg[i].len + Seg[i + 1].len;
                     }
                 }
             }
-            if(i!=0)
+            if(i != 0)
             {
                 if(JudgeThree(i))
                 {
-                    if(Seg[i-1].len+Seg[i].len+Seg[i+1].len > Ans)
+                    if(Seg[i - 1].len + Seg[i].len + Seg[i + 1].len > Ans)
                     {
-                        Ans = Seg[i-1].len+Seg[i].len+Seg[i+1].len;
+                        Ans = Seg[i - 1].len + Seg[i].len + Seg[i + 1].len;
                     }
                 }
             }

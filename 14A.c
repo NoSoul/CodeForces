@@ -8,10 +8,10 @@ int main()
     int MinC, MaxC, MinR, MaxR;
     char Str[50][51];
     scanf("%d %d", &N, &M);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%s", Str[i]);
-        for(j=0; j<M; ++j)
+        for(j = 0; j < M; ++j)
         {
             if(Str[i][j] == '*')
             {
@@ -20,7 +20,7 @@ int main()
             }
         }
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         if(HashRow[i])
         {
@@ -28,7 +28,7 @@ int main()
             break;
         }
     }
-    for(i=N-1; i>=0; --i)
+    for(i = N - 1; i >= 0; --i)
     {
         if(HashRow[i])
         {
@@ -36,7 +36,7 @@ int main()
             break;
         }
     }
-    for(i=0; i<M; ++i)
+    for(i = 0; i < M; ++i)
     {
         if(HashCol[i])
         {
@@ -44,7 +44,7 @@ int main()
             break;
         }
     }
-    for(i=M-1; i>=0; --i)
+    for(i = M - 1; i >= 0; --i)
     {
         if(HashCol[i])
         {
@@ -52,9 +52,9 @@ int main()
             break;
         }
     }
-    for(i=MinR; i<=MaxR; ++i)
+    for(i = MinR; i <= MaxR; ++i)
     {
-        for(j=MinC; j<=MaxC; ++j)
+        for(j = MinC; j <= MaxC; ++j)
         {
             printf("%c", Str[i][j]);
         }

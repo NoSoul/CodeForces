@@ -20,13 +20,13 @@ int main()
 {
     int N, i, Ans;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d %d", &A[i].ai, &A[i].bi);
     }
     qsort(A, N, sizeof(Exam_t), cmp);
     Ans = A[0].bi;
-    for(i=1; i<N; ++i)
+    for(i = 1; i < N; ++i)
     {
         if(Ans <= A[i].bi)
         {

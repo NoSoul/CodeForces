@@ -15,21 +15,21 @@ int Find(int key, int N)
 {
     int Left, Right, Mid;
     Left = 0;
-    Right = N-1;
+    Right = N - 1;
     while(Left <= Right)
     {
-        Mid = (Left+Right)>>1;
+        Mid = (Left + Right) >> 1;
         if(A[Mid] == key)
         {
             return Mid;
         }
         else if(A[Mid] > key)
         {
-            Right = Mid-1;
+            Right = Mid - 1;
         }
         else
         {
-            Left = Mid+1;
+            Left = Mid + 1;
         }
     }
     return -1;
@@ -39,7 +39,7 @@ int main()
 {
     int N, K, i, Ans, Cnt, Num, pos;
     scanf("%d %d", &N, &K);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
     }
@@ -50,7 +50,7 @@ int main()
     }
     qsort(A, N, sizeof(int), cmp);
     Ans = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         if(!Visit[i])
         {
@@ -61,7 +61,7 @@ int main()
             {
                 ++Cnt;
                 Visit[pos] = 1;
-                if(Num <= 1e9/K + 1)
+                if(Num <= 1e9 / K + 1)
                 {
                     Num *= K;
                     pos = Find(Num, N);
@@ -71,7 +71,7 @@ int main()
                     pos = -1;
                 }
             } while(pos != -1);
-            Ans += (Cnt+1)/2;
+            Ans += (Cnt + 1) / 2;
         }
     }
     printf("%d\n", Ans);

@@ -30,25 +30,25 @@ int main()
     int N, K, M, S, i, j;
     int Ans[1000][2];
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d %d", &R[i].c, &R[i].p);
-        R[i].idx = i+1;
+        R[i].idx = i + 1;
     }
     qsort(R, N, sizeof(Request_t), cmp_Request);
     scanf("%d", &K);
-    for(i=0; i<K; ++i)
+    for(i = 0; i < K; ++i)
     {
         scanf("%d", &T[i].r);
-        T[i].idx = i+1;
+        T[i].idx = i + 1;
     }
     qsort(T, K, sizeof(Table_t), cmp_Table);
     M = S = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        for(j=0; j<K; ++j)
+        for(j = 0; j < K; ++j)
         {
-            if(Flag[j]==0 && T[j].r>=R[i].c)
+            if(Flag[j] == 0 && T[j].r >= R[i].c)
             {
                 Ans[M][0] = R[i].idx;
                 Ans[M++][1] = T[j].idx;
@@ -59,7 +59,7 @@ int main()
         }
     }
     printf("%d %d\n", M, S);
-    for(i=0; i<M; ++i)
+    for(i = 0; i < M; ++i)
     {
         printf("%d %d\n", Ans[i][0], Ans[i][1]);
     }

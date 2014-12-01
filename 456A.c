@@ -5,7 +5,7 @@ int main()
     int N, i, a, b, flag;
     scanf("%d", &N);
     flag = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d %d", &a, &b);
         if(a != b)
@@ -18,6 +18,6 @@ int main()
         puts("Poor Alex");
         return 0;
     }
-    puts(flag?"Happy Alex":"Poor Alex");
+    puts(flag ? "Happy Alex" : "Poor Alex");
     return 0;
 }

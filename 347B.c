@@ -4,28 +4,28 @@ int A[100001];
 
 int main()
 {
-    int N,i,Cnt=0;
-    char flag=1;
-    scanf("%d",&N);
-    for(i=0; i<N; ++i)
+    int N, i, Cnt = 0;
+    char flag = 1;
+    scanf("%d", &N);
+    for(i = 0; i < N; ++i)
     {
-        scanf("%d",&A[i]);
+        scanf("%d", &A[i]);
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        if(A[i]==i)
+        if(A[i] == i)
         {
             ++Cnt;
         }
-        else if(A[A[i]]==i)
+        else if(A[A[i]] == i)
         {
-            flag=2;
+            flag = 2;
         }
     }
-    if(Cnt==N)
+    if(Cnt == N)
     {
-        flag=0;
+        flag = 0;
     }
-    printf("%d\n",Cnt+flag);
+    printf("%d\n", Cnt + flag);
     return 0;
 }

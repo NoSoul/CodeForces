@@ -9,22 +9,22 @@ int main()
 {
     int N, M, K, i, j;
     scanf("%d %d %d", &N, &M, &K);
-    for(i=1; i<=N; ++i)
+    for(i = 1; i <= N; ++i)
     {
         scanf("%d", &P[i]);
-        P[i] += P[i-1];
+        P[i] += P[i - 1];
     }
-    for(i=1; i<=N; ++i)
+    for(i = 1; i <= N; ++i)
     {
-        for(j=1; j<=K; ++j)
+        for(j = 1; j <= K; ++j)
         {
             if(i < M)
             {
-                Dp[i][j] = Dp[i-1][j];
+                Dp[i][j] = Dp[i - 1][j];
             }
             else
             {
-                Dp[i][j] = max(Dp[i-1][j], Dp[i-M][j-1]+P[i]-P[i-M]);
+                Dp[i][j] = max(Dp[i - 1][j], Dp[i - M][j - 1] + P[i] - P[i - M]);
             }
             Ans = max(Ans, Dp[i][j]);
         }

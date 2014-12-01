@@ -3,17 +3,17 @@
 
 int main()
 {
-    int N,i,L,Cnt=0;
+    int N, i, L, Cnt = 0;
     char Str[2001];
-    scanf("%d %s",&N,Str);
-    L=strlen(Str);
-    for(i=N; i<L; i+=N)
+    scanf("%d %s", &N, Str);
+    L = strlen(Str);
+    for(i = N; i < L; i += N)
     {
-        if(Str[i-1]==Str[i-2]&&Str[i-1]==Str[i-3])
+        if(Str[i - 1] == Str[i - 2] && Str[i - 1] == Str[i - 3])
         {
             ++Cnt;
         }
     }
-    printf("%d\n",Cnt);
+    printf("%d\n", Cnt);
     return 0;
 }

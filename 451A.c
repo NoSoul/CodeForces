@@ -12,6 +12,6 @@ int main()
     {
         N = M;
     }
-    puts(N&1?"Akshat":"Malvika");
+    puts(N & 1 ? "Akshat" : "Malvika");
     return 0;
 }

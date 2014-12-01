@@ -17,7 +17,7 @@ long long Ans = 1;
 void Init(int N)
 {
     int i;
-    for(i=0; i<=N; ++i)
+    for(i = 0; i <= N; ++i)
     {
         Adj[i] = -1;
     }
@@ -41,9 +41,9 @@ void BFS(int start)
     Queue[0] = start;
     while(Head < Tail)
     {
-        for(i=Head; i<Tail; ++i)
+        for(i = Head; i < Tail; ++i)
         {
-            for(j=Adj[Queue[i]]; ~j; j=E[j].next)
+            for(j = Adj[Queue[i]]; ~j; j = E[j].next)
             {
                 if(!Visited[E[j].to])
                 {
@@ -67,7 +67,7 @@ int main()
     int N, M, i, x, y, Cnt;
     scanf("%d %d", &N, &M);
     Init(N);
-    for(i=0; i<M; ++i)
+    for(i = 0; i < M; ++i)
     {
         scanf("%d %d", &x, &y);
         --x;
@@ -75,7 +75,7 @@ int main()
         Add_Edge(x, y);
         Add_Edge(y, x);
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         if(!Visited[i])
         {

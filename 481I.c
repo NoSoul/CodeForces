@@ -11,15 +11,15 @@ int main()
     int N, i, Sum, Max, Ans;
     int A[2000];
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
     }
     qsort(A, N, sizeof(int), cmp);
     Ans = 1;
-    Max = A[N-1];
+    Max = A[N - 1];
     Sum = 0;
-    for(i=0; i<N-1; ++i)
+    for(i = 0; i < N - 1; ++i)
     {
         if(Sum + A[i] > Max)
         {

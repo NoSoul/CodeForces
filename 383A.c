@@ -11,7 +11,7 @@ int main()
     scanf("%d", &N);
     LeftNum = 0;
     RightNum = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
         if(A[i])
@@ -24,7 +24,7 @@ int main()
         }
     }
     RightIdx = 0;
-    LeftIdx = N-1;
+    LeftIdx = N - 1;
     while(RightIdx < LeftIdx)
     {
         while(A[RightIdx] != 1)
@@ -43,7 +43,7 @@ int main()
                 break;
             }
         }
-        if(RightIdx==N || LeftIdx==-1)
+        if(RightIdx == N || LeftIdx == -1)
         {
             break;
         }

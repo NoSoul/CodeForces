@@ -9,7 +9,7 @@ int Luck(int N)
     }
     while(N)
     {
-        a = N%10;
+        a = N % 10;
         if(a == 8)
         {
             return 1;
@@ -21,7 +21,7 @@ int Luck(int N)
 
 int main()
 {
-    int N, Cnt=0;
+    int N, Cnt = 0;
     scanf("%d", &N);
     while(1)
     {

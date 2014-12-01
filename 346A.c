@@ -7,7 +7,7 @@ int GCD(int a, int b)
     {
         temp = a;
         a = b;
-        b = temp%b;
+        b = temp % b;
     }
     return a;
 }
@@ -18,7 +18,7 @@ int main()
     int A[100];
     Max = 1;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
         if(i == 0)
@@ -34,6 +34,6 @@ int main()
             Max = A[i];
         }
     }
-    puts((Max/g-N)&1?"Alice":"Bob");
+    puts((Max / g - N) & 1 ? "Alice" : "Bob");
     return 0;
 }

@@ -2,26 +2,26 @@
 
 int main()
 {
-    int i,Cnti,Cnta,flagi;
+    int i, Cnti, Cnta, flagi;
     char Str[200001];
-    scanf("%*d %s",Str);
-    for(Cnti=Cnta=flagi=i=0; Str[i]!='\0'; ++i)
+    scanf("%*d %s", Str);
+    for(Cnti = Cnta = flagi = i = 0; Str[i] != '\0'; ++i)
     {
-        if(Str[i]=='I')
+        if(Str[i] == 'I')
         {
-            flagi=1;
+            flagi = 1;
             ++Cnti;
         }
-        else if(Str[i]=='A')
+        else if(Str[i] == 'A')
         {
             ++Cnta;
         }
     }
     if(flagi)
     {
-        if(Cnti==1)
+        if(Cnti == 1)
         {
-            printf("%d\n",Cnti);
+            printf("%d\n", Cnti);
         }
         else
         {
@@ -30,7 +30,7 @@ int main()
     }
     else
     {
-        printf("%d\n",Cnta);
+        printf("%d\n", Cnta);
     }
     return 0;
 }

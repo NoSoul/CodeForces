@@ -3,57 +3,57 @@
 
 int C2N(char *s)
 {
-    int i,r;
-    for(r=i=0; s[i]!='\0'; ++i)
+    int i, r;
+    for(r = i = 0; s[i] != '\0'; ++i)
     {
-        r*=26;
-        r+=s[i]-'A'+1;
+        r *= 26;
+        r += s[i] - 'A' + 1;
     }
     return r;
 }
 
 char* N2C(int N)
 {
-    int i=0,j;
+    int i = 0, j;
     char r[20];
     while(N)
     {
-        j=N%26;
-        if(j==0)
+        j = N % 26;
+        if(j == 0)
         {
-            j=26;
+            j = 26;
         }
-        r[i++]=j-1+'A';
-        N/=26;
-        if(j==26)
+        r[i++] = j - 1 + 'A';
+        N /= 26;
+        if(j == 26)
         {
             --N;
         }
     }
-    r[i]='\0';
+    r[i] = '\0';
     strrev(r);
     return r;
 }
 
 int Judge(char *s)
 {
-    int i,l;
-    l=strlen(s);
-    for(i=0; s[i]!='\0'; ++i)
+    int i, l;
+    l = strlen(s);
+    for(i = 0; s[i] != '\0'; ++i)
     {
-        if(s[i]>='0'&&s[i]<='9')
+        if(s[i] >= '0' && s[i] <= '9')
         {
             break;
         }
     }
-    for(; s[i]!='\0'; ++i)
+    for(; s[i] != '\0'; ++i)
     {
-        if(s[i]>='A'&&s[i]<='Z')
+        if(s[i] >= 'A' && s[i] <= 'Z')
         {
             break;
         }
     }
-    if(i<l)
+    if(i < l)
     {
         return 0;
     }
@@ -62,55 +62,55 @@ int Judge(char *s)
 
 int main()
 {
-    int T,R,C,i,j;
-    char Str[20],Ans[20];
-    scanf("%d",&T);
+    int T, R, C, i, j;
+    char Str[20], Ans[20];
+    scanf("%d", &T);
     while(T--)
     {
-        scanf("%s",Str);
+        scanf("%s", Str);
         if(Judge(Str))
         {
-            for(i=j=0; Str[i]!='\0'; ++i)
+            for(i = j = 0; Str[i] != '\0'; ++i)
             {
-                if(Str[i]>='0'&&Str[i]<='9')
+                if(Str[i] >= '0' && Str[i] <= '9')
                 {
                     break;
                 }
                 else
                 {
-                    Ans[j++]=Str[i];
+                    Ans[j++] = Str[i];
                 }
             }
-            Ans[j]='\0';
-            for(R=0; Str[i]!='\0'; ++i)
+            Ans[j] = '\0';
+            for(R = 0; Str[i] != '\0'; ++i)
             {
-                R*=10;
-                R+=Str[i]-'0';
+                R *= 10;
+                R += Str[i] - '0';
             }
-            C=C2N(Ans);
-            printf("R%dC%d\n",R,C);
+            C = C2N(Ans);
+            printf("R%dC%d\n", R, C);
         }
         else
         {
-            for(R=0,i=1; Str[i]!='\0'; ++i)
+            for(R = 0, i = 1; Str[i] != '\0'; ++i)
             {
-                if(Str[i]=='C')
+                if(Str[i] == 'C')
                 {
                     break;
                 }
                 else
                 {
-                    R*=10;
-                    R+=Str[i]-'0';
+                    R *= 10;
+                    R += Str[i] - '0';
                 }
             }
-            for(C=0,++i; Str[i]!='\0'; ++i)
+            for(C = 0, ++i; Str[i] != '\0'; ++i)
             {
-                C*=10;
-                C+=Str[i]-'0';
+                C *= 10;
+                C += Str[i] - '0';
             }
-            strcpy(Ans,N2C(C));
-            printf("%s%d\n",Ans,R);
+            strcpy(Ans, N2C(C));
+            printf("%s%d\n", Ans, R);
         }
     }
     return 0;

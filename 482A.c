@@ -11,10 +11,10 @@ int main()
     {
         Visited[i] = 1;
         printf("%d ", i);
-        if(!Visited[i+K])
+        if(!Visited[i + K])
         {
-            Visited[i+K] = 1;
-            printf("%d ", i+K);
+            Visited[i + K] = 1;
+            printf("%d ", i + K);
         }
         ++i;
         K -= 2;
@@ -23,7 +23,7 @@ int main()
             break;
         }
     }
-    for(i=1; i<=N; ++i)
+    for(i = 1; i <= N; ++i)
     {
         if(!Visited[i])
         {

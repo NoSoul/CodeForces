@@ -23,25 +23,25 @@ int main()
     LL_t Sum = 0;
     scanf("%d %d", &N, &K);
     scanf("%s", Str);
-    for(i=0; i<26; ++i)
+    for(i = 0; i < 26; ++i)
     {
         A[i].id = i;
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        ++A[Str[i]-'A'].num;
+        ++A[Str[i] - 'A'].num;
     }
     qsort(A, 26, sizeof(Node_t), cmp);
-    for(i=0; i<26; ++i)
+    for(i = 0; i < 26; ++i)
     {
         if(K > A[i].num)
         {
-            Sum += (LL_t)A[i].num*A[i].num;
+            Sum += (LL_t)A[i].num * A[i].num;
             K -= A[i].num;
         }
         else
         {
-            Sum += (LL_t)K*K;
+            Sum += (LL_t)K * K;
             break;
         }
     }

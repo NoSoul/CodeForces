@@ -13,16 +13,16 @@ int main()
 {
     int N, i, j;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d %d", &T[i].x, &T[i].y);
         ++HashX[T[i].x];
         ++HashY[T[i].y];
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        j = N-1-HashX[T[i].y];
-        printf("%d %d\n", N+N-2-j, j);
+        j = N - 1 - HashX[T[i].y];
+        printf("%d %d\n", N + N - 2 - j, j);
     }
     return 0;
 }

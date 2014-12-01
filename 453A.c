@@ -2,10 +2,10 @@
 
 double F(double A, int N)
 {
-    double ret=1;
+    double ret = 1;
     while(N)
     {
-        if(N&1)
+        if(N & 1)
         {
             ret *= A;
         }
@@ -21,9 +21,9 @@ int main()
     double Ans;
     scanf("%d %d", &M, &N);
     Ans = M;
-    for(i=1; i<M; ++i)
+    for(i = 1; i < M; ++i)
     {
-        Ans -= F(i*1.0/M, N);
+        Ans -= F(i * 1.0 / M, N);
     }
     printf("%lf\n", Ans);
     return 0;

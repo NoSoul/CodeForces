@@ -3,14 +3,14 @@
 void DFS(int N)
 {
     int i;
-    printf("%d ",N);
-    if(N==1)
+    printf("%d ", N);
+    if(N == 1)
     {
         return;
     }
-    for(i=N/2; i>0; --i)
+    for(i = N / 2; i > 0; --i)
     {
-        if(N%i==0)
+        if(N % i == 0)
         {
             DFS(i);
             return;
@@ -21,7 +21,7 @@ void DFS(int N)
 int main()
 {
     int N;
-    scanf("%d",&N);
+    scanf("%d", &N);
     DFS(N);
     return 0;
 }

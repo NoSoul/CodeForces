@@ -7,16 +7,16 @@ int main()
     char Map[100][101];
     int Ans[101][2];
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%s", Map[i]);
     }
     Cnt = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        for(j=0; j<N; ++j)
+        for(j = 0; j < N; ++j)
         {
-            if(Map[i][j]=='.')
+            if(Map[i][j] == '.')
             {
                 Ans[Cnt][0] = i;
                 Ans[Cnt++][1] = j;
@@ -27,11 +27,11 @@ int main()
     if(Cnt != N)
     {
         Cnt = 0;
-        for(j=0; j<N; ++j)
+        for(j = 0; j < N; ++j)
         {
-            for(i=0; i<N; ++i)
+            for(i = 0; i < N; ++i)
             {
-                if(Map[i][j]=='.')
+                if(Map[i][j] == '.')
                 {
                     Ans[Cnt][0] = i;
                     Ans[Cnt++][1] = j;
@@ -45,9 +45,9 @@ int main()
             return 0;
         }
     }
-    for(i=0; i<Cnt; ++i)
+    for(i = 0; i < Cnt; ++i)
     {
-        printf("%d %d\n", Ans[i][0]+1, Ans[i][1]+1);
+        printf("%d %d\n", Ans[i][0] + 1, Ans[i][1] + 1);
     }
     return 0;
 }

@@ -8,7 +8,7 @@ int main()
     while(N--)
     {
         scanf("%d %d", &p, &q);
-        if(p+2 <= q)
+        if(p + 2 <= q)
         {
             ++Ans;
         }

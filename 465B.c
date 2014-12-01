@@ -6,7 +6,7 @@ int main()
     scanf("%d", &N);
     Pre = -1;
     Ans = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d ", &Num);
         if(Num == 1)
@@ -17,7 +17,7 @@ int main()
             }
             else
             {
-                if(i-Pre >= 2)
+                if(i - Pre >= 2)
                 {
                     Ans += 2;
                 }

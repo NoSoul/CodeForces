@@ -15,7 +15,7 @@ int main()
 {
     int i;
     scanf("%s", Str);
-    for(i=0; Str[i]!='\0'; ++i)
+    for(i = 0; Str[i] != '\0'; ++i)
     {
         if(Size == 0)
         {
@@ -24,13 +24,13 @@ int main()
         }
         else
         {
-            if(Str[i] != Stack[Size-1].ch)
+            if(Str[i] != Stack[Size - 1].ch)
             {
                 if(Size >= 2)
                 {
-                    if(Stack[Size-1].cnt&1)
+                    if(Stack[Size - 1].cnt & 1)
                     {
-                        if(Stack[Size-2].cnt&1)
+                        if(Stack[Size - 2].cnt & 1)
                         {
                             Stack[Size].ch = Str[i];
                             Stack[Size++].cnt = 1;
@@ -39,12 +39,12 @@ int main()
                         {
                             if(Size == 2)
                             {
-                                Stack[Size-2] = Stack[Size-1];
+                                Stack[Size - 2] = Stack[Size - 1];
                                 --Size;
                             }
                             else
                             {
-                                Stack[Size-3].cnt += Stack[Size-1].cnt;
+                                Stack[Size - 3].cnt += Stack[Size - 1].cnt;
                                 Size -= 2;
                             }
                             Stack[Size].ch = Str[i];
@@ -54,7 +54,7 @@ int main()
                     else
                     {
                         --Size;
-                        ++Stack[Size-1].cnt;
+                        ++Stack[Size - 1].cnt;
                     }
                 }
                 else
@@ -65,20 +65,20 @@ int main()
             }
             else
             {
-                ++Stack[Size-1].cnt;
+                ++Stack[Size - 1].cnt;
             }
         }
     }
-    if(i&1)
+    if(i & 1)
     {
         puts("No");
         return 0;
     }
     int flag = 1;
-    for(i=0; i<Size; ++i)
+    for(i = 0; i < Size; ++i)
     {
-        flag &= (Stack[i].cnt&1)==0;
+        flag &= (Stack[i].cnt & 1) == 0;
     }
-    puts(flag?"Yes":"No");
+    puts(flag ? "Yes" : "No");
     return 0;
 }

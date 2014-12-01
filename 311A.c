@@ -2,18 +2,18 @@
 
 int main()
 {
-    int N,K,i;
-    scanf("%d %d",&N,&K);
-    i=(1+N-1)*(N-1)/2;
-    if(i<=K)
+    int N, K, i;
+    scanf("%d %d", &N, &K);
+    i = (1 + N - 1) * (N - 1) / 2;
+    if(i <= K)
     {
         puts("no solution");
     }
     else
     {
-        for(i=0; i<N; ++i)
+        for(i = 0; i < N; ++i)
         {
-            printf("0 %d\n",i,i);
+            printf("0 %d\n", i, i);
         }
     }
     return 0;

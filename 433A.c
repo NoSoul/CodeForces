@@ -5,7 +5,7 @@ int main()
     int N, i, Num;
     int A[3] = {0};
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &Num);
         Num /= 100;

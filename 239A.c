@@ -2,20 +2,20 @@
 
 int main()
 {
-    int Y,K,N,i,j,f;
-    scanf("%d %d %d",&Y,&K,&N);
-    if(Y>=K)
+    int Y, K, N, i, j, f;
+    scanf("%d %d %d", &Y, &K, &N);
+    if(Y >= K)
     {
-        j=(Y/K+1)*K;
+        j = (Y / K + 1) * K;
     }
     else
     {
-        j=K;
+        j = K;
     }
-    for(f=0,i=j; i<=N; i+=K)
+    for(f = 0, i = j; i <= N; i += K)
     {
-        printf("%d ",i-Y);
-        f=1;
+        printf("%d ", i - Y);
+        f = 1;
     }
     if(!f)
     {

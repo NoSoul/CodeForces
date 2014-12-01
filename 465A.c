@@ -6,7 +6,7 @@ int main()
     char Str[101];
     scanf("%d", &N);
     scanf("%s", Str);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         if(Str[i] == '0')
         {

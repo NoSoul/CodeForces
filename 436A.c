@@ -21,9 +21,9 @@ int Fun(int X, int Pre, int N)
     memset(Visit, 0, sizeof(Visit));
     while(1)
     {
-        for(i=0; i<N; ++i)
+        for(i = 0; i < N; ++i)
         {
-            if(Visit[i]==0 && List[i].h<=X && List[i].t!=Pre)
+            if(Visit[i] == 0 && List[i].h <= X && List[i].t != Pre)
             {
                 Visit[i] = 1;
                 Pre ^= 1;
@@ -44,7 +44,7 @@ int main()
 {
     int N, X, i, Now, Ans;
     scanf("%d %d", &N, &X);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d %d %d", &List[i].t, &List[i].h, &List[i].m);
     }

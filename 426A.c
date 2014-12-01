@@ -6,7 +6,7 @@ int main()
     Sum = 0;
     scanf("%d %d", &N, &S);
     Max = 1;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &Num);
         if(Num > Max)

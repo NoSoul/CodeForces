@@ -14,9 +14,9 @@ int main()
     scanf("%d", &K);
     while(K)
     {
-        for(j=0; j<27; ++j)
+        for(j = 0; j < 27; ++j)
         {
-            for(i=0; i<6; ++i)
+            for(i = 0; i < 6; ++i)
             {
                 if(Str[i][j] == '#')
                 {
@@ -24,7 +24,7 @@ int main()
                     --K;
                     if(!K)
                     {
-                        for(k=0; k<6; ++k)
+                        for(k = 0; k < 6; ++k)
                         {
                             puts(Str[k]);
                         }
@@ -34,7 +34,7 @@ int main()
             }
         }
     }
-    for(k=0; k<6; ++k)
+    for(k = 0; k < 6; ++k)
     {
         puts(Str[k]);
     }

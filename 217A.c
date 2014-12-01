@@ -22,7 +22,7 @@ Point_t P[MAXV];
 void Init(int N)
 {
     int i;
-    for(i=0; i<=N; ++i)
+    for(i = 0; i <= N; ++i)
     {
         Adj[i] = -1;
     }
@@ -46,9 +46,9 @@ void BFS(int start)
     Queue[0] = start;
     while(Head < Tail)
     {
-        for(i=Head; i<Tail; ++i)
+        for(i = Head; i < Tail; ++i)
         {
-            for(j=Adj[Queue[i]]; ~j; j=E[j].next)
+            for(j = Adj[Queue[i]]; ~j; j = E[j].next)
             {
                 if(!Visited[E[j].to])
                 {
@@ -67,12 +67,12 @@ int main()
     int N, i, j, Cnt;
     scanf("%d", &N);
     Init(N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d %d", &P[i].x, &P[i].y);
-        for(j=0; j<i; ++j)
+        for(j = 0; j < i; ++j)
         {
-            if(P[i].x==P[j].x || P[i].y==P[j].y)
+            if(P[i].x == P[j].x || P[i].y == P[j].y)
             {
                 Add_Edge(i, j);
                 Add_Edge(j, i);
@@ -80,7 +80,7 @@ int main()
         }
     }
     Cnt = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         if(!Visited[i])
         {
@@ -88,6 +88,6 @@ int main()
             BFS(i);
         }
     }
-    printf("%d\n", Cnt-1);
+    printf("%d\n", Cnt - 1);
     return 0;
 }

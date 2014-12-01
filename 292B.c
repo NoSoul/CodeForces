@@ -10,7 +10,7 @@ int cmp(const void *a, const void *b)
 
 int IsBus(int *v, int n)
 {
-    if(v[0]==2 && v[n-1]==1 && v[n-2]==1 && v[n-3]==2)
+    if(v[0] == 2 && v[n - 1] == 1 && v[n - 2] == 1 && v[n - 3] == 2)
     {
         return 1;
     }
@@ -19,7 +19,7 @@ int IsBus(int *v, int n)
 
 int IsRing(int *v, int n)
 {
-    if(v[0]==2 && v[n-1]==2)
+    if(v[0] == 2 && v[n - 1] == 2)
     {
         return 1;
     }
@@ -28,7 +28,7 @@ int IsRing(int *v, int n)
 
 int IsStar(int *v, int n)
 {
-    if(v[0]>=3 && v[1]==1)
+    if(v[0] >= 3 && v[1] == 1)
     {
         return 1;
     }
@@ -42,8 +42,8 @@ int main()
     while(M--)
     {
         scanf("%d %d", &a, &b);
-        ++Visit[a-1];
-        ++Visit[b-1];
+        ++Visit[a - 1];
+        ++Visit[b - 1];
     }
     qsort(Visit, N, sizeof(int), cmp);
     if(IsBus(Visit, N))

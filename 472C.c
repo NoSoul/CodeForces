@@ -13,7 +13,7 @@ int main()
     int N, i, Num;
     char Base[51];
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%s %s", &P[i].f, &P[i].s);
     }
@@ -23,16 +23,16 @@ int main()
         return 0;
     }
     int Len;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &Num);
         --Num;
-        if(i==0)
+        if(i == 0)
         {
             Len = strlen(P[Num].f);
             strncpy(Base, P[Num].f, Len);
             Base[Len] = '\0';
-            if(strcmp(Base, P[Num].s)>0)
+            if(strcmp(Base, P[Num].s) > 0)
             {
                 Len = strlen(P[Num].s);
                 strncpy(Base, P[Num].s, Len);
@@ -41,9 +41,9 @@ int main()
         }
         else
         {
-            if(strcmp(P[Num].f, Base)>0 && strcmp(P[Num].s, Base)>0)
+            if(strcmp(P[Num].f, Base) > 0 && strcmp(P[Num].s, Base) > 0)
             {
-                if(strcmp(P[Num].f, P[Num].s)<0)
+                if(strcmp(P[Num].f, P[Num].s) < 0)
                 {
                     Len = strlen(P[Num].f);
                     strncpy(Base, P[Num].f, Len);
@@ -56,13 +56,13 @@ int main()
                     Base[Len] = '\0';
                 }
             }
-            else if(strcmp(P[Num].f, Base)>0)
+            else if(strcmp(P[Num].f, Base) > 0)
             {
                 Len = strlen(P[Num].f);
                 strncpy(Base, P[Num].f, Len);
                 Base[Len] = '\0';
             }
-            else if(strcmp(P[Num].s, Base)>0)
+            else if(strcmp(P[Num].s, Base) > 0)
             {
                 Len = strlen(P[Num].s);
                 strncpy(Base, P[Num].s, Len);

@@ -2,24 +2,24 @@
 
 int main()
 {
-    int N,t,num,A,B,a,b;
-    scanf("%d",&N);
-    a=b=A=B=0;
+    int N, t, num, A, B, a, b;
+    scanf("%d", &N);
+    a = b = A = B = 0;
     while(N--)
     {
-        scanf("%d %d %*d",&t,&num);
-        if(t==1)
+        scanf("%d %d %*d", &t, &num);
+        if(t == 1)
         {
-            a+=num;
-            A+=10;
+            a += num;
+            A += 10;
         }
         else
         {
-            b+=num;
-            B+=10;
+            b += num;
+            B += 10;
         }
     }
-    if(a+a>=A)
+    if(a + a >= A)
     {
         puts("LIVE");
     }
@@ -27,7 +27,7 @@ int main()
     {
         puts("DEAD");
     }
-    if(b+b>=B)
+    if(b + b >= B)
     {
         puts("LIVE");
     }

@@ -4,18 +4,18 @@
 
 int main()
 {
-    int N,X,Y;
+    int N, X, Y;
     double A;
-    scanf("%d %d %d",&N,&X,&Y);
-    A=1.0*N*Y/100;
-    N=(int)A;
-    if(A-1.0*N>eps)
+    scanf("%d %d %d", &N, &X, &Y);
+    A = 1.0 * N * Y / 100;
+    N = (int)A;
+    if(A - 1.0 * N > eps)
     {
         ++N;
     }
-    if(N>X)
+    if(N > X)
     {
-        printf("%d\n",N-X);
+        printf("%d\n", N - X);
         return 0;
     }
     puts("0");

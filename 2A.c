@@ -6,65 +6,65 @@ typedef struct
     char Name[33];
     int  Score;
 } Person_t ;
-Person_t P[1000],Input[1000];
+Person_t P[1000], Input[1000];
 char flag[1000];
 
 int main()
 {
-    int N,i,j,Cnt,Max;
-    scanf("%d",&N);
-    for(Cnt=i=0; i<N; ++i)
+    int N, i, j, Cnt, Max;
+    scanf("%d", &N);
+    for(Cnt = i = 0; i < N; ++i)
     {
-        scanf("%s %d",Input[i].Name,&Input[i].Score);
-        for(j=0; j<Cnt; ++j)
+        scanf("%s %d", Input[i].Name, &Input[i].Score);
+        for(j = 0; j < Cnt; ++j)
         {
-            if(strcmp(P[j].Name,Input[i].Name)==0)
+            if(strcmp(P[j].Name, Input[i].Name) == 0)
             {
                 break;
             }
         }
-        if(j==Cnt)
+        if(j == Cnt)
         {
-            strcpy(P[j].Name,Input[i].Name);
+            strcpy(P[j].Name, Input[i].Name);
             ++Cnt;
         }
-        P[j].Score+=Input[i].Score;
+        P[j].Score += Input[i].Score;
     }
-    for(Max=P[0].Score,i=0; i<Cnt; ++i)
+    for(Max = P[0].Score, i = 0; i < Cnt; ++i)
     {
-        if(P[i].Score>Max)
+        if(P[i].Score > Max)
         {
-            Max=P[i].Score;
+            Max = P[i].Score;
         }
     }
-    for(i=0; i<Cnt; ++i)
+    for(i = 0; i < Cnt; ++i)
     {
-        if(P[i].Score==Max)
+        if(P[i].Score == Max)
         {
-            flag[i]=1;
+            flag[i] = 1;
         }
-        P[i].Score=0;
+        P[i].Score = 0;
     }
-    for(Cnt=i=0; i<N; ++i)
+    for(Cnt = i = 0; i < N; ++i)
     {
-        for(j=0; j<Cnt; ++j)
+        for(j = 0; j < Cnt; ++j)
         {
-            if(strcmp(P[j].Name,Input[i].Name)==0)
+            if(strcmp(P[j].Name, Input[i].Name) == 0)
             {
                 break;
             }
         }
-        if(j==Cnt)
+        if(j == Cnt)
         {
-            strcpy(P[j].Name,Input[i].Name);
+            strcpy(P[j].Name, Input[i].Name);
             ++Cnt;
         }
-        P[j].Score+=Input[i].Score;
-        if(P[j].Score>=Max&&flag[j])
+        P[j].Score += Input[i].Score;
+        if(P[j].Score >= Max && flag[j])
         {
             break;
         }
     }
-    printf("%s\n",P[j].Name);
+    printf("%s\n", P[j].Name);
     return 0;
 }

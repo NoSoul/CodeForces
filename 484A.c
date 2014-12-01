@@ -5,7 +5,7 @@ void Fun(long long num, unsigned char *dst)
 {
     while(num)
     {
-        dst[++dst[0]] = num&1;
+        dst[++dst[0]] = num & 1;
         num >>= 1;
     }
 }
@@ -25,21 +25,21 @@ int main()
         Fun(L, StrL);
         Fun(R, StrR);
         Ans[0] = StrR[0];
-        for(i=Ans[0]; i>0; --i)
+        for(i = Ans[0]; i > 0; --i)
         {
-            if(StrR[i]==1 && StrL[i]==0)
+            if(StrR[i] == 1 && StrL[i] == 0)
             {
                 Ans[i] = 0;
                 break;
             }
             Ans[i] = StrR[i];
         }
-        for(--i; i>0; --i)
+        for(--i; i > 0; --i)
         {
             Ans[i] = 1;
         }
         C = 0;
-        for(i=Ans[0]; i>0; --i)
+        for(i = Ans[0]; i > 0; --i)
         {
             C <<= 1;
             C |= Ans[i];

@@ -10,14 +10,14 @@ int main()
     int Size = 1;
     A[0] = 0;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &type);
         if(type == 1)
         {
             scanf("%d %d", &x, &y);
-            Add[x-1] += y;
-            Sum += x*y;
+            Add[x - 1] += y;
+            Sum += x * y;
         }
         else if(type == 2)
         {
@@ -27,12 +27,12 @@ int main()
         }
         else
         {
-            Sum -= A[Size-1]+Add[Size-1];
-            Add[Size-2] += Add[Size-1];
-            Add[Size-1] = 0;
+            Sum -= A[Size - 1] + Add[Size - 1];
+            Add[Size - 2] += Add[Size - 1];
+            Add[Size - 1] = 0;
             --Size;
         }
-        printf("%.6f\n", 1.0*Sum/Size);
+        printf("%.6f\n", 1.0 * Sum / Size);
     }
     return 0;
 }

@@ -1,24 +1,24 @@
 #include <stdio.h>
 
-int Fun(int a,int b)
+int Fun(int a, int b)
 {
-    int cnt=0;
-    while(a>0&&b>0)
+    int cnt = 0;
+    while(a > 0 && b > 0)
     {
-        if(a==b)
+        if(a == b)
         {
             ++cnt;
             break;
         }
-        else if(a>b)
+        else if(a > b)
         {
-            cnt+=a/b;
-            a-=(a/b)*b;
+            cnt += a / b;
+            a -= (a / b) * b;
         }
         else
         {
-            cnt+=b/a;
-            b-=(b/a)*a;
+            cnt += b / a;
+            b -= (b / a) * a;
         }
     }
     return cnt;
@@ -26,12 +26,12 @@ int Fun(int a,int b)
 
 int main()
 {
-    int N,A,B;
-    scanf("%d",&N);
+    int N, A, B;
+    scanf("%d", &N);
     while(N--)
     {
-        scanf("%d %d",&A,&B);
-        printf("%d\n",Fun(A,B));
+        scanf("%d %d", &A, &B);
+        printf("%d\n", Fun(A, B));
     }
     return 0;
 }

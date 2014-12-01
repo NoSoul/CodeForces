@@ -9,7 +9,7 @@ int main()
 {
     int N, i, a, b;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d %d", &a, &b);
         g_Behind[a] = b;
@@ -28,9 +28,9 @@ int main()
         }
         i += 2;
     }
-    if(N&1)
+    if(N & 1)
     {
-        for(i=1; i<1000001; ++i)
+        for(i = 1; i < 1000001; ++i)
         {
             if(g_Behind[i] && !g_Front[i] && !Vis[i])
             {
@@ -53,7 +53,7 @@ int main()
     else
     {
         a = g_Front[0];
-        i = N-2;
+        i = N - 2;
         while(1)
         {
             Ans[i] = a;
@@ -65,7 +65,7 @@ int main()
             i -= 2;
         }
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         printf("%d ", Ans[i]);
     }

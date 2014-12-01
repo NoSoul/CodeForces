@@ -13,10 +13,10 @@ int main()
 {
     int N, i;
     scanf("%d\n", &N);
-    for(i=1; i<=N; ++i)
+    for(i = 1; i <= N; ++i)
     {
         scanf("%d", &A[i]);
-        B[i] = B[i-1]+A[i-1];
+        B[i] = B[i - 1] + A[i - 1];
         Sum += A[i];
     }
     if(Sum % 3)
@@ -25,18 +25,18 @@ int main()
         return 0;
     }
     int Cnt = 0;
-    for(i=2; i<N; ++i)
+    for(i = 2; i < N; ++i)
     {
-        if(B[i] == Sum/3)
+        if(B[i] == Sum / 3)
         {
             ++Cnt;
         }
         C[i] = Cnt;
     }
     Ans = 0;
-    for(i=2; i<N; ++i)
+    for(i = 2; i < N; ++i)
     {
-        if(B[i+1] == Sum/3*2)
+        if(B[i + 1] == Sum / 3 * 2)
         {
             Ans += C[i];
         }

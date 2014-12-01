@@ -5,19 +5,19 @@ int main()
     int i, j, N, M;
     char Str[100][101];
     scanf("%d %d", &N, &M);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%s", Str[i]);
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        for(j=0; j<M; ++j)
+        for(j = 0; j < M; ++j)
         {
             if(Str[i][j] == '.')
             {
-                if(i&1)
+                if(i & 1)
                 {
-                    if(j&1)
+                    if(j & 1)
                     {
                         Str[i][j] = 'B';
                     }
@@ -28,7 +28,7 @@ int main()
                 }
                 else
                 {
-                    if(j&1)
+                    if(j & 1)
                     {
                         Str[i][j] = 'W';
                     }
@@ -40,7 +40,7 @@ int main()
             }
         }
     }
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         puts(Str[i]);
     }

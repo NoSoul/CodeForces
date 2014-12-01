@@ -10,7 +10,7 @@ int main()
     Min = 0x7fffffff;
     Max = 0;
     scanf("%d", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
         if(A[i] > Max)
@@ -22,7 +22,7 @@ int main()
             Min = A[i];
         }
     }
-    for(MaxCnt=MinCnt=i=0; i<N; ++i)
+    for(MaxCnt = MinCnt = i = 0; i < N; ++i)
     {
         if(A[i] == Max)
         {
@@ -41,13 +41,13 @@ int main()
         }
         else
         {
-            Ans = ((LL_t)N)*(N-1)/2;
+            Ans = ((LL_t)N) * (N - 1) / 2;
         }
     }
     else
     {
-        Ans = ((LL_t)MaxCnt)*MinCnt;
+        Ans = ((LL_t)MaxCnt) * MinCnt;
     }
-    printf("%d %I64d\n", Max-Min, Ans);
+    printf("%d %I64d\n", Max - Min, Ans);
     return 0;
 }

@@ -21,9 +21,9 @@ int main()
     Hash['Y' - 'A'] = 1;
     scanf("%s", Str);
     Len = strlen(Str);
-    for(i=0; i<Len; ++i)
+    for(i = 0; i < Len; ++i)
     {
-        if(!Hash[Str[i]-'A'] || Str[i]!=Str[Len-1-i])
+        if(!Hash[Str[i] - 'A'] || Str[i] != Str[Len - 1 - i])
         {
             puts("NO");
             return 0;

@@ -2,17 +2,17 @@
 
 int main()
 {
-    int  i,flag;
+    int  i, flag;
     char Str[101];
-    scanf("%s",Str);
-    for(flag=i=0; Str[i]!='\0'; ++i)
+    scanf("%s", Str);
+    for(flag = i = 0; Str[i] != '\0'; ++i)
     {
-        if(Str[i]=='H'||Str[i]=='Q'||Str[i]=='9')
+        if(Str[i] == 'H' || Str[i] == 'Q' || Str[i] == '9')
         {
-            flag=1;
+            flag = 1;
             break;
         }
     }
-    puts(flag?"YES":"NO");
+    puts(flag ? "YES" : "NO");
     return 0;
 }

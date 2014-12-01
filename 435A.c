@@ -6,7 +6,7 @@ int main()
     scanf("%d %d", &N, &M);
     Temp = M;
     Ans = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &Num);
         if(Temp > Num)
@@ -21,8 +21,8 @@ int main()
         else
         {
             ++Ans;
-            Ans += Num/M;
-            Temp = M - Num %M;
+            Ans += Num / M;
+            Temp = M - Num % M;
         }
     }
     if(Temp != M)

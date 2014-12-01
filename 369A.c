@@ -2,12 +2,12 @@
 
 int main()
 {
-    int N,M,K,i,type,Cnt;
-    scanf("%d %d %d",&N,&M,&K);
-    for(Cnt=i=0; i<N; ++i)
+    int N, M, K, i, type, Cnt;
+    scanf("%d %d %d", &N, &M, &K);
+    for(Cnt = i = 0; i < N; ++i)
     {
-        scanf("%d",&type);
-        if(type==1)
+        scanf("%d", &type);
+        if(type == 1)
         {
             if(M)
             {
@@ -37,6 +37,6 @@ int main()
             }
         }
     }
-    printf("%d\n",Cnt);
+    printf("%d\n", Cnt);
     return 0;
 }

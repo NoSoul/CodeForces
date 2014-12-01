@@ -11,10 +11,10 @@ int Size;
 int main()
 {
     int i, j, Num;
-    for(i=0; i<6; ++i)
+    for(i = 0; i < 6; ++i)
     {
         scanf("%d", &Num);
-        for(j=0; j<Size; ++j)
+        for(j = 0; j < Size; ++j)
         {
             if(List[j].l == Num)
             {
@@ -28,9 +28,9 @@ int main()
             List[Size++].n = 1;
         }
     }
-    for(i=0; i<Size-1; ++i)
+    for(i = 0; i < Size - 1; ++i)
     {
-        for(j=i+1; j<Size; ++j)
+        for(j = i + 1; j < Size; ++j)
         {
             if(List[i].n < List[j].n)
             {
@@ -49,14 +49,14 @@ int main()
     {
         List[0].n -= 4;
         int A[2];
-        for(i=0,j=0; i<Size; ++i)
+        for(i = 0, j = 0; i < Size; ++i)
         {
             while(List[i].n--)
             {
                 A[j++] = List[i].l;
             }
         }
-        puts(A[0]==A[1]?"Elephant":"Bear");
+        puts(A[0] == A[1] ? "Elephant" : "Bear");
     }
     return 0;
 }

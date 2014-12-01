@@ -12,19 +12,19 @@ int main()
         scanf("%s %d %s", Str, &Num, choice);
         if(Str[0] == '>' && Str[1] == '\0')
         {
-            Type = choice[0]=='Y' ? 1 : 4;
+            Type = choice[0] == 'Y' ? 1 : 4;
         }
         else if(Str[0] == '<' && Str[1] == '\0')
         {
-            Type = choice[0]=='Y' ? 2 : 3;
+            Type = choice[0] == 'Y' ? 2 : 3;
         }
         else if(Str[0] == '>' && Str[1] == '=')
         {
-            Type = choice[0]=='Y' ? 3 : 2;
+            Type = choice[0] == 'Y' ? 3 : 2;
         }
         else if(Str[0] == '<' && Str[1] == '=')
         {
-            Type = choice[0]=='Y' ? 4 : 1;
+            Type = choice[0] == 'Y' ? 4 : 1;
         }
         if(Type == 1)
         {
@@ -47,7 +47,7 @@ int main()
                 ge = Num;
             }
         }
-        else if(Type ==4)
+        else if(Type == 4)
         {
             if(Num < le)
             {
@@ -56,11 +56,11 @@ int main()
         }
     }
     int Min, Max;
-    Min = ge>g ? ge : g;
-    Max = le<l ? le : l;
-    for(i=Min; i<=Max; ++i)
+    Min = ge > g ? ge : g;
+    Max = le < l ? le : l;
+    for(i = Min; i <= Max; ++i)
     {
-        if(i > g && i < l && i>=ge && i<=le)
+        if(i > g && i < l && i >= ge && i <= le)
         {
             printf("%d\n", i);
             return 0;

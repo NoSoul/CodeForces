@@ -11,7 +11,7 @@ int main()
     int Cnt[MAXN];
     scanf("%d", &N);
     Max = 0;
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &Num);
         ++Cnt[Num];
@@ -22,9 +22,9 @@ int main()
     }
     Sum[0] = 0;
     Sum[1] = Cnt[1];
-    for(i=2; i<=Max; ++i)
+    for(i = 2; i <= Max; ++i)
     {
-        Sum[i] = (Sum[i-1]>(Sum[i-2]+Cnt[i]*i))?Sum[i-1]:Sum[i-2]+Cnt[i]*i;
+        Sum[i] = (Sum[i - 1] > (Sum[i - 2] + Cnt[i] * i)) ? Sum[i - 1] : Sum[i - 2] + Cnt[i] * i;
     }
     printf("%I64d\n", Sum[Max]);
     return 0;

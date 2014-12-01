@@ -3,16 +3,16 @@
 
 int Judge(char *S)
 {
-    int i,Len;
-    Len=strlen(S);
-    for(i=1; i<Len; ++i)
+    int i, Len;
+    Len = strlen(S);
+    for(i = 1; i < Len; ++i)
     {
-        if(S[i]>'Z')
+        if(S[i] > 'Z')
         {
             break;
         }
     }
-    if(i==Len)
+    if(i == Len)
     {
         return 1;
     }
@@ -21,25 +21,25 @@ int Judge(char *S)
 
 int main()
 {
-    int  i,Len;
+    int  i, Len;
     char Str[100];
-    scanf("%s",Str);
-    Len=strlen(Str);
+    scanf("%s", Str);
+    Len = strlen(Str);
     if(!Judge(Str))
     {
         puts(Str);
     }
     else
     {
-        for(i=0; i<Len; ++i)
+        for(i = 0; i < Len; ++i)
         {
-            if(Str[i]<'a')
+            if(Str[i] < 'a')
             {
-                printf("%c",Str[i]-'A'+'a');
+                printf("%c", Str[i] - 'A' + 'a');
             }
             else
             {
-                printf("%c",Str[i]-'a'+'A');
+                printf("%c", Str[i] - 'a' + 'A');
             }
         }
         printf("\n");

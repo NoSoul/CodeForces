@@ -5,33 +5,33 @@ int A[101];
 
 int main()
 {
-    int N,i,j,k,Max;
-    scanf("%d",&N);
-    for(i=1; i<=N; ++i)
+    int N, i, j, k, Max;
+    scanf("%d", &N);
+    for(i = 1; i <= N; ++i)
     {
-        scanf("%d",&A[i]);
+        scanf("%d", &A[i]);
     }
-    for(i=1; i<=N; ++i)
+    for(i = 1; i <= N; ++i)
     {
-        for(j=i; j<=N; ++j)
+        for(j = i; j <= N; ++j)
         {
-            for(k=i; k<=j; ++k)
+            for(k = i; k <= j; ++k)
             {
-                Ans[i][j]^=A[k];
+                Ans[i][j] ^= A[k];
             }
         }
     }
-    Max=0;
-    for(i=1; i<=N; ++i)
+    Max = 0;
+    for(i = 1; i <= N; ++i)
     {
-        for(j=i; j<=N; ++j)
+        for(j = i; j <= N; ++j)
         {
-            if(Ans[i][j]>Max)
+            if(Ans[i][j] > Max)
             {
-                Max=Ans[i][j];
+                Max = Ans[i][j];
             }
         }
     }
-    printf("%d\n",Max);
+    printf("%d\n", Max);
     return 0;
 }

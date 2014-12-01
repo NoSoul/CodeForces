@@ -20,6 +20,6 @@ int main()
     maxy -= miny;
     maxx -= minx;
     maxy = max(maxy, maxx);
-    printf("%I64d\n", (long long)maxy*maxy);
+    printf("%I64d\n", (long long)maxy * maxy);
     return 0;
 }

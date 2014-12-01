@@ -2,20 +2,20 @@
 
 int main()
 {
-    int Cnt=1;
+    int Cnt = 1;
     int N;
-    char Str[3],Pre;
-    scanf("%d %s",&N,Str);
-    Pre=Str[1];
+    char Str[3], Pre;
+    scanf("%d %s", &N, Str);
+    Pre = Str[1];
     while(--N)
     {
-        scanf("%s",Str);
-        if(Str[0]==Pre)
+        scanf("%s", Str);
+        if(Str[0] == Pre)
         {
             ++Cnt;
-            Pre=Str[1];
+            Pre = Str[1];
         }
     }
-    printf("%d\n",Cnt);
+    printf("%d\n", Cnt);
     return 0;
 }

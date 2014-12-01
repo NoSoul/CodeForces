@@ -3,26 +3,26 @@
 
 int main()
 {
-    int Cnt,i,Sum,Len;
+    int Cnt, i, Sum, Len;
     char Str[101];
-    Cnt=Sum=0;
-    while(gets(Str)!=NULL)
+    Cnt = Sum = 0;
+    while(gets(Str) != NULL)
     {
-        if(Str[0]=='+')
+        if(Str[0] == '+')
         {
             ++Cnt;
         }
-        else if(Str[0]=='-')
+        else if(Str[0] == '-')
         {
             --Cnt;
         }
         else
         {
-            Len=strlen(Str);
-            for(i=0; Str[i]!=':'; ++i);
-            Sum+=(Len-i-1)*Cnt;
+            Len = strlen(Str);
+            for(i = 0; Str[i] != ':'; ++i);
+            Sum += (Len - i - 1) * Cnt;
         }
     }
-    printf("%d\n",Sum);
+    printf("%d\n", Sum);
     return 0;
 }

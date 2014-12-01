@@ -6,11 +6,11 @@ int main()
 {
     int N, t, c, i, sum, Ans;
     scanf("%d %d %d", &N, &t, &c);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
     }
-    for(Ans=sum=i=0; i<N; ++i)
+    for(Ans = sum = i = 0; i < N; ++i)
     {
         if(A[i] <= t)
         {

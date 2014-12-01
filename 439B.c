@@ -13,14 +13,14 @@ int main()
     int N, X, i;
     long long Sum = 0;
     scanf("%d %d", &N, &X);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         scanf("%d", &A[i]);
     }
     qsort(A, N, sizeof(int), cmp);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
-        Sum += (long long)X*A[i];
+        Sum += (long long)X * A[i];
         --X;
         if(X == 0)
         {

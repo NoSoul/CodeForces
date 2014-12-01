@@ -6,7 +6,7 @@ typedef struct
     int r, c;
 } Node_t;
 Node_t Cur;
-Node_t Stack[60*60];
+Node_t Stack[60 * 60];
 int Size;
 
 int main()
@@ -14,17 +14,17 @@ int main()
     int N, i, j, k;
     char Str[53];
     scanf("%d\n", &N);
-    for(i=0; i<N; ++i)
+    for(i = 0; i < N; ++i)
     {
         fgets(Str, 52, stdin);
-        for(j=0; Str[j] !='\0'; ++j)
+        for(j = 0; Str[j] != '\0'; ++j)
         {
-            Cur.r = i+1;
-            Cur.c = j+1;
+            Cur.r = i + 1;
+            Cur.c = j + 1;
             Cur.ch = Str[j];
-            if(Str[j]>='a' && Str[j]<='z')
+            if(Str[j] >= 'a' && Str[j] <= 'z')
             {
-                for(k=Size-1; k>=0; --k)
+                for(k = Size - 1; k >= 0; --k)
                 {
                     if(Cur.ch == Stack[k].ch)
                     {
@@ -40,7 +40,7 @@ int main()
             }
             else if(Str[j] == '}')
             {
-                while(Stack[Size-1].ch != '{')
+                while(Stack[Size - 1].ch != '{')
                 {
                     --Size;
                 }

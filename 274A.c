@@ -70,7 +70,8 @@ int main()
                 {
                     pos = -1;
                 }
-            } while(pos != -1);
+            }
+            while(pos != -1);
             Ans += (Cnt + 1) / 2;
         }
     }

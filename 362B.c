@@ -11,20 +11,16 @@ int main()
     int i, N, M;
     int A[3000];
     scanf("%d %d", &N, &M);
-    for(i = 0; i < M; ++i)
-    {
+    for(i = 0; i < M; ++i) {
         scanf("%d", &A[i]);
     }
     qsort(A, M, sizeof(int), cmp);
-    if(A[0] == 1 || A[M - 1] == N)
-    {
+    if(A[0] == 1 || A[M - 1] == N) {
         puts("NO");
         return 0;
     }
-    for(i = 0; i < M - 2; ++i)
-    {
-        if(A[i + 1] == A[i] + 1 && A[i + 2] == A[i] + 2)
-        {
+    for(i = 0; i < M - 2; ++i) {
+        if(A[i + 1] == A[i] + 1 && A[i + 2] == A[i] + 2) {
             puts("NO");
             return 0;
         }

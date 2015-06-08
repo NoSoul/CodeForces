@@ -8,26 +8,18 @@ int main()
     char StrA[MAXN], StrB[MAXN];
     scanf("%s %s", StrA, StrB);
     A = B = 0;
-    for(i = 0; StrA[i] != '\0'; ++i)
-    {
-        if(StrB[i] != StrA[i])
-        {
-            if(StrA[i] == '4')
-            {
+    for(i = 0; StrA[i] != '\0'; ++i) {
+        if(StrB[i] != StrA[i]) {
+            if(StrA[i] == '4') {
                 ++A;
-            }
-            else
-            {
+            } else {
                 ++B;
             }
         }
     }
-    if(A < B)
-    {
+    if(A < B) {
         printf("%d\n", B);
-    }
-    else
-    {
+    } else {
         printf("%d\n", A);
     }
     return 0;

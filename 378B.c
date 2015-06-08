@@ -4,8 +4,7 @@
 
 #define MAXN	100000
 
-typedef struct
-{
+typedef struct {
     int id;
     int value;
     char first;
@@ -22,8 +21,7 @@ int main()
 {
     int N, i;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d %d", &Data[i * 2].value, &Data[i * 2 + 1].value);
         Data[i * 2].id = i;
         Data[i * 2].first = 1;
@@ -31,28 +29,21 @@ int main()
         Data[i * 2 + 1].first = 0;
     }
     qsort(Data, 2 * N, sizeof(Res_t), cmp);
-    for(i = 0; i < N / 2; ++i)
-    {
+    for(i = 0; i < N / 2; ++i) {
         Hash1[i] = Hash2[i] = 1;
     }
-    for(i = 0; i < N; ++i)
-    {
-        if(Data[i].first)
-        {
+    for(i = 0; i < N; ++i) {
+        if(Data[i].first) {
             Hash1[Data[i].id] = 1;
-        }
-        else
-        {
+        } else {
             Hash2[Data[i].id] = 1;
         }
     }
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         printf("%d", Hash1[i]);
     }
     printf("\n");
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         printf("%d", Hash2[i]);
     }
     return 0;

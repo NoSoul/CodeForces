@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct
-{
+typedef struct {
     int a, b;
 } Node_t;
 
@@ -22,28 +21,22 @@ int main()
     scanf("%d %d %d", &N, &R, &AVG);
     Bound = AVG;
     Bound *= N;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d %d", &A[i].a, &A[i].b);
         Sum += A[i].a;
     }
-    if(Sum >= Bound)
-    {
+    if(Sum >= Bound) {
         puts("0");
         return 0;
     }
     qsort(A, N, sizeof(Node_t), cmp);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         long long available = (long long)R - A[i].a;
         long long need = Bound - Sum;
-        if(need > available)
-        {
+        if(need > available) {
             Ans += available * A[i].b;
             Sum += available;
-        }
-        else
-        {
+        } else {
             Ans += need * A[i].b;
             Sum += need;
             break;

@@ -6,18 +6,15 @@ int main()
     scanf("%d %d %d", &A, &B, &C);
     Ans = A + B + C;
     exp = (A + B) * C;
-    if(exp > Ans)
-    {
+    if(exp > Ans) {
         Ans = exp;
     }
     exp = A * (B + C);
-    if(exp > Ans)
-    {
+    if(exp > Ans) {
         Ans = exp;
     }
     exp = A * B * C;
-    if(exp > Ans)
-    {
+    if(exp > Ans) {
         Ans = exp;
     }
     printf("%d\n", Ans);

@@ -9,17 +9,14 @@ int main()
     int N, M, i, a, b, c;
     double Ans = 0;
     scanf("%d %d", &N, &M);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &Value[i]);
     }
-    for(i = 0; i < M; ++i)
-    {
+    for(i = 0; i < M; ++i) {
         scanf("%d %d %d", &a, &b, &c);
         --a;
         --b;
-        if(Ans < 1.0 * (Value[a] + Value[b]) / c)
-        {
+        if(Ans < 1.0 * (Value[a] + Value[b]) / c) {
             Ans = 1.0 * (Value[a] + Value[b]) / c;
         }
     }

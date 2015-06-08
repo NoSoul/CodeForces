@@ -5,8 +5,7 @@ int main()
     int N, M, i;
     char Str[2][21];
     scanf("%d %d", &N, &M);
-    for(i = 0; i < 2; ++i)
-    {
+    for(i = 0; i < 2; ++i) {
         scanf("%s", Str[i]);
     }
     puts((Str[0][0] == '<' && Str[1][0] == '^')

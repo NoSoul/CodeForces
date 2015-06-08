@@ -12,14 +12,12 @@ int main()
     char Str[1001];
     int A[1001];
     scanf("%d %d", &N, &M);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%s", Str);
         for(j = 0; Str[j] != 'G'; ++j);
         int Pos = j;
         for(; Str[j] != 'S' && Str[j] != '\0'; ++j);
-        if(j == M)
-        {
+        if(j == M) {
             printf("-1\n");
             return 0;
         }
@@ -28,10 +26,8 @@ int main()
     qsort(A, N, sizeof(int), cmp);
     Pre = A[0];
     Cnt = 1;
-    for(i = 1; i < N; ++i)
-    {
-        if(A[i] != Pre)
-        {
+    for(i = 1; i < N; ++i) {
+        if(A[i] != Pre) {
             Pre = A[i];
             ++Cnt;
         }

@@ -16,18 +16,15 @@ int main()
     LL_t Sum;
     scanf("%d", &N);
     Sum = 0;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &Map[i]);
         Sum += (LL_t)Map[i];
     }
     qsort(Map, N, sizeof(int), cmp);
     M = 4;
-    while(N >= M)
-    {
+    while(N >= M) {
         a = N / M;
-        for(i = 0; i < a; ++i)
-        {
+        for(i = 0; i < a; ++i) {
             Sum += (LL_t)Map[i];
         }
         M <<= 2;

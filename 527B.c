@@ -11,13 +11,10 @@ int main()
     int i, j;
     scanf("%*d %s %s", S, T);
     AnsI = AnsJ = -1;
-    for(i = 0; S[i] != '\0'; ++i)
-    {
-        if(S[i] != T[i])
-        {
+    for(i = 0; S[i] != '\0'; ++i) {
+        if(S[i] != T[i]) {
             Hash[S[i] - 'a'][T[i] - 'a'] = i + 1;
-            if(Hash[T[i] - 'a'][S[i] - 'a'])
-            {
+            if(Hash[T[i] - 'a'][S[i] - 'a']) {
                 Ans = -2;
                 AnsI = Hash[T[i] - 'a'][S[i] - 'a'];
                 AnsJ = Hash[S[i] - 'a'][T[i] - 'a'];
@@ -25,16 +22,11 @@ int main()
             }
         }
     }
-    if(AnsI == -1)
-    {
-        for(i = 0; S[i] != '\0'; ++i)
-        {
-            if(S[i] != T[i])
-            {
-                for(j = 0; j < 26; ++j)
-                {
-                    if(Hash[j][S[i] - 'a'])
-                    {
+    if(AnsI == -1) {
+        for(i = 0; S[i] != '\0'; ++i) {
+            if(S[i] != T[i]) {
+                for(j = 0; j < 26; ++j) {
+                    if(Hash[j][S[i] - 'a']) {
                         Ans = -1;
                         AnsI = Hash[j][S[i] - 'a'];
                         AnsJ = Hash[S[i] - 'a'][T[i] - 'a'];
@@ -44,10 +36,8 @@ int main()
             }
         }
     }
-    for(i = 0; S[i] != '\0'; ++i)
-    {
-        if(S[i] != T[i])
-        {
+    for(i = 0; S[i] != '\0'; ++i) {
+        if(S[i] != T[i]) {
             ++Ans;
         }
     }

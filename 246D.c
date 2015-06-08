@@ -5,15 +5,13 @@
 #define MAXV 100001
 #define MAXE 200001
 
-typedef struct
-{
+typedef struct {
     int to, next;
 } Edge;
 Edge E[MAXE];
 int Adj[MAXV], Size;
 
-typedef struct
-{
+typedef struct {
     int index, c;
 } Value;
 Value V[MAXV];
@@ -23,8 +21,7 @@ int Res[MAXV], Len;
 void Init(int N)
 {
     int i;
-    for(Size = i = 0; i <= N; ++i)
-    {
+    for(Size = i = 0; i <= N; ++i) {
         Adj[i] = -1;
     }
     return;
@@ -47,8 +44,7 @@ void _Add_Edge(int u, int v)
 
 int cmp(const void *a, const void *b)
 {
-    if((*(Value *)a).c == (*(Value *)b).c)
-    {
+    if((*(Value *)a).c == (*(Value *)b).c) {
         return (*(Value *)a).index - (*(Value *)b).index;
     }
     return (*(Value *)a).c - (*(Value *)b).c;
@@ -57,17 +53,13 @@ int cmp(const void *a, const void *b)
 void Find(int u)
 {
     int i, j;
-    for(i = Adj[u]; ~i; i = E[i].next)
-    {
-        for(j = 0; j < Len; ++j)
-        {
-            if(Res[j] == A[E[i].to])
-            {
+    for(i = Adj[u]; ~i; i = E[i].next) {
+        for(j = 0; j < Len; ++j) {
+            if(Res[j] == A[E[i].to]) {
                 break;
             }
         }
-        if(j == Len)
-        {
+        if(j == Len) {
             Res[Len++] = A[E[i].to];
         }
     }
@@ -79,36 +71,29 @@ int main()
     int N, M, i, j, Max, Ans;
     scanf("%d %d", &N, &M);
     Init(N);
-    for(i = 1; i <= N; ++i)
-    {
+    for(i = 1; i <= N; ++i) {
         V[i].index = i;
         scanf("%d", &V[i].c);
         A[i] = V[i].c;
     }
-    while(M--)
-    {
+    while(M--) {
         scanf("%d %d", &i, &j);
-        if(V[i].c != V[j].c)
-        {
+        if(V[i].c != V[j].c) {
             _Add_Edge(i, j);
         }
     }
     qsort(V + 1, N, sizeof(Value), cmp);
     Max = 0;
-    for(i = 1; i <= N; i = j)
-    {
+    for(i = 1; i <= N; i = j) {
         Len = 0;
         Res[Len++] = A[V[i].index];
-        for(j = i; j <= N; ++j)
-        {
-            if(V[j].c != V[i].c)
-            {
+        for(j = i; j <= N; ++j) {
+            if(V[j].c != V[i].c) {
                 break;
             }
             Find(V[j].index);
         }
-        if(Len > Max)
-        {
+        if(Len > Max) {
             Max = Len;
             Ans = V[i].c;
         }

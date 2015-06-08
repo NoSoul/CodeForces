@@ -5,13 +5,10 @@ int main()
     int  i, cnt;
     char Str[101];
     scanf("%s", Str);
-    for(cnt = i = 1; Str[i] != '\0'; ++i)
-    {
-        if(Str[i] == Str[i - 1])
-        {
+    for(cnt = i = 1; Str[i] != '\0'; ++i) {
+        if(Str[i] == Str[i - 1]) {
             ++cnt;
-            if(cnt == 7)
-            {
+            if(cnt == 7) {
                 break;
             }
             continue;

@@ -6,8 +6,7 @@ int main()
     long long Ans;
     scanf("%d", &N);
     Ans = N;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &Num);
         Ans += (long long)(i + 1) * (Num - 1);
     }

@@ -3,8 +3,7 @@
 int GCD(int a, int b)
 {
     int temp;
-    while(b)
-    {
+    while(b) {
         temp = a;
         a = b;
         b = temp % b;
@@ -15,27 +14,19 @@ int GCD(int a, int b)
 int main()
 {
     int A, B, N, C;
-    while(scanf("%d %d %d", &A, &B, &N) != EOF)
-    {
-        while(1)
-        {
+    while(scanf("%d %d %d", &A, &B, &N) != EOF) {
+        while(1) {
             C = GCD(A, N);
-            if(N >= C)
-            {
+            if(N >= C) {
                 N -= C;
-            }
-            else
-            {
+            } else {
                 puts("1");
                 break;
             }
             C = GCD(B, N);
-            if(N >= C)
-            {
+            if(N >= C) {
                 N -= C;
-            }
-            else
-            {
+            } else {
                 puts("0");
                 break;
             }

@@ -3,8 +3,7 @@
 int GCD(int a, int b)
 {
     int temp;
-    while(b)
-    {
+    while(b) {
         temp = a % b;
         a = b;
         b = temp;
@@ -16,8 +15,7 @@ int main()
 {
     int N, i, a, b;
     scanf("%d %d", &N, &a);
-    for(i = 1; i < N; ++i)
-    {
+    for(i = 1; i < N; ++i) {
         scanf("%d", &b);
         a = GCD(a, b);
     }

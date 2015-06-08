@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-typedef struct
-{
+typedef struct {
     int x, y;
 } Point_t;
 
@@ -18,11 +17,9 @@ int main()
     scanf("%d %d %d %d", &h.x, &h.y, &s.x, &s.y);
     scanf("%d", &N);
     int a, b, c;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d %d %d", &a, &b, &c);
-        if(Fun(a, b, c, h, s))
-        {
+        if(Fun(a, b, c, h, s)) {
             ++Ans;
         }
     }

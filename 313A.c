@@ -4,27 +4,18 @@ int main()
 {
     int N, A, B;
     scanf("%d", &N);
-    if(N >= 0)
-    {
+    if(N >= 0) {
         printf("%d\n", N);
-    }
-    else
-    {
+    } else {
         N = -N;
-        if(N < 10)
-        {
+        if(N < 10) {
             printf("0\n");
-        }
-        else
-        {
+        } else {
             A = (N / 100) * 10 + N % 10;
             B = N / 10;
-            if(A < B)
-            {
+            if(A < B) {
                 printf("%d\n", -A);
-            }
-            else
-            {
+            } else {
                 printf("%d\n", -B);
             }
         }

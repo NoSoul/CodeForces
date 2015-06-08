@@ -10,23 +10,17 @@ int main()
     int Size = 1;
     A[0] = 0;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &type);
-        if(type == 1)
-        {
+        if(type == 1) {
             scanf("%d %d", &x, &y);
             Add[x - 1] += y;
             Sum += x * y;
-        }
-        else if(type == 2)
-        {
+        } else if(type == 2) {
             scanf("%d", &x);
             A[Size++] = x;
             Sum += x;
-        }
-        else
-        {
+        } else {
             Sum -= A[Size - 1] + Add[Size - 1];
             Add[Size - 2] += Add[Size - 1];
             Add[Size - 1] = 0;

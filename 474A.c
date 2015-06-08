@@ -8,16 +8,12 @@ int main()
     scanf("%s", Cmd);
     scanf("%s", Recv);
     int offset = 1;
-    if(Cmd[0] == 'R')
-    {
+    if(Cmd[0] == 'R') {
         offset = -1;
     }
-    for(i = 0; Recv[i] != '\0'; ++i)
-    {
-        for(j = 0; j < 31; ++j)
-        {
-            if(Recv[i] == Str[j])
-            {
+    for(i = 0; Recv[i] != '\0'; ++i) {
+        for(j = 0; j < 31; ++j) {
+            if(Recv[i] == Str[j]) {
                 putchar(Str[j + offset]);
                 break;
             }

@@ -4,13 +4,11 @@ int main()
 {
     int N, A, B, Now = 0, Max = 0;
     scanf("%d", &N);
-    while(N--)
-    {
+    while(N--) {
         scanf("%d %d", &A, &B);
         Now = Now < A ? 0 : Now - A;
         Now += B;
-        if(Max < Now)
-        {
+        if(Max < Now) {
             Max = Now;
         }
     }

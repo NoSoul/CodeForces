@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-typedef struct
-{
+typedef struct {
     int k;
     char visit;
     unsigned int flag[4];
@@ -30,64 +29,46 @@ int main()
 {
     int N, M, i, j, Num, Ans = 0, Sum = 0;
     scanf("%d %d", &N, &M);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i].k);
         Sum += A[i].k;
         A[i].visit = 0;
-        for(j = 0; j < 4; ++j)
-        {
+        for(j = 0; j < 4; ++j) {
             A[i].flag[j] = 0;
         }
-        for(j = 0; j < A[i].k; ++j)
-        {
+        for(j = 0; j < A[i].k; ++j) {
             scanf("%d", &Num);
             --Num;
-            if(Num < 32)
-            {
+            if(Num < 32) {
                 A[i].flag[0] |= 1 << Num;
-            }
-            else if(Num < 64)
-            {
+            } else if(Num < 64) {
                 A[i].flag[1] |= 1 << (Num - 32);
-            }
-            else if(Num < 96)
-            {
+            } else if(Num < 96) {
                 A[i].flag[2] |= 1 << (Num - 64);
-            }
-            else
-            {
+            } else {
                 A[i].flag[3] |= 1 << (Num - 96);
             }
         }
     }
-    if(Sum == 0)
-    {
+    if(Sum == 0) {
         printf("%d\n", N);
         return 0;
     }
-    for(i = 0; i < N; ++i)
-    {
-        if(!A[i].visit)
-        {
+    for(i = 0; i < N; ++i) {
+        if(!A[i].visit) {
             ++Ans;
-            while(1)
-            {
+            while(1) {
                 char flag = 0;
-                for(j = i + 1; j < N; ++j)
-                {
-                    if(!A[j].visit)
-                    {
-                        if(InSet(i, j))
-                        {
+                for(j = i + 1; j < N; ++j) {
+                    if(!A[j].visit) {
+                        if(InSet(i, j)) {
                             flag = 1;
                             A[j].visit = 1;
                             Merge(i, j);
                         }
                     }
                 }
-                if(!flag)
-                {
+                if(!flag) {
                     break;
                 }
             }

@@ -9,24 +9,19 @@ int main()
     freopen("output.txt", "w", stdout);
     int N, m, d, p, t, i, Max, s;
     scanf("%d", &N);
-    while(N--)
-    {
+    while(N--) {
         scanf("%d %d %d %d", &m, &d, &p, &t);
-        for(s = 0, i = 1; i < m; ++i)
-        {
+        for(s = 0, i = 1; i < m; ++i) {
             s += Date[i];
         }
         s += d;
         s += 100;
-        for(i = s - t; i < s; ++i)
-        {
+        for(i = s - t; i < s; ++i) {
             Hash[i] += p;
         }
     }
-    for(Max = i = 1; i < 466; ++i)
-    {
-        if(Hash[i] && Max < Hash[i])
-        {
+    for(Max = i = 1; i < 466; ++i) {
+        if(Hash[i] && Max < Hash[i]) {
             Max = Hash[i];
         }
     }

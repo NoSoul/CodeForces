@@ -9,12 +9,10 @@ int main()
     scanf("%d %d %d", &N, &X, &Y);
     A = 1.0 * N * Y / 100;
     N = (int)A;
-    if(A - 1.0 * N > eps)
-    {
+    if(A - 1.0 * N > eps) {
         ++N;
     }
-    if(N > X)
-    {
+    if(N > X) {
         printf("%d\n", N - X);
         return 0;
     }

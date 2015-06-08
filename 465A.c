@@ -6,15 +6,12 @@ int main()
     char Str[101];
     scanf("%d", &N);
     scanf("%s", Str);
-    for(i = 0; i < N; ++i)
-    {
-        if(Str[i] == '0')
-        {
+    for(i = 0; i < N; ++i) {
+        if(Str[i] == '0') {
             break;
         }
     }
-    if(i < N)
-    {
+    if(i < N) {
         ++i;
     }
     printf("%d\n", i);

@@ -2,8 +2,7 @@
 
 #define MAXN	100001
 
-typedef struct
-{
+typedef struct {
     int mV;
     int mNext;
     char mType;
@@ -11,8 +10,7 @@ typedef struct
 Edge_t E[MAXN << 1];
 int Adj[MAXN], Size;
 
-typedef struct
-{
+typedef struct {
     int mIndex;
     int mValue;
 } Node_t;
@@ -26,8 +24,7 @@ int AnsCnt, Ans[MAXN];
 void Init(int N)
 {
     int i;
-    for(Size = i = 0; i <= N; ++i)
-    {
+    for(Size = i = 0; i <= N; ++i) {
         Adj[i] = -1;
     }
 }
@@ -48,16 +45,12 @@ void BFS(int start)
     Queue[Head].mIndex = start;
     Queue[Head].mValue = 0;
     Visited[start] = 1;
-    while(Head < Tail)
-    {
-        for(flag = 0, i = Adj[Queue[Head].mIndex]; ~i; i = E[i].mNext)
-        {
-            if(!Visited[E[i].mV])
-            {
+    while(Head < Tail) {
+        for(flag = 0, i = Adj[Queue[Head].mIndex]; ~i; i = E[i].mNext) {
+            if(!Visited[E[i].mV]) {
                 Queue[Tail].mIndex = E[i].mV;
                 Queue[Tail].mValue = Queue[Head].mValue;
-                if(E[i].mType == 2)
-                {
+                if(E[i].mType == 2) {
                     Updated[Queue[Head].mValue] = 1;
                     Queue[Tail].mValue = E[i].mV;
                 }
@@ -66,8 +59,7 @@ void BFS(int start)
                 flag = 1;
             }
         }
-        if(flag == 0 && Queue[Head].mValue != 0 && Stored[Queue[Head].mValue] == 0)
-        {
+        if(flag == 0 && Queue[Head].mValue != 0 && Stored[Queue[Head].mValue] == 0) {
             Stored[Queue[Head].mValue] = 1;
             Ans[AnsCnt++] = Queue[Head].mValue;
         }
@@ -80,25 +72,21 @@ int main()
     int N, i, u, v, type;
     scanf("%d", &N);
     Init(N);
-    for(i = 0; i < N - 1; ++i)
-    {
+    for(i = 0; i < N - 1; ++i) {
         scanf("%d %d %d", &u, &v, &type);
         Add_Edge(u, v, type);
         Add_Edge(v, u, type);
     }
     BFS(1);
-    for(i = 0; i < AnsCnt; ++i)
-    {
-        if(Updated[Ans[i]])
-        {
+    for(i = 0; i < AnsCnt; ++i) {
+        if(Updated[Ans[i]]) {
             Ans[i] = Ans[AnsCnt - 1];
             --i;
             --AnsCnt;
         }
     }
     printf("%d\n", AnsCnt);
-    for(i = 0; i < AnsCnt; ++i)
-    {
+    for(i = 0; i < AnsCnt; ++i) {
         printf("%d ", Ans[i]);
     }
     return 0;

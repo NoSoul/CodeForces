@@ -12,12 +12,10 @@ int main()
 {
     int N, K, i;
     scanf("%d %d", &N, &K);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
-    if(K > N)
-    {
+    if(K > N) {
         printf("-1\n");
         return 0;
     }

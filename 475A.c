@@ -2,8 +2,7 @@
 
 int main()
 {
-    char Str[6][28] =
-    {
+    char Str[6][28] = {
         "+------------------------+",
         "|#.#.#.#.#.#.#.#.#.#.#.|D|)",
         "|#.#.#.#.#.#.#.#.#.#.#.|.|",
@@ -13,20 +12,14 @@ int main()
     };
     int K, i, j, k;
     scanf("%d", &K);
-    while(K)
-    {
-        for(j = 0; j < 27; ++j)
-        {
-            for(i = 0; i < 6; ++i)
-            {
-                if(Str[i][j] == '#')
-                {
+    while(K) {
+        for(j = 0; j < 27; ++j) {
+            for(i = 0; i < 6; ++i) {
+                if(Str[i][j] == '#') {
                     Str[i][j] = 'O';
                     --K;
-                    if(!K)
-                    {
-                        for(k = 0; k < 6; ++k)
-                        {
+                    if(!K) {
+                        for(k = 0; k < 6; ++k) {
                             puts(Str[k]);
                         }
                         return 0;
@@ -35,8 +28,7 @@ int main()
             }
         }
     }
-    for(k = 0; k < 6; ++k)
-    {
+    for(k = 0; k < 6; ++k) {
         puts(Str[k]);
     }
     return 0;

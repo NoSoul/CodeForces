@@ -7,22 +7,17 @@ int main()
 {
     int N, S, T, Cnt, i;
     scanf("%d %d %d", &N, &S, &T);
-    for(i = 1; i <= N; ++i)
-    {
+    for(i = 1; i <= N; ++i) {
         scanf("%d", &A[i]);
     }
     Hash[S] = 1;
     Cnt = 0;
-    while(S != T)
-    {
+    while(S != T) {
         S = A[S];
-        if(Hash[S])
-        {
+        if(Hash[S]) {
             Cnt = -1;
             break;
-        }
-        else
-        {
+        } else {
             Hash[S] = 1;
             ++Cnt;
         }

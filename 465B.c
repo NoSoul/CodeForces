@@ -6,23 +6,15 @@ int main()
     scanf("%d", &N);
     Pre = -1;
     Ans = 0;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d ", &Num);
-        if(Num == 1)
-        {
-            if(Pre == -1)
-            {
+        if(Num == 1) {
+            if(Pre == -1) {
                 Ans = 1;
-            }
-            else
-            {
-                if(i - Pre >= 2)
-                {
+            } else {
+                if(i - Pre >= 2) {
                     Ans += 2;
-                }
-                else
-                {
+                } else {
                     ++Ans;
                 }
             }

@@ -11,17 +11,14 @@ int main()
     int N, i, sum, now;
     int A[100];
     scanf("%d", &N);
-    for(sum = i = 0; i < N; ++i)
-    {
+    for(sum = i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
         sum += A[i];
     }
     qsort(A, N, sizeof(int), cmp);
-    for(now = i = 0; i < N; ++i)
-    {
+    for(now = i = 0; i < N; ++i) {
         now += A[i];
-        if(now > sum - now)
-        {
+        if(now > sum - now) {
             break;
         }
     }

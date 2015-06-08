@@ -3,8 +3,7 @@
 #include <string.h>
 
 #define MAXN    1000001
-typedef struct
-{
+typedef struct {
     int id;
     int pos;
 } Stone_t;
@@ -24,23 +23,18 @@ int main()
     N = strlen(Str);
     l = 1;
     r = N;
-    for(i = 0; Str[i] != '\0'; ++i)
-    {
+    for(i = 0; Str[i] != '\0'; ++i) {
         Ans[i].id = i + 1;
-        if(Str[i] == 'l')
-        {
+        if(Str[i] == 'l') {
             Ans[i].pos = r;
             --r;
-        }
-        else
-        {
+        } else {
             Ans[i].pos = l;
             ++l;
         }
     }
     qsort(Ans, N, sizeof(Stone_t), cmp);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         printf("%d\n", Ans[i].id);
     }
     return 0;

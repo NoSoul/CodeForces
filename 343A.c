@@ -8,22 +8,15 @@ int main()
 {
     Ans = 0;
     scanf("%I64d %I64d", &A, &B);
-    while(A)
-    {
-        if(A >= B)
-        {
+    while(A) {
+        if(A >= B) {
             Ans += A / B;
             A %= B;
-        }
-        else
-        {
-            if(B % A == 0)
-            {
+        } else {
+            if(B % A == 0) {
                 Ans += B / A - 1;
                 B = A;
-            }
-            else
-            {
+            } else {
                 Ans += B / A;
                 B -= (B / A) * A;
             }

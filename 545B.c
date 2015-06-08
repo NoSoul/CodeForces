@@ -6,31 +6,23 @@ int main()
     char T[100001];
     int i, N = 0;
     scanf("%s %s", S, T);
-    for(i = 0; S[i] != '\0'; ++i)
-    {
-        if(S[i] != T[i])
-        {
+    for(i = 0; S[i] != '\0'; ++i) {
+        if(S[i] != T[i]) {
             ++N;
         }
     }
-    if(N & 1)
-    {
+    if(N & 1) {
         puts("impossible");
         return 0;
     }
     N /= 2;
-    for(i = 0; S[i] != '\0'; ++i)
-    {
-        if(S[i] != T[i])
-        {
+    for(i = 0; S[i] != '\0'; ++i) {
+        if(S[i] != T[i]) {
             putchar(N ? S[i] : T[i]);
-            if(N)
-            {
+            if(N) {
                 --N;
             }
-        }
-        else
-        {
+        } else {
             putchar(S[i]);
         }
     }

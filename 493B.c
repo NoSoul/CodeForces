@@ -10,52 +10,34 @@ int main()
     long long Sum;
     scanf("%d", &N);
     Sum = 0;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &a);
-        if(a > 0)
-        {
+        if(a > 0) {
             F[SizeF++] = a;
-        }
-        else
-        {
+        } else {
             S[SizeS++] = -a;
         }
         Sum += a;
     }
-    if(Sum > 0)
-    {
+    if(Sum > 0) {
         puts("first");
-    }
-    else if(Sum < 0)
-    {
+    } else if(Sum < 0) {
         puts("second");
-    }
-    else
-    {
-        for(i = 0; i < SizeF && i < SizeS; ++i)
-        {
-            if(F[i] > S[i])
-            {
+    } else {
+        for(i = 0; i < SizeF && i < SizeS; ++i) {
+            if(F[i] > S[i]) {
                 puts("first");
                 return 0;
-            }
-            else if(F[i] < S[i])
-            {
+            } else if(F[i] < S[i]) {
                 puts("second");
                 return 0;
             }
         }
-        if(SizeF > SizeS)
-        {
+        if(SizeF > SizeS) {
             puts("first");
-        }
-        else if(SizeF < SizeS)
-        {
+        } else if(SizeF < SizeS) {
             puts("second");
-        }
-        else
-        {
+        } else {
             puts(a > 0 ? "first" : "second");
         }
     }

@@ -4,8 +4,7 @@ int main()
 {
     int T, a;
     scanf("%d", &T);
-    while(T--)
-    {
+    while(T--) {
         scanf("%d", &a);
         puts(360 % (180 - a) ? "NO" : "YES");
     }

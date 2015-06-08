@@ -5,11 +5,9 @@ int main()
 {
     int i, Flag;
     char Str[10];
-    for(i = 0, Flag = 1; i < 8; ++i)
-    {
+    for(i = 0, Flag = 1; i < 8; ++i) {
         scanf("%s", Str);
-        if(!(strcmp(Str, "WBWBWBWB") == 0 || strcmp(Str, "BWBWBWBW") == 0))
-        {
+        if(!(strcmp(Str, "WBWBWBWB") == 0 || strcmp(Str, "BWBWBWBW") == 0)) {
             Flag = 0;
         }
     }

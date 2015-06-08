@@ -10,19 +10,13 @@ LL GetSum(LL i, LL K)
 LL Binary(LL K, LL N)
 {
     LL Left = 1, Right = K, Mid;
-    while(Right > Left)
-    {
+    while(Right > Left) {
         Mid = (Left + Right) / 2;
-        if(GetSum(Mid, K) == N)
-        {
+        if(GetSum(Mid, K) == N) {
             return Mid;
-        }
-        else if(GetSum(Mid, K) < N)
-        {
+        } else if(GetSum(Mid, K) < N) {
             Right = Mid;
-        }
-        else
-        {
+        } else {
             Left = Mid + 1;
         }
     }
@@ -33,31 +27,24 @@ int main()
 {
     freopen("IO", "r", stdin);
     LL N, K, index;
-    while(scanf("%lld %lld", &N, &K) != EOF)
-    {
-        if(N == 1)
-        {
+    while(scanf("%lld %lld", &N, &K) != EOF) {
+        if(N == 1) {
             puts("0");
             continue;
         }
-        if(N <= K)
-        {
+        if(N <= K) {
             puts("1");
             continue;
         }
         --N;
-        if(N == 0 || N > K * (K - 1) / 2)
-        {
+        if(N == 0 || N > K * (K - 1) / 2) {
             puts("-1");
             continue;
         }
         index = Binary(K - 1, N);
-        if(GetSum(index, K - 1) == N)
-        {
+        if(GetSum(index, K - 1) == N) {
             printf("%d\n", K - index);
-        }
-        else
-        {
+        } else {
             printf("%d\n", K - index + 1);
         }
     }

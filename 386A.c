@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct
-{
+typedef struct {
     int id, p;
 } Bidders_t;
 Bidders_t A[1000];
@@ -16,8 +15,7 @@ int main()
 {
     int N, i;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i].p);
         A[i].id = i + 1;
     }

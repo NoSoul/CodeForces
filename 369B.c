@@ -2,16 +2,13 @@
 
 void Show(int sum, int n, int l, int r)
 {
-    if(n == 0)
-    {
+    if(n == 0) {
         return;
     }
     int i, j, mod = sum % n;
-    for(i = 0; i < n; ++i)
-    {
+    for(i = 0; i < n; ++i) {
         j = sum / n;
-        if(mod > 0)
-        {
+        if(mod > 0) {
             --mod;
             ++j;
         }

@@ -14,8 +14,7 @@ int main()
     Str[1][M] = '\0';
     Str[2][M] = '\0';
     Str[1][M - 1] = '#';
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         puts((i & 1) ? ((i & 3) == 1 ? Str[1] : Str[2]) : Str[0]);
     }
     return 0;

@@ -8,11 +8,9 @@ int main()
     int N, T, i;
     scanf("%d %d", &N, &T);
     Hash[1] = 1;
-    for(i = 1; i < N; ++i)
-    {
+    for(i = 1; i < N; ++i) {
         scanf("%d", &A[i]);
-        if(Hash[i])
-        {
+        if(Hash[i]) {
             Hash[i + A[i]] = 1;
         }
     }

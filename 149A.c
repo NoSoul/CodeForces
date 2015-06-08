@@ -11,31 +11,22 @@ int main()
     int i, j, K, sum;
     int A[12];
     scanf("%d", &K);
-    for(i = 0; i < 12; ++i)
-    {
+    for(i = 0; i < 12; ++i) {
         scanf("%d", &A[i]);
     }
-    if(K == 0)
-    {
+    if(K == 0) {
         printf("0\n");
-    }
-    else
-    {
+    } else {
         qsort(A, 12, sizeof(int), cmp);
-        for(j = 1, sum = i = 0; i < 12; ++i, ++j)
-        {
+        for(j = 1, sum = i = 0; i < 12; ++i, ++j) {
             sum += A[i];
-            if(sum >= K)
-            {
+            if(sum >= K) {
                 break;
             }
         }
-        if(sum < K)
-        {
+        if(sum < K) {
             printf("-1\n");
-        }
-        else
-        {
+        } else {
             printf("%d\n", j);
         }
     }

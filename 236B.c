@@ -10,13 +10,10 @@ int Cnt;
 void Make()
 {
     int i, j;
-    for(Cnt = 0, i = 2; i < MAXN; ++i)
-    {
-        if(!B[i])
-        {
+    for(Cnt = 0, i = 2; i < MAXN; ++i) {
+        if(!B[i]) {
             Prime[Cnt++] = i;
-            for(j = i << 1; j < MAXN; j += i)
-            {
+            for(j = i << 1; j < MAXN; j += i) {
                 B[j] = 1;
             }
         }
@@ -27,13 +24,10 @@ void Make()
 int F(int N)
 {
     int i, j, r = 1;
-    for(i = 0; i < Cnt && Prime[i] <= N; ++i)
-    {
-        if(N % Prime[i] == 0)
-        {
+    for(i = 0; i < Cnt && Prime[i] <= N; ++i) {
+        if(N % Prime[i] == 0) {
             j = 1;
-            while(N % Prime[i] == 0)
-            {
+            while(N % Prime[i] == 0) {
                 N /= Prime[i];
                 ++j;
             }
@@ -48,12 +42,9 @@ int main()
     int a, b, c, i, j, k, Sum = 0;
     Make();
     scanf("%d %d %d", &a, &b, &c);
-    for(i = 1; i <= a; ++i)
-    {
-        for(j = 1; j <= b; ++j)
-        {
-            for(k = 1; k <= c; ++k)
-            {
+    for(i = 1; i <= a; ++i) {
+        for(j = 1; j <= b; ++j) {
+            for(k = 1; k <= c; ++k) {
                 Sum = (Sum % MOD + F(i * j * k) % MOD) % MOD;
             }
         }

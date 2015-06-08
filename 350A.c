@@ -7,30 +7,23 @@ int main()
     int N, M, i, Min, Max, Extra;
     scanf("%d %d", &N, &M);
     Min = 100, Max = 1, Extra = 100;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
-        if(A[i] > Max)
-        {
+        if(A[i] > Max) {
             Max = A[i];
         }
-        if(A[i] < Extra)
-        {
+        if(A[i] < Extra) {
             Extra = A[i];
         }
     }
-    for(i = 0; i < M; ++i)
-    {
+    for(i = 0; i < M; ++i) {
         scanf("%d", &B[i]);
-        if(B[i] < Min)
-        {
+        if(B[i] < Min) {
             Min = B[i];
         }
     }
-    for(i = Max; i < Min; ++i)
-    {
-        if(i / Extra >= 2)
-        {
+    for(i = Max; i < Min; ++i) {
+        if(i / Extra >= 2) {
             printf("%d\n", i);
             return 0;
         }

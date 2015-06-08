@@ -6,13 +6,10 @@ int main()
     int Ans = 20, N, i;
     char Str[21], Pre[21];
     scanf("%d %s", &N, Pre);
-    while(--N)
-    {
+    while(--N) {
         scanf("%s", Str);
-        for(i = 0; Str[i] != '\0' && i < Ans; ++i)
-        {
-            if(Str[i] != Pre[i])
-            {
+        for(i = 0; Str[i] != '\0' && i < Ans; ++i) {
+            if(Str[i] != Pre[i]) {
                 break;
             }
         }

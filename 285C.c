@@ -14,13 +14,11 @@ int main()
     int N, i;
     LL Sum;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
     qsort(A, N, sizeof(int), cmp);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         Sum += abs(A[i] - i - 1);
     }
     printf("%I64d\n", Sum);

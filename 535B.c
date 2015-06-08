@@ -8,14 +8,10 @@ int main()
     scanf("%s", Str);
     Len = strlen(Str);
     Ans = 0;
-    for(i = 0; i < Len; ++i)
-    {
-        if(Str[i] == '4')
-        {
+    for(i = 0; i < Len; ++i) {
+        if(Str[i] == '4') {
             Ans += 1 << (Len - i - 1);
-        }
-        else
-        {
+        } else {
             Ans += 1 << (Len - i);
         }
     }

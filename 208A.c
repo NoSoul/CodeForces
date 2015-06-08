@@ -7,36 +7,28 @@ int main()
     char Str[201], out[201];
     scanf("%s", Str);
     L = strlen(Str);
-    for(k = i = j = 0; i < L; ++i)
-    {
-        if(i < L - 2 && Str[i] == 'W' && Str[i + 1] == 'U' && Str[i + 2] == 'B')
-        {
-            if(j)
-            {
+    for(k = i = j = 0; i < L; ++i) {
+        if(i < L - 2 && Str[i] == 'W' && Str[i + 1] == 'U' && Str[i + 2] == 'B') {
+            if(j) {
                 out[j] = '\0';
                 printf("%s", out);
-                if(i == L - 3)
-                {
+                if(i == L - 3) {
                     j = 0;
                     break;
                 }
-                if(k)
-                {
+                if(k) {
                     printf(" ");
                 }
                 k = 1;
             }
             i += 2;
             j = 0;
-        }
-        else
-        {
+        } else {
             out[j++] = Str[i];
             k = 1;
         }
     }
-    if(j)
-    {
+    if(j) {
         out[j] = '\0';
         printf("%s", out);
     }

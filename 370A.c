@@ -8,36 +8,24 @@ int Odds(int a, int b, int c, int d)
 
 void SolveRook(int r1, int c1, int r2, int c2)
 {
-    if(r1 == r2 && c1 == c2)
-    {
+    if(r1 == r2 && c1 == c2) {
         printf("0 ");
-    }
-    else if(r1 == r2 || c1 == c2)
-    {
+    } else if(r1 == r2 || c1 == c2) {
         printf("1 ");
-    }
-    else
-    {
+    } else {
         printf("2 ");
     }
 }
 
 void SolveBishop(int r1, int c1, int r2, int c2)
 {
-    if(r1 == r2 && c1 == c2)
-    {
+    if(r1 == r2 && c1 == c2) {
         printf("0 ");
-    }
-    else if(abs(r1 - r2) == abs(c1 - c2))
-    {
+    } else if(abs(r1 - r2) == abs(c1 - c2)) {
         printf("1 ");
-    }
-    else if((Odds(r1, c1, r2, c2) & 1) == 0)
-    {
+    } else if((Odds(r1, c1, r2, c2) & 1) == 0) {
         printf("2 ");
-    }
-    else
-    {
+    } else {
         printf("0 ");
     }
 }

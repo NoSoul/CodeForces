@@ -6,8 +6,7 @@ int main()
     scanf("%d %d", &N, &X);
     Cur = 1;
     Sum = 0;
-    while(N--)
-    {
+    while(N--) {
         scanf("%d %d", &L, &R);
         int num = (L - Cur) / X;
         Cur += num * X;

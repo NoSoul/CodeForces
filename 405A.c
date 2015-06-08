@@ -11,13 +11,11 @@ int main()
     int N, i;
     int A[100];
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", & A[i]);
     }
     qsort(A, N, sizeof(int), cmp);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         printf("%d ", A[i]);
     }
     return 0;

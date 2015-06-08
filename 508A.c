@@ -5,8 +5,7 @@ char Map[1001][1001];
 
 char Get(int x, int y)
 {
-    if(x < 1 || y < 1 || x > N || y > M)
-    {
+    if(x < 1 || y < 1 || x > N || y > M) {
         return 0;
     }
     return Map[x][y];
@@ -24,12 +23,10 @@ int main()
 {
     int K, i, x, y;
     scanf("%d %d %d", &N, &M, &K);
-    for(i = 1; i <= K; ++i)
-    {
+    for(i = 1; i <= K; ++i) {
         scanf("%d %d", &x, &y);
         Map[x][y] = 1;
-        if(Judge(x, y))
-        {
+        if(Judge(x, y)) {
             printf("%d\n", i);
             return 0;
         }

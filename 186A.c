@@ -8,24 +8,19 @@ int main()
 {
     int i, Cnt;
     scanf("%s %s", Src, Dst);
-    if(strlen(Src) != strlen(Dst))
-    {
+    if(strlen(Src) != strlen(Dst)) {
         puts("NO");
         return 0;
     }
-    for(Cnt = i = 0; Src[i] != '\0'; ++i)
-    {
+    for(Cnt = i = 0; Src[i] != '\0'; ++i) {
         ++CntS[Src[i] - 'a'];
         ++CntD[Dst[i] - 'a'];
-        if(Src[i] != Dst[i])
-        {
+        if(Src[i] != Dst[i]) {
             ++Cnt;
         }
     }
-    for(i = 0; i < 26; ++i)
-    {
-        if(CntS[i] != CntD[i])
-        {
+    for(i = 0; i < 26; ++i) {
+        if(CntS[i] != CntD[i]) {
             break;
         }
     }

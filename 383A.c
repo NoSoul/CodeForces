@@ -11,50 +11,37 @@ int main()
     scanf("%d", &N);
     LeftNum = 0;
     RightNum = 0;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
-        if(A[i])
-        {
+        if(A[i]) {
             ++RightNum;
-        }
-        else
-        {
+        } else {
             ++LeftNum;
         }
     }
     RightIdx = 0;
     LeftIdx = N - 1;
-    while(RightIdx < LeftIdx)
-    {
-        while(A[RightIdx] != 1)
-        {
+    while(RightIdx < LeftIdx) {
+        while(A[RightIdx] != 1) {
             --LeftNum;
-            if(++RightIdx == N)
-            {
+            if(++RightIdx == N) {
                 break;
             }
         }
-        while(A[LeftIdx] != 0)
-        {
+        while(A[LeftIdx] != 0) {
             --RightNum;
-            if(--LeftIdx == -1)
-            {
+            if(--LeftIdx == -1) {
                 break;
             }
         }
-        if(RightIdx == N || LeftIdx == -1)
-        {
+        if(RightIdx == N || LeftIdx == -1) {
             break;
         }
-        if(LeftNum < RightNum)
-        {
+        if(LeftNum < RightNum) {
             Ans += LeftNum;
             ++RightIdx;
             --RightNum;
-        }
-        else
-        {
+        } else {
             Ans += RightNum;
             --LeftIdx;
             --LeftNum;

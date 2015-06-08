@@ -6,10 +6,8 @@ int main()
 {
     int N, i, j;
     scanf("%d", &N);
-    for(j = i = 0; A[i] <= N && i < 14; ++i)
-    {
-        if(N % A[i] == 0)
-        {
+    for(j = i = 0; A[i] <= N && i < 14; ++i) {
+        if(N % A[i] == 0) {
             j = 1;
             break;
         }

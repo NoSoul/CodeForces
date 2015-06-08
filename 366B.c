@@ -6,19 +6,15 @@ int main()
 {
     int K, N, i, j, Min, Sum, id;
     scanf("%d %d", &N, &K);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
     Min = 0x7fffffff;
-    for(i = 0; i < K; ++i)
-    {
-        for(Sum = 0, j = i; j < N; j += K)
-        {
+    for(i = 0; i < K; ++i) {
+        for(Sum = 0, j = i; j < N; j += K) {
             Sum += A[j];
         }
-        if(Sum < Min)
-        {
+        if(Sum < Min) {
             Min = Sum;
             id = i + 1;
         }

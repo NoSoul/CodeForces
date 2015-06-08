@@ -10,18 +10,13 @@ int main()
     char S[11];
     scanf("%d %s", &N, T1);
     ++C1;
-    while(--N)
-    {
+    while(--N) {
         scanf("%s", S);
-        if(strcmp(S, T1) == 0)
-        {
+        if(strcmp(S, T1) == 0) {
             ++C1;
-        }
-        else
-        {
+        } else {
             ++C2;
-            if(!flag)
-            {
+            if(!flag) {
                 flag = 1;
                 strcpy(T2, S);
             }

@@ -6,13 +6,10 @@ char Str[51];
 
 void Judge_Protocol()
 {
-    if(Str[Now] == 'f')
-    {
+    if(Str[Now] == 'f') {
         printf("ftp://");
         Now += 3;
-    }
-    else
-    {
+    } else {
         printf("http://");
         Now += 4;
     }
@@ -22,10 +19,8 @@ void Judge_Protocol()
 void Judge_Domain()
 {
     printf("%c", Str[Now]);
-    for(i = Now + 1; i < L; ++i)
-    {
-        if(Str[i] == 'r' && Str[i + 1] == 'u')
-        {
+    for(i = Now + 1; i < L; ++i) {
+        if(Str[i] == 'r' && Str[i + 1] == 'u') {
             break;
         }
         printf("%c", Str[i]);
@@ -37,13 +32,11 @@ void Judge_Domain()
 
 void Judge_Context()
 {
-    if(Now == L)
-    {
+    if(Now == L) {
         return;
     }
     printf("/");
-    for(i = Now; i < L; ++i)
-    {
+    for(i = Now; i < L; ++i) {
         printf("%c", Str[i]);
     }
     printf("\n");

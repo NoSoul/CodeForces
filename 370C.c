@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct
-{
+typedef struct {
     int mIndex;
     int mNum;
 } Mittens_t;
 Mittens_t Color[101];
 
-typedef struct
-{
+typedef struct {
     int l, r;
     int extra;
 } Ans_t;
@@ -24,29 +22,23 @@ int cmp(const void *a, const void *b)
 void Solve(int num)
 {
     int i;
-    while(1)
-    {
+    while(1) {
         qsort(Color, num, sizeof(Mittens_t), cmp);
-        if(num == 1)
-        {
-            for(i = 0; i < AnsSize && Color[0].mNum; ++i)
-            {
-                if(Color[0].mIndex != Ans[i].l && Color[0].mIndex != Ans[i].r)
-                {
+        if(num == 1) {
+            for(i = 0; i < AnsSize && Color[0].mNum; ++i) {
+                if(Color[0].mIndex != Ans[i].l && Color[0].mIndex != Ans[i].r) {
                     Ans[i].extra = Color[0].mIndex;
                     --Color[0].mNum;
                     ++Cnt;
                 }
             }
-            while(Color[0].mNum--)
-            {
+            while(Color[0].mNum--) {
                 Ans[AnsSize].l = Color[0].mIndex;
                 Ans[AnsSize++].r = Color[0].mIndex;
             }
             break;
         }
-        for(i = 0; i < Color[1].mNum; ++i)
-        {
+        for(i = 0; i < Color[1].mNum; ++i) {
             Ans[AnsSize].l = Color[0].mIndex;
             Ans[AnsSize++].r = Color[1].mIndex;
             Cnt += 2;
@@ -54,13 +46,11 @@ void Solve(int num)
         Color[0].mNum -= Color[1].mNum;
         Color[1] = Color[num - 1];
         --num;
-        if(Color[0].mNum == 0)
-        {
+        if(Color[0].mNum == 0) {
             Color[0] = Color[num - 1];
             --num;
         }
-        if(num == 0)
-        {
+        if(num == 0) {
             break;
         }
     }
@@ -70,26 +60,19 @@ int main()
 {
     int N, M, i, num;
     scanf("%d %d", &N, &M);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &num);
         ++Color[num - 1].mNum;
         Color[num - 1].mIndex = num;
     }
     Solve(M);
     printf("%d\n", Cnt);
-    for(i = 0; i < AnsSize; ++i)
-    {
-        if(Ans[i].extra)
-        {
+    for(i = 0; i < AnsSize; ++i) {
+        if(Ans[i].extra) {
             printf("%d %d\n%d %d\n%d %d\n", Ans[i].l, Ans[i].r, Ans[i].r, Ans[i].extra, Ans[i].extra, Ans[i].l);
-        }
-        else if(Ans[i].l != Ans[i].r)
-        {
+        } else if(Ans[i].l != Ans[i].r) {
             printf("%d %d\n%d %d\n", Ans[i].l, Ans[i].r, Ans[i].r, Ans[i].l);
-        }
-        else
-        {
+        } else {
             printf("%d %d\n", Ans[i].l, Ans[i].r);
         }
     }

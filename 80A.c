@@ -10,13 +10,10 @@ void Init()
 {
     int i, j;
     B[0] = B[1] = 1;
-    for(i = 2; i < MAX; ++i)
-    {
-        if(!B[i])
-        {
+    for(i = 2; i < MAX; ++i) {
+        if(!B[i]) {
             P[Top++] = i;
-            for(j = i << 1; j < MAX; j += i)
-            {
+            for(j = i << 1; j < MAX; j += i) {
                 B[j] = 1;
             }
         }
@@ -28,10 +25,8 @@ int main()
     int N, M, i;
     Init();
     scanf("%d %d", &N, &M);
-    for(i = 0; i < Top; ++i)
-    {
-        if(P[i] == N)
-        {
+    for(i = 0; i < Top; ++i) {
+        if(P[i] == N) {
             break;
         }
     }

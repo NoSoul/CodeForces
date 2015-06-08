@@ -12,21 +12,16 @@ int main()
 {
     int N, i, K, Now, j;
     scanf("%d %d", &N, &K);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
     qsort(A, N, sizeof(int), cmp);
     Now = 0;
-    while(K)
-    {
-        for(i = Now; K && i < N; ++i)
-        {
-            if(K)
-            {
+    while(K) {
+        for(i = Now; K && i < N; ++i) {
+            if(K) {
                 printf("%d ", Now + 1);
-                for(j = 0; j < Now; ++j)
-                {
+                for(j = 0; j < Now; ++j) {
                     printf("%d ", A[j]);
                 }
                 printf("%d\n", A[i]);

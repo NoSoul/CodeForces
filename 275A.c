@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-char Str[9][10] =
-{
+char Str[9][10] = {
     "110100000",
     "111010000",
     "011001000",
@@ -18,18 +17,13 @@ int main()
     int i, j, k, index;
     int Mat[3][3];
     char Res[10] = "111111111";
-    for(i = 0; i < 3; ++i)
-    {
-        for(j = 0; j < 3; ++j)
-        {
+    for(i = 0; i < 3; ++i) {
+        for(j = 0; j < 3; ++j) {
             scanf("%d", &Mat[i][j]);
-            if(Mat[i][j] & 1)
-            {
+            if(Mat[i][j] & 1) {
                 index = i * 3 + j;
-                for(k = 0; k < 9; ++k)
-                {
-                    if(Str[index][k] == '1')
-                    {
+                for(k = 0; k < 9; ++k) {
+                    if(Str[index][k] == '1') {
                         Res[k] = (Res[k] == '0') ? '1' : '0';
                     }
                 }

@@ -6,12 +6,10 @@ int main()
 {
     int N, i, j;
     scanf("%d", &N);
-    for(j = N / 4, i = 0; i < j; ++i)
-    {
+    for(j = N / 4, i = 0; i < j; ++i) {
         printf("%s", Base);
     }
-    for(N %= 4, i = 0; i < N; ++i)
-    {
+    for(N %= 4, i = 0; i < N; ++i) {
         printf("%c", Base[i % 4]);
     }
     printf("\n");

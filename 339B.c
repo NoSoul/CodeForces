@@ -8,15 +8,11 @@ int main()
     int N, M, pre, now;
     scanf("%d %d %d", &N, &M, &pre);
     Sum = pre - 1;
-    while(--M)
-    {
+    while(--M) {
         scanf("%d", &now);
-        if(now >= pre)
-        {
+        if(now >= pre) {
             Sum += now - pre;
-        }
-        else
-        {
+        } else {
             Sum += (now + N) - pre;
         }
         pre = now;

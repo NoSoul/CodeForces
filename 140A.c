@@ -8,8 +8,7 @@ int main()
     int N, R, r;
     double A, a;
     scanf("%d %d %d", &N, &R, &r);
-    if(N == 1)
-    {
+    if(N == 1) {
         puts(R >= r ? "YES" : "NO");
         return 0;
     }

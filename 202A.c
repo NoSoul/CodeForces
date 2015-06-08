@@ -7,19 +7,15 @@ int main()
     int  i, N;
     char Str[11];
     scanf("%s", Str);
-    for(i = 0; Str[i] != '\0'; ++i)
-    {
+    for(i = 0; Str[i] != '\0'; ++i) {
         ++Flag[Str[i] - 'a'];
     }
-    for(i = 25; i >= 0; --i)
-    {
-        if(Flag[i])
-        {
+    for(i = 25; i >= 0; --i) {
+        if(Flag[i]) {
             break;
         }
     }
-    while(Flag[i]--)
-    {
+    while(Flag[i]--) {
         printf("%c", i + 'a');
     }
     printf("\n");

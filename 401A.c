@@ -4,8 +4,7 @@ int main()
 {
     int N, X, i, num, Sum;
     scanf("%d %d", &N, &X);
-    for(Sum = i = 0; i < N; ++i)
-    {
+    for(Sum = i = 0; i < N; ++i) {
         scanf("%d", &num);
         Sum += num;
     }

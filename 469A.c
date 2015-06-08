@@ -6,14 +6,11 @@ int main()
 {
     int N, M, i, Num, Ans = 0;
     scanf("%d", &N);
-    for(i = 0; i < 2; ++i)
-    {
+    for(i = 0; i < 2; ++i) {
         scanf("%d", &M);
-        while(M--)
-        {
+        while(M--) {
             scanf("%d", &Num);
-            if(!Hash[Num])
-            {
+            if(!Hash[Num]) {
                 Hash[Num] = 1;
                 ++Ans;
             }

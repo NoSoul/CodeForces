@@ -8,8 +8,7 @@ int main()
     LL_t MOD = 1000000007;
     scanf("%I64d %I64d", &A, &B);
     Ans = 0;
-    for(i = 1; i <= A; ++i)
-    {
+    for(i = 1; i <= A; ++i) {
         LL_t temp = B * (B - 1) / 2;
         Ans += ((temp % MOD) * ((i * B + 1) % MOD)) % MOD;
         Ans %= MOD;

@@ -3,8 +3,7 @@
 int GCD(int a, int b)
 {
     int temp;
-    while(b)
-    {
+    while(b) {
         temp = a;
         a = b;
         b = temp % b;
@@ -18,19 +17,14 @@ int main()
     int A[100];
     Max = 1;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
-        if(i == 0)
-        {
+        if(i == 0) {
             g = A[0];
-        }
-        else
-        {
+        } else {
             g = GCD(g, A[i]);
         }
-        if(A[i] > Max)
-        {
+        if(A[i] > Max) {
             Max = A[i];
         }
     }

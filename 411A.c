@@ -6,24 +6,17 @@ int main()
     int i, A, B, C;
     char Str[101];
     scanf("%s", Str);
-    if(strlen(Str) < 5)
-    {
+    if(strlen(Str) < 5) {
         puts("Too weak");
         return 0;
     }
     A = B = C = 0;
-    for(i = 0; Str[i] != '\0'; ++i)
-    {
-        if(Str[i] >= 'A' && Str[i] <= 'Z')
-        {
+    for(i = 0; Str[i] != '\0'; ++i) {
+        if(Str[i] >= 'A' && Str[i] <= 'Z') {
             A = 1;
-        }
-        else if(Str[i] >= 'a' && Str[i] <= 'z')
-        {
+        } else if(Str[i] >= 'a' && Str[i] <= 'z') {
             B = 1;
-        }
-        else if(Str[i] >= '0' && Str[i] <= '9')
-        {
+        } else if(Str[i] >= '0' && Str[i] <= '9') {
             C = 1;
         }
     }

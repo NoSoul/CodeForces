@@ -6,11 +6,9 @@ int main()
 {
     int N, i, j, Cnt;
     scanf("%d", &N);
-    for(Cnt = i = 0; i < N; ++i)
-    {
+    for(Cnt = i = 0; i < N; ++i) {
         scanf("%d", &j);
-        if(j <= N && !Hash[j])
-        {
+        if(j <= N && !Hash[j]) {
             Hash[j] = 1;
             ++Cnt;
         }

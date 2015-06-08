@@ -13,16 +13,11 @@ int main()
     scanf("%d %d %d %d", &a, &b, &c, &d);
     int A = GetPoint(a, c);
     int B = GetPoint(b, d);
-    if(A > B)
-    {
+    if(A > B) {
         puts("Misha");
-    }
-    else if(A < B)
-    {
+    } else if(A < B) {
         puts("Vasya");
-    }
-    else
-    {
+    } else {
         puts("Tie");
     }
     return 0;

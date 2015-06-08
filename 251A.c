@@ -9,25 +9,18 @@ int BinSearch(int i)
 {
     int Left = i, Right = N, Mid;
     LL temp;
-    while(Right > Left)
-    {
+    while(Right > Left) {
         Mid = (Left + Right) / 2;
         temp = A[Mid] - A[i];
-        if(temp > D)
-        {
+        if(temp > D) {
             Right = Mid - 1;
-        }
-        else if(temp == D)
-        {
+        } else if(temp == D) {
             return Mid;
-        }
-        else
-        {
+        } else {
             Left = Mid + 1;
         }
     }
-    if(A[Left] - A[i] > D)
-    {
+    if(A[Left] - A[i] > D) {
         --Left;
     }
     return Left;
@@ -38,12 +31,10 @@ int main()
     int i, j;
     LL M, Sum;
     scanf("%d %d", &N, &D);
-    for(i = 1; i <= N; ++i)
-    {
+    for(i = 1; i <= N; ++i) {
         scanf("%d", &A[i]);
     }
-    for(Sum = 0, i = 1; i < N; ++i)
-    {
+    for(Sum = 0, i = 1; i < N; ++i) {
         j = BinSearch(i);
         M = j - i;
         Sum += M * (M - 1) / 2;

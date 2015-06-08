@@ -6,20 +6,16 @@ int F(int id)
     Min = 0x7fffffff;
     Max = 0;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &Now);
-        if(Now > Max)
-        {
+        if(Now > Max) {
             Max = Now;
         }
-        if(Now < Min)
-        {
+        if(Now < Min) {
             Min = Now;
         }
     }
-    if(id)
-    {
+    if(id) {
         return Max;
     }
     return Min;

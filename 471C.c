@@ -8,16 +8,13 @@ int main()
     scanf("%I64d", &N);
     h = 1;
     Ans = 0;
-    while(1)
-    {
+    while(1) {
         F = h * 2 + h * (h - 1) / 2 * 3;
-        if(F > N)
-        {
+        if(F > N) {
             break;
         }
         E = N - F;
-        if(E % 3 == 0)
-        {
+        if(E % 3 == 0) {
             ++Ans;
         }
         ++h;

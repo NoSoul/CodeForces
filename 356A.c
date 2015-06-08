@@ -2,8 +2,7 @@
 
 #define MAXN    300001
 
-typedef struct
-{
+typedef struct {
     int conquered;
 } Node_t;
 Node_t Tree[MAXN << 2];
@@ -11,8 +10,7 @@ int RangeX, RangeY;
 
 void Build(int left, int right, int id)
 {
-    if(left == right)
-    {
+    if(left == right) {
         Tree[id].conquered = 0;
         return;
     }
@@ -23,18 +21,14 @@ void Build(int left, int right, int id)
 
 void Update(int left, int right, int value, int id)
 {
-    if(RangeX > right || RangeY < left)
-    {
+    if(RangeX > right || RangeY < left) {
         return;
     }
-    if(Tree[id].conquered)
-    {
+    if(Tree[id].conquered) {
         return;
     }
-    if(RangeX <= left && RangeY >= right)
-    {
-        if(Tree[id].conquered == 0)
-        {
+    if(RangeX <= left && RangeY >= right) {
+        if(Tree[id].conquered == 0) {
             Tree[id].conquered = value;
         }
         return;
@@ -46,12 +40,10 @@ void Update(int left, int right, int value, int id)
 
 int Query(int left, int right, int pre, int id)
 {
-    if(RangeX > right || RangeY < left)
-    {
+    if(RangeX > right || RangeY < left) {
         return 0;
     }
-    if(left == RangeX && RangeY == right)
-    {
+    if(left == RangeX && RangeY == right) {
         return Tree[id].conquered ? Tree[id].conquered : pre;
     }
     int mid = (left + right) >> 1;
@@ -66,8 +58,7 @@ int main()
     int l, r, x;
     scanf("%d %d", &N, &M);
     Build(1, N, 1);
-    while(M--)
-    {
+    while(M--) {
         scanf("%d %d %d", &l, &r, &x);
         RangeX = l;
         RangeY = x - 1;
@@ -76,8 +67,7 @@ int main()
         RangeY = r;
         Update(1, N, x, 1);
     }
-    for(i = 1; i <= N; ++i)
-    {
+    for(i = 1; i <= N; ++i) {
         RangeX = i;
         RangeY = i;
         printf("%d ", Query(1, N, 0, 1));

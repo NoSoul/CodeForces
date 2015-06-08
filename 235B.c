@@ -6,8 +6,7 @@ int main()
     double ans, m, p;
     ans = m = 0;
     scanf("%d", &n);
-    while(n--)
-    {
+    while(n--) {
         scanf("%lf", &p);
         ans += p * (1 + 2 * m);
         m = p * (m + 1);

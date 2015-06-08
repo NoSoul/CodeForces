@@ -9,17 +9,13 @@ void Fun(int Dp[MAXN][MAXN], const int N, const int K, int *Ans)
 {
     int i, j, k;
     memset(Dp, 0, sizeof(int)*MAXN * MAXN);
-    for(i = 1; i <= K; ++i)
-    {
+    for(i = 1; i <= K; ++i) {
         Dp[1][i] = 1;
     }
     *Ans = Dp[1][N];
-    for(i = 2; i <= N; ++i)
-    {
-        for(j = i - 1; j <= N; ++j)
-        {
-            for(k = 1; k <= K && j + k <= N; ++k)
-            {
+    for(i = 2; i <= N; ++i) {
+        for(j = i - 1; j <= N; ++j) {
+            for(k = 1; k <= K && j + k <= N; ++k) {
                 Dp[i][j + k] += Dp[i - 1][j];
                 Dp[i][j + k] %= MOD;
             }

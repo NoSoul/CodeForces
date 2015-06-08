@@ -12,18 +12,12 @@ int main()
     int x, y, z;
     x = y = z = 0;
     scanf("%d %d", &a, &b);
-    for(i = 1; i < 7; ++i)
-    {
-        if(Dist(a, i) < Dist(b, i))
-        {
+    for(i = 1; i < 7; ++i) {
+        if(Dist(a, i) < Dist(b, i)) {
             ++x;
-        }
-        else if(Dist(a, i) == Dist(b, i))
-        {
+        } else if(Dist(a, i) == Dist(b, i)) {
             ++y;
-        }
-        else
-        {
+        } else {
             ++z;
         }
     }

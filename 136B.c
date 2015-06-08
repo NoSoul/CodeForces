@@ -16,22 +16,16 @@ int main()
     L = L1 > L2 ? L1 : L2;
     strrev(Str1);
     strrev(Str2);
-    if(L1 > L2)
-    {
-        for(i = L2; i < L; ++i)
-        {
+    if(L1 > L2) {
+        for(i = L2; i < L; ++i) {
             Str2[i] = '0';
         }
-    }
-    else
-    {
-        for(i = L1; i < L; ++i)
-        {
+    } else {
+        for(i = L1; i < L; ++i) {
             Str1[i] = '0';
         }
     }
-    for(p = 1, ans = i = 0; i < L; ++i)
-    {
+    for(p = 1, ans = i = 0; i < L; ++i) {
         ans += ((Str2[i] + 3 - Str1[i]) % 3) * p;
         p *= 3;
     }

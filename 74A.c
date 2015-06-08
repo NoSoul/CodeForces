@@ -9,12 +9,10 @@ int main()
     scanf("%s %d %d %d %d %d %d %d", Name, &Plus, &Minus, &a, &b, &c, &d, &e);
     strcpy(Ans, Name);
     Max = Plus * 100 - Minus * 50 + a + b + c + d + e;
-    while(--N)
-    {
+    while(--N) {
         scanf("%s %d %d %d %d %d %d %d", Name, &Plus, &Minus, &a, &b, &c, &d, &e);
         Now = Plus * 100 - Minus * 50 + a + b + c + d + e;
-        if(Max < Now)
-        {
+        if(Max < Now) {
             Max = Now;
             strcpy(Ans, Name);
         }

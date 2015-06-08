@@ -15,17 +15,14 @@ int main()
 {
     int N, i, Ans;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &R[i]);
     }
     qsort(R, N, sizeof(int), cmp);
-    for(Ans = i = 0; i < N; i += 2)
-    {
+    for(Ans = i = 0; i < N; i += 2) {
         Ans += R[i] * R[i] - R[i + 1] * R[i + 1];
     }
-    if(i + 1 == N)
-    {
+    if(i + 1 == N) {
         Ans += R[i] * R[i];
     }
     printf("%f\n", Ans * PI);

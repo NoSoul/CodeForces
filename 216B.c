@@ -3,8 +3,7 @@
 
 #define  MAXN 210
 
-typedef struct
-{
+typedef struct {
     int v, next;
 } Edge;
 Edge E[MAXN];
@@ -15,8 +14,7 @@ int Visit[MAXN], View[MAXN], In[MAXN];
 void Init(int N)
 {
     int i;
-    for(Size = i = 0; i <= N; ++i)
-    {
+    for(Size = i = 0; i <= N; ++i) {
         Adj[i] = -1;
         View[i] = In[i] = 0;
     }
@@ -45,19 +43,13 @@ int Judge(int u, int v)
     Head = 0;
     Queue[0] = u;
     Cnt = k = Tail = Visit[u] = 1;
-    while(Head < Tail)
-    {
-        for(i = Head; i < Tail; ++i)
-        {
-            for(j = Adj[Queue[i]]; ~j; j = E[j].next)
-            {
-                if(!Visit[E[j].v] && !View[E[j].v])
-                {
+    while(Head < Tail) {
+        for(i = Head; i < Tail; ++i) {
+            for(j = Adj[Queue[i]]; ~j; j = E[j].next) {
+                if(!Visit[E[j].v] && !View[E[j].v]) {
                     Visit[E[j].v] = 1;
-                    if(E[j].v == v)
-                    {
-                        if(Cnt % 2)
-                        {
+                    if(E[j].v == v) {
+                        if(Cnt % 2) {
                             return 1;
                         }
                         return 0;
@@ -78,17 +70,14 @@ int main()
     int N, M, u, v, i, j, A, B, R, Cnt;
     scanf("%d %d", &N, &M);
     Init(N);
-    while(M--)
-    {
+    while(M--) {
         scanf("%d %d", &u, &v);
         _Add_Edge(u, v);
         ++In[u];
         ++In[v];
     }
-    for(Cnt = 0, i = 1; i <= N; ++i)
-    {
-        if(!View[i] && In[i] == 2)
-        {
+    for(Cnt = 0, i = 1; i <= N; ++i) {
+        if(!View[i] && In[i] == 2) {
             View[i] = 1;
             j = Adj[i];
             A = E[j].v;
@@ -96,16 +85,14 @@ int main()
             B = E[j].v;
             memset(Visit, 0, sizeof(Visit));
             R = Judge(A, B);
-            if(R)
-            {
+            if(R) {
                 View[A] = View[B] = 1;
                 ++Cnt;
             }
         }
     }
     N -= Cnt;
-    if(N % 2)
-    {
+    if(N % 2) {
         ++Cnt;
     }
     printf("%d\n", Cnt);

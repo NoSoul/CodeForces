@@ -6,16 +6,12 @@ int main()
     char Str[1000001];
     scanf("%d", &N);
     Cnt = Suma = Sumg = 0;
-    while(N--)
-    {
+    while(N--) {
         scanf("%d %d", &a, &g);
-        if(abs(Suma + a - Sumg) <= 500)
-        {
+        if(abs(Suma + a - Sumg) <= 500) {
             Suma += a;
             Str[Cnt++] = 'A';
-        }
-        else
-        {
+        } else {
             Sumg += g;
             Str[Cnt++] = 'G';
         }

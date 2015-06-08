@@ -6,30 +6,21 @@ int main()
 {
     int i, A, B;
     scanf("%s", Str);
-    for(A = B = i = 0; Str[i] != '\0'; ++i)
-    {
-        if(Str[i] == 'x')
-        {
+    for(A = B = i = 0; Str[i] != '\0'; ++i) {
+        if(Str[i] == 'x') {
             ++A;
-        }
-        else
-        {
+        } else {
             ++B;
         }
     }
-    if(A >= B)
-    {
+    if(A >= B) {
         A -= B;
-        for(i = 0; i < A; ++i)
-        {
+        for(i = 0; i < A; ++i) {
             printf("x");
         }
-    }
-    else
-    {
+    } else {
         B -= A;
-        for(i = 0; i < B; ++i)
-        {
+        for(i = 0; i < B; ++i) {
             printf("y");
         }
     }

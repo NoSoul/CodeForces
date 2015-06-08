@@ -3,8 +3,7 @@
 
 #define LL __int64
 
-typedef struct
-{
+typedef struct {
     int index, num;
     LL  cnt;
 } Cho;
@@ -26,26 +25,20 @@ int main()
     int i, N, j, k;
     LL Sum;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
-    for(i = 0; i < 5; ++i)
-    {
+    for(i = 0; i < 5; ++i) {
         scanf("%d", &C[i].num);
         C[i].index = i;
         C[i].cnt = 0;
     }
     qsort(C, 5, sizeof(Cho), cmp2);
-    for(Sum = i = 0; i < N; ++i)
-    {
+    for(Sum = i = 0; i < N; ++i) {
         Sum += A[i];
-        while(Sum >= C[4].num)
-        {
-            for(j = 0; j < 5; ++j)
-            {
-                if(Sum >= C[j].num)
-                {
+        while(Sum >= C[4].num) {
+            for(j = 0; j < 5; ++j) {
+                if(Sum >= C[j].num) {
                     k = Sum / C[j].num;
                     C[j].cnt += k;
                     Sum -= k * C[j].num;
@@ -55,8 +48,7 @@ int main()
         }
     }
     qsort(C, 5, sizeof(Cho), cmp1);
-    for(i = 0; i < 4; ++i)
-    {
+    for(i = 0; i < 4; ++i) {
         printf("%I64d ", C[i].cnt);
     }
     printf("%I64d\n%I64d\n", C[i].cnt, Sum);

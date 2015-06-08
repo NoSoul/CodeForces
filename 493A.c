@@ -10,49 +10,31 @@ int main()
     char Team[2], Card[2];
     scanf("%s %s", StrHome, StrAway);
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d %s %d %s", &t, Team, &m, Card);
-        if(Team[0] == 'h')
-        {
-            if(~A[0][m])
-            {
-                if(Card[0] == 'r')
-                {
+        if(Team[0] == 'h') {
+            if(~A[0][m]) {
+                if(Card[0] == 'r') {
                     printf("%s %d %d\n", StrHome, m , t);
                     A[0][m] = -1;
-                }
-                else
-                {
-                    if(A[0][m] == 0)
-                    {
+                } else {
+                    if(A[0][m] == 0) {
                         A[0][m] = t;
-                    }
-                    else
-                    {
+                    } else {
                         printf("%s %d %d\n", StrHome, m , t);
                         A[0][m] = -1;
                     }
                 }
             }
-        }
-        else
-        {
-            if(~A[1][m])
-            {
-                if(Card[0] == 'r')
-                {
+        } else {
+            if(~A[1][m]) {
+                if(Card[0] == 'r') {
                     printf("%s %d %d\n", StrAway, m , t);
                     A[1][m] = -1;
-                }
-                else
-                {
-                    if(A[1][m] == 0)
-                    {
+                } else {
+                    if(A[1][m] == 0) {
                         A[1][m] = t;
-                    }
-                    else
-                    {
+                    } else {
                         printf("%s %d %d\n", StrAway, m , t);
                         A[1][m] = -1;
                     }

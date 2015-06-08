@@ -11,11 +11,9 @@ int main()
 {
     int P, N, i, Ans = -1, Num;
     scanf("%d %d", &P, &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &Num);
-        if(Hash[H(Num, P)])
-        {
+        if(Hash[H(Num, P)]) {
             Ans = i + 1;
             break;
         }

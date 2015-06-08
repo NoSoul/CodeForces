@@ -3,8 +3,7 @@
 int GCD(int m, int n)
 {
     int r;
-    while(n != 0)
-    {
+    while(n != 0) {
         r = n;
         n = m % n;
         m = r;

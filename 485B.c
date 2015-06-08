@@ -9,8 +9,7 @@ int main()
     scanf("%d", &N);
     minx = miny = 1000000000;
     maxx = maxy  = -1000000000;
-    while(N--)
-    {
+    while(N--) {
         scanf("%d %d", &x, &y);
         maxx = max(x, maxx);
         maxy = max(y, maxy);

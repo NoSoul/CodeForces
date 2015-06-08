@@ -4,12 +4,9 @@ int main()
 {
     int N, M;
     scanf("%d %d", &N, &M);
-    if(N < M)
-    {
+    if(N < M) {
         M = N;
-    }
-    else
-    {
+    } else {
         N = M;
     }
     puts(N & 1 ? "Akshat" : "Malvika");

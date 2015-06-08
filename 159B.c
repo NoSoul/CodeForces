@@ -3,14 +3,12 @@
 
 #define MAX 100000
 
-typedef struct
-{
+typedef struct {
     int x, y;
 } Item;
 Item Temp[MAX];
 
-typedef struct
-{
+typedef struct {
     Item p;
     int cnt;
 } Point;
@@ -19,8 +17,7 @@ int N, M;
 
 int cmp(const void *a, const void *b)
 {
-    if((*(Item *)a).y == (*(Item *)b).y)
-    {
+    if((*(Item *)a).y == (*(Item *)b).y) {
         return (*(Item *)a).x - (*(Item *)b).x;
     }
     return (*(Item *)a).y - (*(Item *)b).y;
@@ -29,21 +26,16 @@ int cmp(const void *a, const void *b)
 int Init(Point *A, int n)
 {
     int i, Cnt = 0;
-    for(i = 0; i < n; ++i)
-    {
+    for(i = 0; i < n; ++i) {
         scanf("%d %d", &Temp[i].x, &Temp[i].y);
     }
     qsort(Temp, n, sizeof(Item), cmp);
     A[Cnt].p = Temp[0];
     A[Cnt].cnt = 1;
-    for(i = 1; i < n; ++i)
-    {
-        if(Temp[i].x == A[Cnt].p.x && Temp[i].y == A[Cnt].p.y)
-        {
+    for(i = 1; i < n; ++i) {
+        if(Temp[i].x == A[Cnt].p.x && Temp[i].y == A[Cnt].p.y) {
             ++A[Cnt].cnt;
-        }
-        else
-        {
+        } else {
             ++Cnt;
             A[Cnt].p = Temp[i];
             A[Cnt].cnt = 1;
@@ -57,29 +49,18 @@ int Binary_Item(Item key)
     int Left, Right, Mid;
     Left = 0;
     Right = M - 1;
-    while(Left <= Right)
-    {
+    while(Left <= Right) {
         Mid = (Left + Right) >> 1;
-        if(Cap[Mid].p.y < key.y)
-        {
+        if(Cap[Mid].p.y < key.y) {
             Left = Mid + 1;
-        }
-        else if(Cap[Mid].p.y > key.y)
-        {
+        } else if(Cap[Mid].p.y > key.y) {
             Right = Mid - 1;
-        }
-        else
-        {
-            if(Cap[Mid].p.x == key.x)
-            {
+        } else {
+            if(Cap[Mid].p.x == key.x) {
                 return Mid;
-            }
-            else if(Cap[Mid].p.x < key.x)
-            {
+            } else if(Cap[Mid].p.x < key.x) {
                 Left = Mid + 1;
-            }
-            else
-            {
+            } else {
                 Right = Mid - 1;
             }
         }
@@ -92,15 +73,11 @@ int Binary_y(int key)
     int Left, Right, Mid;
     Left = 0;
     Right = M - 1;
-    while(Left <= Right)
-    {
+    while(Left <= Right) {
         Mid = (Left + Right) >> 1;
-        if(Cap[Mid].p.y >= key)
-        {
+        if(Cap[Mid].p.y >= key) {
             Right = Mid - 1;
-        }
-        else
-        {
+        } else {
             Left = Mid + 1;
         }
     }
@@ -113,14 +90,11 @@ int main()
     scanf("%d %d", &N, &M);
     N = Init(Marker, N);
     M = Init(Cap, M);
-    for(Cnt = Max = i = 0; i < N; ++i)
-    {
+    for(Cnt = Max = i = 0; i < N; ++i) {
         j = Binary_Item(Marker[i].p);
-        if(j != -1)
-        {
+        if(j != -1) {
             k = Marker[i].cnt < Cap[j].cnt ? Marker[i].cnt : Cap[j].cnt;
-            if(k)
-            {
+            if(k) {
                 Cnt += k;
                 Max += k;
                 Marker[i].cnt -= k;
@@ -128,15 +102,11 @@ int main()
             }
         }
     }
-    for(i = 0; i < N; ++i)
-    {
-        while(Marker[i].cnt--)
-        {
+    for(i = 0; i < N; ++i) {
+        while(Marker[i].cnt--) {
             j = Binary_y(Marker[i].p.y);
-            for(k = j; Marker[i].p.y == Cap[k].p.y; ++k)
-            {
-                if(Cap[k].cnt)
-                {
+            for(k = j; Marker[i].p.y == Cap[k].p.y; ++k) {
+                if(Cap[k].cnt) {
                     --Cap[k].cnt;
                     ++Cnt;
                     break;

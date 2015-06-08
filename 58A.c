@@ -6,10 +6,8 @@ int main()
     char Template[6] = {"hello"};
     char Str[101];
     scanf("%s", Str);
-    for(Top = i = 0; Str[i] != '\0' && Top < 5; ++i)
-    {
-        if(Str[i] == Template[Top])
-        {
+    for(Top = i = 0; Str[i] != '\0' && Top < 5; ++i) {
+        if(Str[i] == Template[Top]) {
             ++Top;
         }
     }

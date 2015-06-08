@@ -5,18 +5,14 @@ int main()
     int N, M, i, j, Pre = -1;
     char Str[101];
     scanf("%d %d", &N, &M);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%s", Str);
-        if(Str[0] - '0' == Pre)
-        {
+        if(Str[0] - '0' == Pre) {
             puts("NO");
             return 0;
         }
-        for(j = 1; j < M; ++j)
-        {
-            if(Str[j] != Str[j - 1])
-            {
+        for(j = 1; j < M; ++j) {
+            if(Str[j] != Str[j - 1]) {
                 puts("NO");
                 return 0;
             }

@@ -7,23 +7,17 @@ int main()
     int N, i, Cnt = 0;
     char flag = 1;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
-    for(i = 0; i < N; ++i)
-    {
-        if(A[i] == i)
-        {
+    for(i = 0; i < N; ++i) {
+        if(A[i] == i) {
             ++Cnt;
-        }
-        else if(A[A[i]] == i)
-        {
+        } else if(A[A[i]] == i) {
             flag = 2;
         }
     }
-    if(Cnt == N)
-    {
+    if(Cnt == N) {
         flag = 0;
     }
     printf("%d\n", Cnt + flag);

@@ -6,8 +6,7 @@ LL p, q, temp, Num;
 LL GCD(LL a, LL b)
 {
     LL temp;
-    while(b)
-    {
+    while(b) {
         temp = a;
         a = b;
         b = temp % b;
@@ -22,8 +21,7 @@ int main()
     temp = GCD(p, q);
     p /= temp;
     q /= temp;
-    for(i = 1; i < N; ++i)
-    {
+    for(i = 1; i < N; ++i) {
         scanf("%I64d", &Num);
         temp = GCD(p, Num);
         p = (p / temp - Num / temp * q) * temp;
@@ -35,12 +33,9 @@ int main()
         q = temp;
     }
     scanf("%I64d", &Num);
-    if(q == 1 && p == Num)
-    {
+    if(q == 1 && p == Num) {
         puts("YES");
-    }
-    else
-    {
+    } else {
         puts("NO");
     }
     return 0;

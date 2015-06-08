@@ -6,32 +6,22 @@ int main()
     int a, b;
     a = b = 0;
     scanf("%d", &N);
-    while(N--)
-    {
+    while(N--) {
         scanf("%d", &Num);
-        if(Num == 25)
-        {
+        if(Num == 25) {
             ++a;
-        }
-        else if(Num == 50)
-        {
+        } else if(Num == 50) {
             ++b;
             --a;
-        }
-        else
-        {
-            if(b > 0)
-            {
+        } else {
+            if(b > 0) {
                 --b;
                 --a;
-            }
-            else
-            {
+            } else {
                 a -= 3;
             }
         }
-        if(a < 0 || b < 0)
-        {
+        if(a < 0 || b < 0) {
             puts("NO");
             return 0;
         }

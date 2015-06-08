@@ -13,20 +13,15 @@ int Binary(int *src, int len, int key)
 {
     int Left = 0;
     int Right = len - 1;
-    while(Left < Right)
-    {
+    while(Left < Right) {
         int Mid = (Left + Right) >> 1;
-        if(src[Mid] > key)
-        {
+        if(src[Mid] > key) {
             Right = Mid;
-        }
-        else
-        {
+        } else {
             Left = Mid + 1;
         }
     }
-    if(src[Left] <= key)
-    {
+    if(src[Left] <= key) {
         ++Left;
     }
     return Left;
@@ -38,59 +33,51 @@ int main()
     int Max, SumA, SumB, AnsA, AnsB;
     int C[2] = {0, 2000000001};
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
     scanf("%d", &M);
-    for(i = 0; i < M; ++i)
-    {
+    for(i = 0; i < M; ++i) {
         scanf("%d", &B[i]);
     }
     qsort(A, N, sizeof(int), cmp);
     qsort(B, M, sizeof(int), cmp);
     Max = 2 * N - 3 * M - 1;
     AnsA = 0;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         int choice = A[i];
         int idx;
         idx = Binary(A, N, choice);
         SumA = idx * 2 + (N - idx) * 3;
         idx = Binary(B, M, choice);
         SumB = idx * 2 + (M - idx) * 3;
-        if(SumA - SumB > Max || (SumA - SumB == Max && SumA > AnsA))
-        {
+        if(SumA - SumB > Max || (SumA - SumB == Max && SumA > AnsA)) {
             Max = SumA - SumB;
             AnsA = SumA;
             AnsB = SumB;
         }
     }
-    for(i = 0; i < M; ++i)
-    {
+    for(i = 0; i < M; ++i) {
         int choice = B[i];
         int idx;
         idx = Binary(A, N, choice);
         SumA = idx * 2 + (N - idx) * 3;
         idx = Binary(B, M, choice);
         SumB = idx * 2 + (M - idx) * 3;
-        if(SumA - SumB > Max || (SumA - SumB == Max && SumA > AnsA))
-        {
+        if(SumA - SumB > Max || (SumA - SumB == Max && SumA > AnsA)) {
             Max = SumA - SumB;
             AnsA = SumA;
             AnsB = SumB;
         }
     }
-    for(i = 0; i < 2; ++i)
-    {
+    for(i = 0; i < 2; ++i) {
         int choice = C[i];
         int idx;
         idx = Binary(A, N, choice);
         SumA = idx * 2 + (N - idx) * 3;
         idx = Binary(B, M, choice);
         SumB = idx * 2 + (M - idx) * 3;
-        if(SumA - SumB > Max || (SumA - SumB == Max && SumA > AnsA))
-        {
+        if(SumA - SumB > Max || (SumA - SumB == Max && SumA > AnsA)) {
             Max = SumA - SumB;
             AnsA = SumA;
             AnsB = SumB;

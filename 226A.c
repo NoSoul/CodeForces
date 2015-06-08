@@ -5,10 +5,8 @@ typedef __int64 LL;
 LL F(LL A, LL N, LL M)
 {
     int ret = 1;
-    while(N)
-    {
-        if(N & 1)
-        {
+    while(N) {
+        if(N & 1) {
             ret = (ret % M * A % M) % M;
         }
         A = (A * A) % M;

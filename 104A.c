@@ -6,8 +6,7 @@ int main()
 {
     int N;
     scanf("%d", &N);
-    if(N <= 10 || N > 21)
-    {
+    if(N <= 10 || N > 21) {
         puts("0");
         return 0;
     }

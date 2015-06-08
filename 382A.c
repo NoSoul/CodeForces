@@ -8,18 +8,15 @@ int main()
     scanf("%s %s", Str, extra);
     res = (strlen(Str) + strlen(extra) - 1) / 2;
     for(i = 0; Str[i] != '|'; ++i);
-    if((strlen(Str) + strlen(extra) - 1) % 2 == 1 || i > res || (strlen(Str) - i - 1) > res)
-    {
+    if((strlen(Str) + strlen(extra) - 1) % 2 == 1 || i > res || (strlen(Str) - i - 1) > res) {
         printf("Impossible\n");
         return 0;
     }
-    for(j = 0; j < res - i; ++j)
-    {
+    for(j = 0; j < res - i; ++j) {
         printf("%c", extra[j]);
     }
     printf("%s", Str);
-    for(j = res - i; j < strlen(extra); ++j)
-    {
+    for(j = res - i; j < strlen(extra); ++j) {
         printf("%c", extra[j]);
     }
     printf("\n");

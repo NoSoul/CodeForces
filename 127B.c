@@ -8,13 +8,11 @@ int main()
 {
     int N, i, j;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &j);
         ++Hash[j];
     }
-    for(j = 0, i = 1; i < MAX; ++i)
-    {
+    for(j = 0, i = 1; i < MAX; ++i) {
         j += Hash[i] / 2;
     }
     printf("%d\n", j / 2);

@@ -12,21 +12,17 @@ int main()
 {
     int N, i, Cnt;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
         B[i] = A[i];
     }
     qsort(B, N, sizeof(int), cmp);
-    for(Cnt = i = 0; i < N; ++i)
-    {
-        if(A[i] != B[i])
-        {
+    for(Cnt = i = 0; i < N; ++i) {
+        if(A[i] != B[i]) {
             ++Cnt;
         }
     }
-    if(Cnt > 2)
-    {
+    if(Cnt > 2) {
         puts("NO");
         return 0;
     }

@@ -7,23 +7,18 @@ int main()
     char a, b;
     char Str[101];
     scanf("%d%*c", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         gets(Str);
         Len = strlen(Str);
         a = b = 0;
-        if(Len > 4)
-        {
-            if(Str[Len - 5] == 'l' && Str[Len - 4] == 'a' && Str[Len - 3] == 'l' && Str[Len - 2] == 'a' && Str[Len - 1] == '.')
-            {
+        if(Len > 4) {
+            if(Str[Len - 5] == 'l' && Str[Len - 4] == 'a' && Str[Len - 3] == 'l' && Str[Len - 2] == 'a' && Str[Len - 1] == '.') {
                 a = 1;
             }
-            if(Str[0] == 'm' && Str[1] == 'i' && Str[2] == 'a' && Str[3] == 'o' && Str[4] == '.')
-            {
+            if(Str[0] == 'm' && Str[1] == 'i' && Str[2] == 'a' && Str[3] == 'o' && Str[4] == '.') {
                 b = 1;
             }
-            if(a != b)
-            {
+            if(a != b) {
                 puts(a ? "Freda's" : "Rainbow's");
                 continue;
             }

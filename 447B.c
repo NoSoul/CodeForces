@@ -9,20 +9,16 @@ int main()
     scanf("%s", Str);
     scanf("%d", &N);
     Max = 0;
-    for(i = 0; i < 26; ++i)
-    {
+    for(i = 0; i < 26; ++i) {
         scanf("%d", &Value[i]);
-        if(Value[i] > Max)
-        {
+        if(Value[i] > Max) {
             Max = Value[i];
         }
     }
-    for(Len = 0; Str[Len] != '\0'; ++Len)
-    {
+    for(Len = 0; Str[Len] != '\0'; ++Len) {
         Sum += (Len + 1) * Value[Str[Len] - 'a'];
     }
-    for(i = 0; i < N; ++i, ++Len)
-    {
+    for(i = 0; i < N; ++i, ++Len) {
         Sum += (Len + 1) * Max;
     }
     printf("%I64d\n", Sum);

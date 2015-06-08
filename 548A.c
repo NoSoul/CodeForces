@@ -3,10 +3,8 @@
 
 int Palindrome(char *str, int s, int e)
 {
-    while(s < e)
-    {
-        if(str[s] != str[e])
-        {
+    while(s < e) {
+        if(str[s] != str[e]) {
             return 0;
         }
         ++s;
@@ -21,16 +19,13 @@ int main()
     int K, L, i, M;
     scanf("%s %d", Str, &K);
     L = strlen(Str);
-    if(L % K)
-    {
+    if(L % K) {
         puts("NO");
         return 0;
     }
     M = L / K;
-    for(i = 0; i < L; i += M)
-    {
-        if(!Palindrome(Str, i, i + M - 1))
-        {
+    for(i = 0; i < L; i += M) {
+        if(!Palindrome(Str, i, i + M - 1)) {
             puts("NO");
             return 0;
         }

@@ -2,8 +2,7 @@
 
 #define MAXV    2001
 
-typedef struct
-{
+typedef struct {
     int to;
     int next;
 } Edge_t;
@@ -16,8 +15,7 @@ int Queue[MAXV];
 void Init(int N)
 {
     int i;
-    for(i = 0; i <= N; ++i)
-    {
+    for(i = 0; i <= N; ++i) {
         Adj[i] = -1;
     }
     Size = 0;
@@ -36,12 +34,9 @@ int BFS(int start)
     Queue[Len++] = start;
     Head = 0;
     Tail = 1;
-    while(Head < Tail)
-    {
-        for(i = Head; i < Tail; ++i)
-        {
-            for(j = Adj[Queue[i]]; ~j; j = E[j].next)
-            {
+    while(Head < Tail) {
+        for(i = Head; i < Tail; ++i) {
+            for(j = Adj[Queue[i]]; ~j; j = E[j].next) {
                 Visit[E[j].to] = 1;
                 Queue[Len++] = E[j].to;
             }
@@ -58,22 +53,17 @@ int main()
     int N, i, Num, Ans;
     scanf("%d", &N);
     Init(N);
-    for(i = 1; i <= N; ++i)
-    {
+    for(i = 1; i <= N; ++i) {
         scanf("%d", &Num);
-        if(~Num)
-        {
+        if(~Num) {
             Add_Edge(Num, i);
         }
     }
     Ans = 0;
-    for(i = 1; i <= N; ++i)
-    {
-        if(!Visit[i])
-        {
+    for(i = 1; i <= N; ++i) {
+        if(!Visit[i]) {
             int Now = BFS(i);
-            if(Now > Ans)
-            {
+            if(Now > Ans) {
                 Ans = Now;
             }
         }

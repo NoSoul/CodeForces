@@ -8,12 +8,9 @@ int main()
     int i, j, Ans;
     char Str[101];
     scanf("%s", &Str);
-    for(Ans = i = 0; Str[i] != '\0'; ++i)
-    {
-        for(j = 0; j < 8; ++j)
-        {
-            if(Str[i] == T[j])
-            {
+    for(Ans = i = 0; Str[i] != '\0'; ++i) {
+        for(j = 0; j < 8; ++j) {
+            if(Str[i] == T[j]) {
                 break;
             }
         }

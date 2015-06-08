@@ -7,27 +7,20 @@ int main()
     int num = a / v;
     num += (a % v) ? 1 : 0;
     int Ans = 0;
-    while(1)
-    {
-        if(b >= k - 1)
-        {
+    while(1) {
+        if(b >= k - 1) {
             b -= k - 1;
             a -= k * v;
             ++Ans;
-        }
-        else if(b > 0)
-        {
+        } else if(b > 0) {
             a -= (b + 1) * v;
             b = 0;
             ++Ans;
-        }
-        else
-        {
+        } else {
             a -= v;
             ++Ans;
         }
-        if(a <= 0)
-        {
+        if(a <= 0) {
             break;
         }
     }

@@ -4,28 +4,22 @@ int main()
 {
     int X, T, i, A, B, da, db, Num;
     scanf("%d %d %d %d %d %d", &X, &T, &A, &B, &da, &db);
-    if(X == 0)
-    {
+    if(X == 0) {
         puts("YES");
         return 0;
     }
-    for(i = 0; i < T; ++i)
-    {
-        if((X == A - da * i) || (X == B - db * i))
-        {
+    for(i = 0; i < T; ++i) {
+        if((X == A - da * i) || (X == B - db * i)) {
             break;
         }
     }
-    if(i < T)
-    {
+    if(i < T) {
         puts("YES");
         return 0;
     }
-    for(i = 0; i < T; ++i)
-    {
+    for(i = 0; i < T; ++i) {
         Num = A - da * i;
-        if((B + Num - X) % db == 0 && (B + Num - X) >= 0 && (B + Num - X) <= (T - 1)*db)
-        {
+        if((B + Num - X) % db == 0 && (B + Num - X) >= 0 && (B + Num - X) <= (T - 1)*db) {
             break;
         }
     }

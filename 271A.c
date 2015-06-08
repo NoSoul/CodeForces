@@ -14,10 +14,8 @@ int main()
 {
     int N, i;
     scanf("%d", &N);
-    for(i = N + 1; i < 9013; ++i)
-    {
-        if(Fun(i))
-        {
+    for(i = N + 1; i < 9013; ++i) {
+        if(Fun(i)) {
             printf("%d\n", i);
             break;
         }

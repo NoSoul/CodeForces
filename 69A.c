@@ -5,8 +5,7 @@ int main()
     int N, X, Y, Z, x, y, z, i;
     X = Y = Z = 0;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d %d %d", &x, &y, &z);
         X += x;
         Y += y;

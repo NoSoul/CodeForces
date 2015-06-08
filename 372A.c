@@ -15,18 +15,14 @@ int main()
 {
     int N, i, j, Ans;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
     qsort(A, N, sizeof(int), cmp);
     j = N / 2 - 1;
-    for(i = N - 1; i >= N / 2; --i)
-    {
-        for(; j >= 0; --j)
-        {
-            if(A[i] >= A[j] * 2)
-            {
+    for(i = N - 1; i >= N / 2; --i) {
+        for(; j >= 0; --j) {
+            if(A[i] >= A[j] * 2) {
                 Hash[i] = 2;
                 Hash[j] = 1;
                 --j;
@@ -35,8 +31,7 @@ int main()
         }
     }
     Ans = 0;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         Ans += Hash[i] != 1;
     }
     printf("%d\n", Ans);

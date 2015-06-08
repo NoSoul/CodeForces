@@ -8,15 +8,11 @@ int main()
                           };
     char Ten[10][20] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
     scanf("%d", &s);
-    if(s < 20)
-    {
+    if(s < 20) {
         printf("%s", Less20[s]);
-    }
-    else
-    {
+    } else {
         printf("%s", Ten[s / 10]);
-        if(s % 10)
-        {
+        if(s % 10) {
             printf("-%s", Less20[s % 10]);
         }
     }

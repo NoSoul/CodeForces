@@ -3,8 +3,7 @@
 #define MAXV    51
 #define MAXE    (MAXV*MAXV)
 
-typedef struct
-{
+typedef struct {
     int to;
     int next;
 } Edge_t;
@@ -17,8 +16,7 @@ long long Ans = 1;
 void Init(int N)
 {
     int i;
-    for(i = 0; i <= N; ++i)
-    {
+    for(i = 0; i <= N; ++i) {
         Adj[i] = -1;
     }
     SizeE = 0;
@@ -39,14 +37,10 @@ void BFS(int start)
     Tail = Cnt = 1;
     Visited[start] = 1;
     Queue[0] = start;
-    while(Head < Tail)
-    {
-        for(i = Head; i < Tail; ++i)
-        {
-            for(j = Adj[Queue[i]]; ~j; j = E[j].next)
-            {
-                if(!Visited[E[j].to])
-                {
+    while(Head < Tail) {
+        for(i = Head; i < Tail; ++i) {
+            for(j = Adj[Queue[i]]; ~j; j = E[j].next) {
+                if(!Visited[E[j].to]) {
                     Visited[E[j].to] = 1;
                     Queue[Cnt++] = E[j].to;
                 }
@@ -55,8 +49,7 @@ void BFS(int start)
         Head = Tail;
         Tail = Cnt;
     }
-    while(Cnt > 1)
-    {
+    while(Cnt > 1) {
         Ans = Ans * 2;
         --Cnt;
     }
@@ -67,18 +60,15 @@ int main()
     int N, M, i, x, y, Cnt;
     scanf("%d %d", &N, &M);
     Init(N);
-    for(i = 0; i < M; ++i)
-    {
+    for(i = 0; i < M; ++i) {
         scanf("%d %d", &x, &y);
         --x;
         --y;
         Add_Edge(x, y);
         Add_Edge(y, x);
     }
-    for(i = 0; i < N; ++i)
-    {
-        if(!Visited[i])
-        {
+    for(i = 0; i < N; ++i) {
+        if(!Visited[i]) {
             BFS(i);
         }
     }

@@ -7,15 +7,12 @@ int A[100000];
 int F(int x)
 {
     int res;
-    if(x == 1)
-    {
+    if(x == 1) {
         return 1;
     }
     res = 0;
-    while(x != 1)
-    {
-        if(x & 1)
-        {
+    while(x != 1) {
+        if(x & 1) {
             ++res;
         }
         x /= 2;
@@ -28,17 +25,13 @@ int main()
     int N, i, j;
     LL Sum, Cnt;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
         A[i] = F(A[i]);
     }
-    for(Sum = 0, i = 1; i < 33; ++i)
-    {
-        for(Cnt = j = 0; j < N; ++j)
-        {
-            if(A[j] == i)
-            {
+    for(Sum = 0, i = 1; i < 33; ++i) {
+        for(Cnt = j = 0; j < N; ++j) {
+            if(A[j] == i) {
                 ++Cnt;
             }
         }

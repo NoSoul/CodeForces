@@ -10,8 +10,7 @@ int main()
     int i, j, Len;
     scanf("%s %s", Str1, Str2);
     Len = strlen(Str1);
-    if(Len != strlen(Str2))
-    {
+    if(Len != strlen(Str2)) {
         puts("NO");
         return 0;
     }

@@ -6,16 +6,13 @@ int main()
 {
     int A, M;
     scanf("%d %d", &A, &M);
-    while(1)
-    {
+    while(1) {
         int p = A % M;
-        if(p == 0)
-        {
+        if(p == 0) {
             puts("Yes");
             return 0;
         }
-        if(Hash[p])
-        {
+        if(Hash[p]) {
             puts("No");
             return 0;
         }

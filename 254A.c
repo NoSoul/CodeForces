@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct
-{
+typedef struct {
     int index, num;
 } Card;
 Card C[600001];
@@ -19,29 +18,22 @@ int main()
     freopen("output.txt", "w", stdout);
     int N, i, j, Flag, Min, Max;
     scanf("%d", &N);
-    for(i = 1; i <= N + N; ++i)
-    {
+    for(i = 1; i <= N + N; ++i) {
         scanf("%d", &C[i].num);
         C[i].index = i;
         ++Hash[C[i].num];
     }
     qsort(C + 1, N + N, sizeof(Card), cmp);
-    for(Flag = i = 1; i < 5001; ++i)
-    {
-        if(Hash[i] % 2 != 0)
-        {
+    for(Flag = i = 1; i < 5001; ++i) {
+        if(Hash[i] % 2 != 0) {
             Flag = 0;
             break;
         }
     }
-    if(!Flag)
-    {
+    if(!Flag) {
         printf("-1\n");
-    }
-    else
-    {
-        for(i = 1; i <= N + N; i += 2)
-        {
+    } else {
+        for(i = 1; i <= N + N; i += 2) {
             printf("%d %d\n", C[i].index, C[i + 1].index);
         }
     }

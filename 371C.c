@@ -13,41 +13,29 @@ int main()
     scanf("%d %d %d", &pb, &ps, &pc);
     scanf("%I64d", &Sum);
     needb = needs = needc = 0;
-    for(i = 0; Str[i] != '\0'; ++i)
-    {
-        if(Str[i] == 'B')
-        {
+    for(i = 0; Str[i] != '\0'; ++i) {
+        if(Str[i] == 'B') {
             ++needb;
-        }
-        else if(Str[i] == 'S')
-        {
+        } else if(Str[i] == 'S') {
             ++needs;
-        }
-        else
-        {
+        } else {
             ++needc;
         }
     }
     One = needb * pb + needs * ps + needc * pc;
     Min = 0x7fffffff;
-    if(needb)
-    {
-        if(nb / needb < Min)
-        {
+    if(needb) {
+        if(nb / needb < Min) {
             Min = nb / needb;
         }
     }
-    if(needs)
-    {
-        if(ns / needs < Min)
-        {
+    if(needs) {
+        if(ns / needs < Min) {
             Min = ns / needs;
         }
     }
-    if(needc)
-    {
-        if(nc / needc < Min)
-        {
+    if(needc) {
+        if(nc / needc < Min) {
             Min = nc / needc;
         }
     }
@@ -55,59 +43,42 @@ int main()
     nb -= Min * needb;
     ns -= Min * needs;
     nc -= Min * needc;
-    while(1)
-    {
+    while(1) {
         flag = 1;
-        if(needb && nb != 0)
-        {
+        if(needb && nb != 0) {
             flag = 0;
         }
-        if(needs && ns != 0)
-        {
+        if(needs && ns != 0) {
             flag = 0;
         }
-        if(needc && nc != 0)
-        {
+        if(needc && nc != 0) {
             flag = 0;
         }
-        if(flag)
-        {
+        if(flag) {
             break;
         }
-        if(nb >= needb)
-        {
+        if(nb >= needb) {
             nb -= needb;
-        }
-        else
-        {
-            if(Sum < ((needb - nb)*pb))
-            {
+        } else {
+            if(Sum < ((needb - nb)*pb)) {
                 break;
             }
             Sum -= (needb - nb) * pb;
             nb = 0;
         }
-        if(ns >= needs)
-        {
+        if(ns >= needs) {
             ns -= needs;
-        }
-        else
-        {
-            if(Sum < ((needs - ns)*ps))
-            {
+        } else {
+            if(Sum < ((needs - ns)*ps)) {
                 break;
             }
             Sum -= (needs - ns) * ps;
             ns = 0;
         }
-        if(nc >= needc)
-        {
+        if(nc >= needc) {
             nc -= needc;
-        }
-        else
-        {
-            if(Sum < ((needc - nc)*pc))
-            {
+        } else {
+            if(Sum < ((needc - nc)*pc)) {
                 break;
             }
             Sum -= (needc - nc) * pc;

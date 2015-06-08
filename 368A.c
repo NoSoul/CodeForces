@@ -11,18 +11,15 @@ int main()
     int N, D, M, i, Sum;
     int A[100];
     scanf("%d %d", &N, &D);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
     scanf("%d", &M);
     qsort(A, N, sizeof(int), cmp);
-    for(Sum = i = 0; i < N && i < M; ++i)
-    {
+    for(Sum = i = 0; i < N && i < M; ++i) {
         Sum += A[i];
     }
-    if(M > N)
-    {
+    if(M > N) {
         Sum -= (M - N) * D;
     }
     printf("%d\n", Sum);

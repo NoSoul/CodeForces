@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-typedef struct
-{
+typedef struct {
     int x, y;
 } Point;
 
@@ -17,8 +16,7 @@ int main()
     double Dist;
     Point Pre, Now;
     scanf("%d %d %d %d", &N, &K, &Pre.x, &Pre.y);
-    for(Dist = 0, i = 1; i < N; ++i)
-    {
+    for(Dist = 0, i = 1; i < N; ++i) {
         scanf("%d %d", &Now.x, &Now.y);
         Dist += Distance(Pre, Now);
         Pre = Now;

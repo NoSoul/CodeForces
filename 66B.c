@@ -21,15 +21,12 @@ int main()
 {
     int i, Max, j;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &A[i]);
     }
-    for(Max = i = 0; i < N; ++i)
-    {
+    for(Max = i = 0; i < N; ++i) {
         j = Left(i) + Right(i) + 1;
-        if(Max < j)
-        {
+        if(Max < j) {
             Max = j;
         }
     }

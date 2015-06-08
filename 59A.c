@@ -7,33 +7,22 @@ int main()
     int i, A, B;
     char Str[MAX];
     scanf("%s", Str);
-    for(A = B = i = 0; Str[i] != '\0'; ++i)
-    {
-        if(Str[i] < 'a')
-        {
+    for(A = B = i = 0; Str[i] != '\0'; ++i) {
+        if(Str[i] < 'a') {
             ++A;
-        }
-        else
-        {
+        } else {
             ++B;
         }
     }
-    if(A <= B)
-    {
-        for(i = 0; Str[i] != '\0'; ++i)
-        {
-            if(Str[i] < 'a')
-            {
+    if(A <= B) {
+        for(i = 0; Str[i] != '\0'; ++i) {
+            if(Str[i] < 'a') {
                 Str[i] += 32;
             }
         }
-    }
-    else
-    {
-        for(i = 0; Str[i] != '\0'; ++i)
-        {
-            if(Str[i] > 'Z')
-            {
+    } else {
+        for(i = 0; Str[i] != '\0'; ++i) {
+            if(Str[i] > 'Z') {
                 Str[i] -= 32;
             }
         }

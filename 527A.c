@@ -5,10 +5,8 @@ int main()
     long long a, b;
     long long Ans = 0;
     scanf("%I64d %I64d", &a, &b);
-    while(1)
-    {
-        if(a % b == 0)
-        {
+    while(1) {
+        if(a % b == 0) {
             Ans += a / b;
             break;
         }

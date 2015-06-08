@@ -6,31 +6,23 @@ int main()
 {
     int N, M, i, j, type, Sum;
     scanf("%d", &N);
-    for(i = 0; i < N; ++i)
-    {
-        for(j = 0; j < N; ++j)
-        {
+    for(i = 0; i < N; ++i) {
+        for(j = 0; j < N; ++j) {
             scanf("%d", &A[i][j]);
         }
     }
-    for(i = 0; i < N; ++i)
-    {
-        for(j = 0; j < N; ++j)
-        {
+    for(i = 0; i < N; ++i) {
+        for(j = 0; j < N; ++j) {
             Sum += A[i][j] * A[j][i];
         }
     }
     Sum &= 1;
     scanf("%d", &M);
-    while(M--)
-    {
+    while(M--) {
         scanf("%d", &type);
-        if(type == 3)
-        {
+        if(type == 3) {
             printf("%d", Sum);
-        }
-        else
-        {
+        } else {
             scanf("%d", &i);
             Sum ^= 1;
         }

@@ -8,16 +8,13 @@ int main()
     scanf("%s %s", S, T);
     int i, L;
     L = strlen(S);
-    for(i = L - 1; i >= 0; --i)
-    {
-        if(S[i] != 'z')
-        {
+    for(i = L - 1; i >= 0; --i) {
+        if(S[i] != 'z') {
             ++S[i];
             break;
         }
     }
-    for(++i; i < L; ++i)
-    {
+    for(++i; i < L; ++i) {
         S[i] = 'a';
     }
     puts(strcmp(S, T) >= 0 ? "No such string" : S);

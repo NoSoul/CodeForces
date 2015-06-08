@@ -9,12 +9,9 @@ int main()
     char Str[1001];
     gets(Str);
     Len = strlen(Str);
-    for(i = 0; i < Len; ++i)
-    {
-        if(Str[i] >= 'a' && Str[i] <= 'z')
-        {
-            if(!Hash[Str[i] - 'a'])
-            {
+    for(i = 0; i < Len; ++i) {
+        if(Str[i] >= 'a' && Str[i] <= 'z') {
+            if(!Hash[Str[i] - 'a']) {
                 ++Ans;
                 Hash[Str[i] - 'a'] = 1;
             }

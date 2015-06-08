@@ -6,27 +6,20 @@ int main()
     scanf("%d %d", &N, &M);
     Temp = M;
     Ans = 0;
-    for(i = 0; i < N; ++i)
-    {
+    for(i = 0; i < N; ++i) {
         scanf("%d", &Num);
-        if(Temp > Num)
-        {
+        if(Temp > Num) {
             Temp -= Num;
-        }
-        else if(Temp == Num)
-        {
+        } else if(Temp == Num) {
             ++Ans;
             Temp = M;
-        }
-        else
-        {
+        } else {
             ++Ans;
             Ans += Num / M;
             Temp = M - Num % M;
         }
     }
-    if(Temp != M)
-    {
+    if(Temp != M) {
         ++Ans;
     }
     printf("%d\n", Ans);

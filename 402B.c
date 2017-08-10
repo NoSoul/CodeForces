@@ -24,7 +24,7 @@ int main()
             if(i == j) {
                 continue;
             }
-            if(A[j] != Fun(A, i , j, K)) {
+            if(A[j] != Fun(A, i, j, K)) {
                 ++Cnt;
                 if(Fun(A, i, j, K) <= 0) {
                     Cnt += 2 * N;

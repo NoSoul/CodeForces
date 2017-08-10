@@ -3,7 +3,7 @@
 int main()
 {
     int s;
-    char Less20[20][20] = {"zero", "one", "two", "three", "four", "five" , "six", "seven", "eight", "nine",
+    char Less20[20][20] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
                            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
                           };
     char Ten[10][20] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};

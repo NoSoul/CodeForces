@@ -18,7 +18,7 @@ int main()
     }
     for(i = 0; i < N - 1; ++i) {
         for(j = 0; j < N; ++j) {
-            if(strcmp(Q[i].new , Q[j].old) == 0) {
+            if(strcmp(Q[i].new, Q[j].old) == 0) {
                 memcpy(Q[j].old, Q[i].old, strlen(Q[i].old));
                 Q[j].old[strlen(Q[i].old)] = '\0';
                 Q[i].next = j;

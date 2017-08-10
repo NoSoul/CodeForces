@@ -15,13 +15,13 @@ int main()
         if(Team[0] == 'h') {
             if(~A[0][m]) {
                 if(Card[0] == 'r') {
-                    printf("%s %d %d\n", StrHome, m , t);
+                    printf("%s %d %d\n", StrHome, m, t);
                     A[0][m] = -1;
                 } else {
                     if(A[0][m] == 0) {
                         A[0][m] = t;
                     } else {
-                        printf("%s %d %d\n", StrHome, m , t);
+                        printf("%s %d %d\n", StrHome, m, t);
                         A[0][m] = -1;
                     }
                 }
@@ -29,13 +29,13 @@ int main()
         } else {
             if(~A[1][m]) {
                 if(Card[0] == 'r') {
-                    printf("%s %d %d\n", StrAway, m , t);
+                    printf("%s %d %d\n", StrAway, m, t);
                     A[1][m] = -1;
                 } else {
                     if(A[1][m] == 0) {
                         A[1][m] = t;
                     } else {
-                        printf("%s %d %d\n", StrAway, m , t);
+                        printf("%s %d %d\n", StrAway, m, t);
                         A[1][m] = -1;
                     }
                 }

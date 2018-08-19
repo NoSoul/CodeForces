@@ -84,9 +84,8 @@ int main()
                     find = 1;
                     break;
                 } else if(Cnt[i] >= 2) {
-                    Data[Size++] = A[i];
+                    Data[Size++] = i;
                 }
-
             }
         }
         if(!find) {

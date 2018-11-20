@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAXN	150001
+#define MAXN    150001
 
 int A[MAXN];
 

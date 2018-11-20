@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MOD	1000003
+#define MOD 1000003
 
 int main()
 {

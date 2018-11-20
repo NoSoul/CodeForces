@@ -16,7 +16,7 @@ int FunCmp(DataType_t *src, int x, int y)
     return x < y ? 1 : 0;
 }
 
-void SetSTRMQ(int dp[MAXN][20], DataType_t *src, int n, int (*fun)(DataType_t*, int, int))
+void SetSTRMQ(int dp[MAXN][20], DataType_t *src, int n, int (*fun)(DataType_t *, int, int))
 {
     int i, j, k;
     for(i = 0; i < n; ++i) {
@@ -30,7 +30,7 @@ void SetSTRMQ(int dp[MAXN][20], DataType_t *src, int n, int (*fun)(DataType_t*, 
     }
 }
 
-DataType_t GetSTRMQ(int dp[MAXN][20], DataType_t *src, int a, int b, int (*fun)(DataType_t*, int, int))
+DataType_t GetSTRMQ(int dp[MAXN][20], DataType_t *src, int a, int b, int (*fun)(DataType_t *, int, int))
 {
     int k = log2(b - a + 1);
     int resid = fun(src, dp[a][k], dp[b - (1 << k) + 1][k]) ? dp[a][k] : dp[b - (1 << k) + 1][k];

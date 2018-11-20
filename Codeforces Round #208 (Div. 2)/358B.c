@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXN	100001
+#define MAXN    100001
 
 char *Str[MAXN];
 
@@ -28,13 +28,13 @@ int main()
     for(i = 0; i < N; ++i) {
         scanf("%s", temp);
         if(i == 0) {
-            Str[i] = (char*)malloc(sizeof(char) * (strlen(temp) + 5));
+            Str[i] = (char *)malloc(sizeof(char) * (strlen(temp) + 5));
             memcpy(Str[i], "<3", sizeof(char) * 2);
             memcpy(Str[i] + 2, temp, strlen(temp));
             memcpy(Str[i] + 2 + strlen(temp), "<3", sizeof(char) * 2);
             Str[i][2 + strlen(temp) + 2] = '\0';
         } else {
-            Str[i] = (char*)malloc(sizeof(char) * (strlen(temp) + 3));
+            Str[i] = (char *)malloc(sizeof(char) * (strlen(temp) + 3));
             memcpy(Str[i], temp, strlen(temp));
             memcpy(Str[i] + strlen(temp), "<3", sizeof(char) * 2);
             Str[i][strlen(temp) + 2] = '\0';

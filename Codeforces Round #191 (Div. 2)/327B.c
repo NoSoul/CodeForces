@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAXN	1300000
+#define MAXN    1300000
 
 char Flag[MAXN];
 int Prime[100000];

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MOD	1000000000LL
+#define MOD 1000000000LL
 typedef long long LL_t;
 
 LL_t F[101];

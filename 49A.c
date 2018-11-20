@@ -12,7 +12,7 @@ int main()
             break;
         }
     }
-    if( Str[i] == 'a' || Str[i] == 'e' || Str[i] == 'i' || Str[i] == 'o' || Str[i] == 'u' || Str[i] == 'y' || \
+    if(Str[i] == 'a' || Str[i] == 'e' || Str[i] == 'i' || Str[i] == 'o' || Str[i] == 'u' || Str[i] == 'y' || \
             Str[i] == 'A' || Str[i] == 'E' || Str[i] == 'I' || Str[i] == 'O' || Str[i] == 'U' || Str[i] == 'Y') {
         puts("YES");
     } else {

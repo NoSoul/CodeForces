@@ -51,10 +51,10 @@ void DFS(int cnt)
 
 int cmp(const void *a, const void *b)
 {
-    if(((Node_t*)a)->m_Fun == ((Node_t*)b)->m_Fun) {
-        return ((Node_t*)a)->m_id - ((Node_t*)b)->m_id;
+    if(((Node_t *)a)->m_Fun == ((Node_t *)b)->m_Fun) {
+        return ((Node_t *)a)->m_id - ((Node_t *)b)->m_id;
     }
-    return ((Node_t*)b)->m_Fun - ((Node_t*)a)->m_Fun;
+    return ((Node_t *)b)->m_Fun - ((Node_t *)a)->m_Fun;
 }
 
 int main()

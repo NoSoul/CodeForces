@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAXN	500001
+#define MAXN    500001
 
 int A[MAXN];
 char Hash[MAXN];

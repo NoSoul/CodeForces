@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAXN	1001
+#define MAXN    1001
 
 typedef struct {
     int v, next;

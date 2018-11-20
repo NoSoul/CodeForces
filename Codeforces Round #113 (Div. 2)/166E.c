@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MOD	1000000007
+#define MOD 1000000007
 
 typedef struct {
     long long data[4][4];

@@ -12,7 +12,7 @@ int Dp[MAXN];
 
 int cmp(const void *a, const void *b)
 {
-    return (*(Beacons_t*)a).a - (*(Beacons_t*)b).a;
+    return (*(Beacons_t *)a).a - (*(Beacons_t *)b).a;
 }
 
 int BinarySearch(Beacons_t *array, int len, int key)

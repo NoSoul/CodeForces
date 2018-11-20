@@ -10,7 +10,7 @@ Node_t A[1000];
 
 int cmp(const void *a, const void *b)
 {
-    return (*(Node_t*)a).dis - (*(Node_t*)b).dis;
+    return (*(Node_t *)a).dis - (*(Node_t *)b).dis;
 }
 
 int main()

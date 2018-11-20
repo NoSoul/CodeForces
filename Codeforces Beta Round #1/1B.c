@@ -11,7 +11,7 @@ int C2N(char *s)
     return r;
 }
 
-char* N2C(int N)
+char *N2C(int N)
 {
     int i = 0, j;
     char r[20];

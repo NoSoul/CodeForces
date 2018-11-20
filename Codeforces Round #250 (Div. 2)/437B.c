@@ -13,7 +13,7 @@ int Size;
 
 int cmp(const void *a, const void *b)
 {
-    return (*(Node_t*)b).val - (*(Node_t*)a).val;
+    return (*(Node_t *)b).val - (*(Node_t *)a).val;
 }
 
 int main()

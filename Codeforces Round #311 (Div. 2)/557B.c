@@ -18,7 +18,7 @@ int main()
     }
     qsort(A, N << 1, sizeof(A[i]), cmp);
     int max = A[N] < 2 * A[0] ? A[N] : 2 * A[0];
-    if((long long)3 * max * N < 2 * W ) {
+    if((long long)3 * max * N < 2 * W) {
         printf("%.1lf\n", max * N * 1.5);
     } else {
         printf("%d\n", W);

@@ -8,7 +8,7 @@ char *Manacher(char *str)
 {
     int originLen = strlen(str);
     int transLen = originLen << 1;
-    char *transStr = (char*)malloc(sizeof(char) * (transLen + 1));
+    char *transStr = (char *)malloc(sizeof(char) * (transLen + 1));
     if(transStr == NULL) {
         return NULL;
     }
@@ -20,7 +20,7 @@ char *Manacher(char *str)
         transStr[i << 1 | 1] = str[i];
     }
     transStr[transLen] = '\0';
-    int *P = (int*)malloc(sizeof(int) * transLen);
+    int *P = (int *)malloc(sizeof(int) * transLen);
     if(P == NULL) {
         return NULL;
     }

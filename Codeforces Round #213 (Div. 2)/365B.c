@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAXN	100000
+#define MAXN    100000
 
 int A[MAXN];
 int Flag[MAXN];

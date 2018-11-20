@@ -8,10 +8,10 @@ typedef struct {
 
 int cmp(const void *a, const void *b)
 {
-    if(((Node_t*)a)->scores == ((Node_t*)b)->scores) {
-        return ((Node_t*)a)->id - ((Node_t*)b)->id;
+    if(((Node_t *)a)->scores == ((Node_t *)b)->scores) {
+        return ((Node_t *)a)->id - ((Node_t *)b)->id;
     }
-    return ((Node_t*)b)->scores - ((Node_t*)a)->scores;
+    return ((Node_t *)b)->scores - ((Node_t *)a)->scores;
 }
 
 int main()

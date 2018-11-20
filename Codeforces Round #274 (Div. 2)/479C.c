@@ -8,10 +8,10 @@ Exam_t A[5000];
 
 int cmp(const void *a, const void *b)
 {
-    if((*(Exam_t*)a).ai == (*(Exam_t*)b).ai) {
-        return (*(Exam_t*)a).bi - (*(Exam_t*)b).bi;
+    if((*(Exam_t *)a).ai == (*(Exam_t *)b).ai) {
+        return (*(Exam_t *)a).bi - (*(Exam_t *)b).bi;
     }
-    return (*(Exam_t*)a).ai - (*(Exam_t*)b).ai;
+    return (*(Exam_t *)a).ai - (*(Exam_t *)b).ai;
 }
 
 int main()

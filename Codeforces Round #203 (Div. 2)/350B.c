@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAXN	100001
+#define MAXN    100001
 
 typedef struct {
     int to;

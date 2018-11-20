@@ -8,7 +8,7 @@ Round_t R[4001];
 
 int cmp(const void *a, const void *b)
 {
-    return (*(Round_t*)a).y - (*(Round_t*)b).y;
+    return (*(Round_t *)a).y - (*(Round_t *)b).y;
 }
 
 int main()

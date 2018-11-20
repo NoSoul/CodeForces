@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAXN	100001
+#define MAXN    100001
 
 typedef struct {
     int mV;

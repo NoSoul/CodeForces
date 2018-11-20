@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXN	100000
+#define MAXN    100000
 
 typedef struct {
     int id;

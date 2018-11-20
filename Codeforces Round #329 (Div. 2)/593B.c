@@ -10,10 +10,10 @@ Node_t A[100000];
 
 int cmp(const void *a, const void *b)
 {
-    if(((Node_t*)a)->y1 == ((Node_t*)b)->y1) {
-        return ((Node_t*)a)->y2 > ((Node_t*)b)->y2 ? 1 : -1;
+    if(((Node_t *)a)->y1 == ((Node_t *)b)->y1) {
+        return ((Node_t *)a)->y2 > ((Node_t *)b)->y2 ? 1 : -1;
     }
-    return ((Node_t*)a)->y1 > ((Node_t*)b)->y1 ? 1 : -1;
+    return ((Node_t *)a)->y1 > ((Node_t *)b)->y1 ? 1 : -1;
 }
 
 int main()

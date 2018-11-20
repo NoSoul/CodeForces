@@ -8,10 +8,10 @@ Point_t P[100000];
 
 int cmp(const void *a, const void *b)
 {
-    if(abs((*(Point_t*)a).x) == abs((*(Point_t*)b).x)) {
-        return abs((*(Point_t*)a).y) - abs((*(Point_t*)b).y);
+    if(abs((*(Point_t *)a).x) == abs((*(Point_t *)b).x)) {
+        return abs((*(Point_t *)a).y) - abs((*(Point_t *)b).y);
     }
-    return abs((*(Point_t*)a).x) - abs((*(Point_t*)b).x);
+    return abs((*(Point_t *)a).x) - abs((*(Point_t *)b).x);
 }
 
 int main()

@@ -15,7 +15,7 @@ int main()
     Bound = A[0].x;
     for(i = 1; i < N - 1; ++i) {
         if(A[i].x - A[i].h <= Bound) {
-            if( A[i].x + A[i].h < A[i + 1].x) {
+            if(A[i].x + A[i].h < A[i + 1].x) {
                 ++Ans;
                 Bound = A[i].x + A[i].h;
             } else {

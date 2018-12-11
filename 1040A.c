@@ -8,7 +8,7 @@ int main()
     int map[3][3] = {
         0, -1, a,
         -1, 0, b,
-        a, b, min,
+        a, b, 2 * min,
     };
     int c[20];
     for(int i = 0; i < n; ++i) {
@@ -16,11 +16,17 @@ int main()
     }
     int ans = 0;
     for(int i = 0, j = n - 1; i <= j; ++i, --j) {
-        if(map[c[i]][c[j]] == -1) {
-            puts("-1");
-            return 0;
+        if(i != j) {
+            if(map[c[i]][c[j]] == -1) {
+                puts("-1");
+                return 0;
+            } else {
+                ans += map[c[i]][c[j]];
+            }
         } else {
-            ans += map[c[i]][c[j]];
+            if(c[i] == 2) {
+                ans += min;
+            }
         }
     }
     printf("%d\n", ans);
